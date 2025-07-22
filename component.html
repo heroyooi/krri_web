@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>퍼블리싱 - 컴포넌트 가이드</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/prism.css">
+  <style>
+    .component-menu{position:fixed;right:10px;top:10px;padding:10px;background-color:#fff;border:1px solid #ddd;box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.07);border-radius:5px;z-index:1;}
+    .component-menu li{font-size:12px;margin-top:10px;cursor:pointer;}
+    .component-menu li:first-child{margin-top:0;}
+    .component-menu li.on{color:#1b64c8;font-weight:500;}
+    .component-menu .component-list{margin-bottom:10px;}
+    .component-menu .btn-base a{font-size:12px;padding:5px;}
+
+    .tooltip-list li{margin-top:10px;}
+    .tooltip-list li a{display:inline-block;margin:1px 0;padding:6px;background-color:#222;border-radius:3px;color:#fff;width:72px;text-align:center;}
+    .tooltip-list li a:hover{background-color:#0ae;}
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <h1>퍼블리싱 폴포츠 <span>(컴포넌트 가이드)</span></h1>      
+    </div><!-- #header -->
+    
+    <div id="container" class="ex_wrp component">
+
+<pre class="language-html guide">
+<code><link rel="stylesheet" href="css/common.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/tui-time-picker.js"></script>
+<script src="js/tui-date-picker.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/ui.js"></script></code>
+</pre>
+
+      <div class="section">
+        <div class="code-area">
+    <h3>메뉴 &amp; 탑 <button>코드 보기</button></h3>
+<div class="code-box"><div class="fm-wrap">
+  <ul>
+    <li class="menu"><a href="#">메뉴</a></li>
+    <li class="home"><a href="#">홈</a></li>
+    <li class="use"><a href="#">이용방법</a></li>
+    <li class="member"><a href="#">로그인·가입</a></li>
+  </ul>
+</div>
+<button class="btn-top">위로 가기</button>
+<div class="menu-dimm"></div>
+  <div class="menu-wrap">
+    <div class="m-header">
+      <h1>메뉴</h1>
+      <button class="btn-back">뒤로 가기</button>
+    </div>
+    <div class="m-container">
+      <div class="o-scrollbar">
+        <div class="inner">
+          내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.<br />내용이 나옵니다.
+        </div>
+      </div>
+    </div>
+  </div></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- //section -->
+
+      <div class="section" data-aos="fade-down" data-aos-easing="ease">
+        <h2>인풋</h2>
+
+        <div class="code-area">
+          <h3>타입 1 <button>코드 보기</button></h3>
+<div class="code-box"><div>
+  <input type="text" class="input-base" placeholder="검색어를 입력해 주세요.">
+</div>
+<div class="input-wrap w-tip mt10">
+  <input type="password" placeholder="비밀번호를 입력해 주세요." class="input-base" />
+  <span class="tip">영어, 숫자, 특수문자 8 ~ 16자</span>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입 2 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap">
+  <input type="password" class="input-base line" id="user-password" placeholder="현재 비밀번호를 입력해 주세요." value="qwert09!@#" />
+  <button class="btn-del">삭제</button>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+        
+        <div class="code-area">
+          <h3>타입 3 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap w-count">
+  <input type="text" class="input-base" placeholder="6자까지 입력 가능" />
+  <span class="tx-count"><em>0</em>/6</span>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+                
+      </div><!-- .section -->
+
+      <div class="section" data-aos="fade" data-aos-easing="ease">
+        <h2>datepicker - jquery-ui</h2>
+        <div class="code-area">
+          <h3>datepicker - 타입 1 <button>코드 보기</button></h3>
+<div class="code-box"><span class="s-datepicker">
+  <input type="text" class="input-base datepicker" readonly />
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>달력 - datepicker <button>코드 보기</button></h3>
+<div class="code-box"><div class="s-datepicker" id="datepicker"></div></div>
+<script>var DummyDates = {
+  "20220108": { title: "일한 날", year: "2022" },
+  "20220113": { title: "일할 날", year: "2022" },
+  "20220117": { title: "일할 날", year: "2022" },
+  "20220118": { title: "일할 날", year: "2022" },
+  "20220119": { title: "일할 날", year: "2022" },
+  "20220120": { title: "일할 날", year: "2022" },
+  "20220121": { title: "일할 날", year: "2022" },
+  "20220123": { title: "일할 날", year: "2022" },
+  "20220124": { title: "일할 날", year: "2022" },
+  "20220125": { title: "일할 날", year: "2022" },
+  "20220201": { title: "일할 날", year: "2022" },
+  "20220205": { title: "일할 날", year: "2022" },
+  "20220301": { title: "일할 날", year: "2022" },
+  "20220401": { title: "일할 날", year: "2022" },
+  "20220501": { title: "일할 날", year: "2022" },
+  "20220601": { title: "일할 날", year: "2022" },
+  "20220701": { title: "일할 날", year: "2022" },
+  "20220801": { title: "일할 날", year: "2022" },
+  "20220901": { title: "일할 날", year: "2022" },
+  "20221001": { title: "일할 날", year: "2022" },
+}
+$("#datepicker").datepicker({
+  beforeShowDay: function(date) {
+    var result;
+    var days = DummyDates[$.datepicker.formatDate("mmdd",date)];
+    if(!days){
+      days = DummyDates[$.datepicker.formatDate("yymmdd",date)];
+    }
+    var thisYear = $.datepicker.formatDate("yy", date);
+    if (days) {
+      if(thisYear == days.year || days.year == "") {
+        result =  [true, "date-working", days.title];
+      }
+    }
+    if(!result) {
+      switch (date.getDay()) {
+        case 0:
+          result = [true, "date-sunday"];
+          break;
+        case 6:
+          result = [true, "date-saturday"];
+          break;
+        default:
+          result = [true, ""];
+          break;
+      }
+    }
+    return result;
+  },
+});</script>
+<pre class="language-html direct"><code><div class="s-datepicker" id="datepicker"></div></code></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+
+
+        <div class="code-area">
+          <h3>datepicker - 타입2 <button>코드 보기</button></h3>
+<div class="code-box"><div class="datepicker-area">
+  <div class="input-wrap input-datepicker">
+    <span class="s-datepicker" id="startDate">
+      <input type="text" class="input-base" readonly />
+    </span>
+    <span class="bridge"></span>
+    <span class="s-datepicker" id="endDate">
+      <input type="text" class="input-base" readonly />
+    </span>
+  </div>
+</div>
+<div class="datepicker-container" id="datepicker-container1">
+  <div id="datepicker1"></div>
+  <span class="btn-base tp2 gray"><a href="#">닫기</a></span>
+</div>
+<div class="datepicker-container" id="datepicker-container2">
+  <div id="datepicker2"></div>
+  <span class="btn-base tp2 gray"><a href="#">닫기</a></span>
+</div></div>
+
+<style>.datepicker-area{padding:16px;border-bottom:1px solid #EBEBEB;background-color:#fff;}
+.datepicker-container{padding:20px;display:none;background-color:#fff;}
+.datepicker-container.on{display:block;}
+.input-wrap.input-datepicker{display:flex;gap:0 10px;align-items:center;}
+.input-wrap.input-datepicker .bridge{flex-shrink:0;width:10px;height:14px;background:url(../img/common/ic_dash.svg) 50% 50% no-repeat;font-size:0;}
+.input-wrap.input-datepicker .s-datepicker{flex-grow:1;}
+.datepicker-container > .btn-base{margin-top:20px;}
+
+.s-datepicker{position:relative;}
+.s-datepicker .input-base{padding:9px 14px;font-size:12px;font-family:'Montserrat';font-weight:500;}
+.s-datepicker::after{content:'';display:inline-block;position: absolute;right:14px;top:8px;width:18px;height:18px;background:url(../img/common/ic_calendar.svg) 50% 50% no-repeat;}
+
+.ui-widget.ui-widget-content{border:0;}
+.ui-datepicker{width:100%;padding:0;}
+.ui-datepicker .ui-datepicker-header{display:flex;justify-content:center;background-color:#fff;border:0;padding:0;height:40px;align-items:center;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{cursor:pointer;top:10px;}
+.ui-datepicker .ui-datepicker-prev{background:url(../img/common/ic_calendar_l.svg) 50% 50% no-repeat;left:50%;margin-left:-75px;}
+.ui-datepicker .ui-datepicker-next{background:url(../img/common/ic_calendar_r.svg) 50% 50% no-repeat;right:50%;margin-right:-75px;}
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover{top:10px;border:0;}
+.ui-datepicker .ui-datepicker-prev-hover{left: 50%;}
+.ui-datepicker .ui-datepicker-next-hover{right: 50%;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{width:20px;height:20px;}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{display:none;}
+.ui-datepicker .ui-datepicker-title{display:flex;justify-content:center;flex-direction:row-reverse;font-family:'Montserrat';font-weight:600;font-size:0;}
+.ui-datepicker .ui-datepicker-title .ui-datepicker-month::before{content:'.';}
+.ui-datepicker .ui-datepicker-title .ui-datepicker-month,
+.ui-datepicker .ui-datepicker-title .ui-datepicker-year{font-size:20px;display:block;}
+
+.ui-datepicker table{margin-top:20px;}
+.ui-datepicker th{font-size:12px;font-family:'Pretendard';padding:10px 0;border-bottom:1px solid #EBEBEB;}
+.ui-datepicker th span{color:#72767A;font-weight:500;}
+.ui-datepicker td{text-align:center;padding-top:20px;}
+.ui-state-default, .ui-widget-content .ui-state-default{font-size:16px;font-family:'Montserrat';width:40px;height:40px;display:inline-flex;justify-content:center;align-items:center;border:0;background-color:#fff;border-radius:8px;font-weight:600;}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight{background-color:#4289F0;color:#fff;border-radius:8px;}
+.ui-datepicker-today .ui-state-default{background-color:#D0E8FF;color:#333;}
+.ui-state-default.ui-state-active{background-color:#4289F0 !important;color:#fff;}
+.ui-datepicker-week-end:first-child .ui-state-default{color:#FC4852;}
+.ui-datepicker-week-end:last-child .ui-state-default{color:#4289F0;}
+.ui-datepicker-week-end .ui-state-default.ui-state-active{color:#fff;}
+</style>
+
+<script>$.datepicker.setDefaults({
+  dateFormat: 'yy.mm.dd',
+  dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+  monthNames: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+  showOtherMonths: true,
+});
+$("#datepicker1").datepicker({
+  beforeShow: function(input, inst) {
+    // 달력이 처음 표시될 때 월과 년도를 'yyyy.mm' 형식으로 표시
+    var currentDate = $(this).datepicker("getDate") || new Date(); // 현재 선택된 날짜 또는 오늘 날짜
+    var year = currentDate.getFullYear();
+    var month = currentDate.getMonth() + 1;
+    updateCalendarTitle(inst, year, month);
+  },
+  onSelect: function(dateText, inst) {
+    $('#startDate .input-base').val(dateText);
+    $('#datepicker-container1').removeClass('on');
+    $('.tab-dimm').hide();
+  },
+});
+$("#datepicker2").datepicker({
+  onSelect: function(dateText, inst) {
+    $('#endDate .input-base').val(dateText);
+    $('#datepicker-container2').removeClass('on');
+    $('.tab-dimm').hide();
+  },
+});
+
+$('.s-datepicker#startDate').on('click', function(){
+  $('#datepicker-container2').removeClass('on');
+  $('#datepicker-container1').addClass('on');
+  $('.tab-dimm').show();
+  $(this).find('.input-base').focus();
+});
+$('.s-datepicker#endDate').on('click', function(){
+  $('#datepicker-container1').removeClass('on');
+  $('#datepicker-container2').addClass('on');
+  $('.tab-dimm').show();
+  $(this).find('.input-base').focus();
+});
+
+$('.datepicker-container > .btn-base').on('click', function(e){
+  $(this).closest('.datepicker-container').removeClass('on');
+  $('.tab-dimm').hide();
+});
+
+$('.tab-dimm').on('click', function(){
+  $(this).hide();
+  $('.datepicker-container').removeClass('on');
+});</script>
+<pre class="language-html direct"><code><div class="datepicker-area">
+  <div class="input-wrap input-datepicker">
+    <span class="s-datepicker" id="startDate">
+      <input type="text" class="input-base" readonly />
+    </span>
+    <span class="bridge"></span>
+    <span class="s-datepicker" id="endDate">
+      <input type="text" class="input-base" readonly />
+    </span>
+  </div>
+</div>
+<div class="datepicker-container" id="datepicker-container1">
+  <div id="datepicker1"></div>
+  <span class="btn-base tp2 gray"><a href="#">닫기</a></span>
+</div>
+<div class="datepicker-container" id="datepicker-container2">
+  <div id="datepicker2"></div>
+  <span class="btn-base tp2 gray"><a href="#">닫기</a></span>
+</div></code></pre>
+<pre class="language-css"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+
+      </div><!-- .section -->
+
+      <div class="section" style="z-index:2;">
+        <h2>datepicker - tui-datepicker</h2>
+
+        <div class="code-area">
+          <h3>타입 1 <button>코드 보기</button></h3>
+<div class="code-box"><div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+  <input type="text" id="datepicker-input" aria-label="Date-Time">
+  <span class="tui-ico-date"></span>
+</div>
+<div class="date_wrapper" style="margin-top: -1px;"></div></div>
+
+<style>
+  .date_wrapper{position: relative;z-index:1;}
+</style>
+
+<script>var datepicker = new tui.DatePicker('.date_wrapper', {
+  date: new Date(),
+  input: {
+    element: '#datepicker-input',
+    format: 'MM-dd-yyyy'
+  }
+});</script>
+<pre class="language-html direct"><code><div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+  <input type="text" id="datepicker-input" aria-label="Date-Time">
+  <span class="tui-ico-date"></span>
+</div>
+<div class="date_wrapper" style="margin-top: -1px;"></div></code></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+
+
+        <div class="code-area">
+          <h3>타입 3 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap input-datepicker">
+  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+    <input id="startpicker-input1" type="text" aria-label="Date">
+    <span class="tui-ico-date"></span>
+    <div id="startpicker-container1" style="margin-left: -1px;"></div>
+  </div>
+  <span class="bridge">~</span>
+  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+    <input id="endpicker-input1" type="text" aria-label="Date">
+    <span class="tui-ico-date"></span>
+    <div id="endpicker-container1" style="margin-left: -1px;"></div>
+  </div>
+</div></div>
+
+<script>var today1 = new Date();
+var picker1 = tui.DatePicker.createRangePicker({
+  startpicker: {
+    date: today1,
+    input: '#startpicker-input1',
+    container: '#startpicker-container1'
+  },
+  endpicker: {
+    date: today1,
+    input: '#endpicker-input1',
+    container: '#endpicker-container1'
+  },
+  selectableRanges: [
+    [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
+  ],
+  format: 'MM-dd-YYYY',
+});
+
+picker1.on('change:end', () => {
+    console.log(123);
+})</script>
+<pre class="language-html direct"><code><div class="input-wrap input-datepicker">
+  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+    <input id="startpicker-input1" type="text" aria-label="Date">
+    <span class="tui-ico-date"></span>
+    <div id="startpicker-container1" style="margin-left: -1px;"></div>
+  </div>
+  <span class="bridge">~</span>
+  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+    <input id="endpicker-input1" type="text" aria-label="Date">
+    <span class="tui-ico-date"></span>
+    <div id="endpicker-container1" style="margin-left: -1px;"></div>
+  </div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+
+
+        <div class="code-area">
+          <h3>타입 3 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap input-timepicker">
+  <label>Durasi Pesan</label>
+  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+    <input id="startpicker-input2" type="text" aria-label="Date">
+    <span class="tui-ico-date time"></span>
+    <div id="startpicker-container2" style="margin-left: -1px;"></div>
+  </div>
+  <span class="bridge">~</span>
+  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+    <input id="endpicker-input2" type="text" aria-label="Date">
+    <span class="tui-ico-date time"></span>
+    <div id="endpicker-container2" style="margin-left: -1px;"></div>
+  </div>
+</div></div>
+
+<script>var today2 = new Date();
+var picker2 = tui.DatePicker.createRangePicker({
+  startpicker: {
+    date: today2,
+    input: '#startpicker-input2',
+    container: '#startpicker-container2'
+  },
+  endpicker: {
+    date: today2,
+    input: '#endpicker-input2',
+    container: '#endpicker-container2'
+  },
+  selectableRanges: [
+    [today2, new Date(today2.getFullYear() + 1, today2.getMonth(), today2.getDate())]
+  ],
+  format: 'MM-dd-YYYY HH:mm',
+  timePicker: true
+});
+
+picker2.on('change:end', () => {
+    console.log(123);
+})</script>
+<pre class="language-html direct"><code><div class="input-wrap input-timepicker pl96">
+  <label>Durasi Pesan</label>
+  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+    <input id="startpicker-input2" type="text" aria-label="Date">
+    <span class="tui-ico-date"></span>
+    <div id="startpicker-container2" style="margin-left: -1px;"></div>
+  </div>
+  <span class="bridge">~</span>
+  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+    <input id="endpicker-input2" type="text" aria-label="Date">
+    <span class="tui-ico-date"></span>
+    <div id="endpicker-container2" style="margin-left: -1px;"></div>
+  </div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+        </div><!-- .code-area -->
+
+
+
+        <div class="code-area">
+          <h3>타입 4 <button>코드 보기</button></h3>
+<div class="code-box"><div class="datepicker-area">
+  <div class="input-wrap tui">
+    <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+      <input id="startpicker-input4" type="text" aria-label="Date">
+      <span class="tui-ico-date"></span>
+    </div>
+    <span class="bridge">-</span>
+    <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+      <input id="endpicker-input4" type="text" aria-label="Date">
+      <span class="tui-ico-date"></span>
+    </div>
+  </div>
+</div><!--.datepicker-area -->
+<div class="datepicker-container" id="datepicker-container-tui1">
+  <div id="datepicker-tui1"></div>
+  <span class="btn-base tp1 green"><a href="#">닫기</a></span>
+</div>
+<div class="datepicker-container" id="datepicker-container-tui2">
+  <div id="datepicker-tui2"></div>
+  <span class="btn-base tp1 green"><a href="#">닫기</a></span>
+</div></div>
+
+<style>.datepicker-area{padding:16px;border-bottom:1px solid #EBEBEB;background-color:#fff;}
+.datepicker-container{padding:20px;display:none;background-color:#fff;}
+.datepicker-container.on{display:block;}
+.input-wrap.tui{display:flex;gap:0 10px;align-items:center;}
+.input-wrap.tui .bridge{flex-shrink:0;width:10px;height:14px;background:url(/img/common/ic_dash.svg) 50% 50% no-repeat;font-size:0;}
+.input-wrap.tui .s-datepicker{flex-grow:1;}
+.datepicker-container > .btn-base{margin-top:20px;}
+
+.input-wrap.tui .tui-datepicker-input{border:1px solid #ebebeb;border-radius:8px;overflow:hidden;flex-grow:1;height:auto;}
+.input-wrap.tui .tui-datepicker-input > input{padding:9px 14px;font-size:12px;}
+.input-wrap.tui .tui-datepicker-input > .tui-ico-date{width:18px;height:18px;background:url(../img/common/ic_calendar.svg) 50% 50% no-repeat;right:14px;top:6px;margin:0;}
+.tui-calendar .tui-calendar-header-info{display:none;}
+.datepicker-container .tui-datepicker{position: relative;}
+.datepicker-container .tui-datepicker-type-date,
+.datepicker-container .tui-calendar{width:100%;}
+.datepicker-container.on .tui-hidden{display:block;}
+.datepicker-container .tui-datepicker{border:0;}
+.datepicker-container .tui-datepicker.tui-hidden{display:block;}
+.datepicker-container .tui-datepicker .tui-is-selectable.tui-is-selected, .tui-datepicker.tui-rangepicker .tui-is-selectable.tui-is-selected{background-color:#4289F0;}
+.datepicker-container .tui-calendar .tui-calendar-title{font-size:20px;font-family:'Montserrat';font-weight:600;line-height:1.4;}
+.datepicker-container .tui-calendar .tui-calendar-header{border-bottom:0;}
+.datepicker-container .tui-calendar .tui-calendar-header-inner{height:auto;padding:6px 10px 26px;display:flex;justify-content:center;align-items:center;gap:0 20px;}
+.datepicker-container .tui-calendar-btn{width:20px;height:20px;position: static;font-size:0;}
+.tui-calendar .tui-calendar-btn-prev-month:after, .tui-calendar .tui-calendar-btn-next-month:after, .tui-calendar .tui-calendar-btn-prev-year:after, .tui-calendar .tui-calendar-btn-next-year:after{display:none;}
+.datepicker-container .tui-calendar .tui-calendar-btn-prev-month{background:url(/img/common/ic_calendar_l.svg) 50% 50% no-repeat;}
+.datepicker-container .tui-calendar .tui-calendar-btn-next-month{background:url(/img/common/ic_calendar_r.svg) 50% 50% no-repeat;}
+.datepicker-container .tui-calendar th{height:auto;padding:10px 0;font-size:12px;font-weight:500;color:#72767a;border-bottom:1px solid #EBEBEB;}
+.datepicker-container .tui-calendar td{font-family:'Montserrat';color:#333;font-weight:600;}
+.datepicker-container .tui-datepicker .tui-calendar-sun{color:#FC4852;}
+.datepicker-container .tui-datepicker .tui-is-blocked{opacity:0.5;}</style>
+<script>tui.DatePicker.localeTexts['customKey'] = {
+  titles: {
+      // days
+      DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      // daysShort
+      D: ['일', '월', '화', '수', '목', '금', '토'],
+      // months
+      MMMM: [
+          'January', 'February', 'March', 'April', 'May', 'June',
+          'July', 'August', 'September', 'October', 'November', 'December'
+      ],
+      // monthsShort
+      MMM: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
+  },
+  titleFormat: 'yyyy.MMM',
+  todayFormat: 'D, MMMM dd, yyyy',
+  date: 'Date',
+  time: 'Time'
+};
+
+var today1 = new Date();
+var picker4 = tui.DatePicker.createRangePicker({
+  language: 'customKey',
+  startpicker: {
+    date: today1,
+    input: '#startpicker-input4',
+    container: '#datepicker-tui1',
+  },
+  endpicker: {
+    date: today1,
+    input: '#endpicker-input4',
+    container: '#datepicker-tui2',
+  },
+  // selectableRanges: [
+  //   [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
+  // ],
+  format: 'YYYY.MM.dd',
+});
+
+picker4.on('change:start', () => {
+  console.log('시작일 설정');
+  $('#datepicker-container-tui1').removeClass('on');
+  $('#datepicker-container-tui2').addClass('on');
+});
+
+picker4.on('change:end', () => {
+  console.log('종료일 설정');
+});
+
+$('#startpicker-input4').on('click', function(){
+  $('#datepicker-container-tui2').removeClass('on');
+  $('#datepicker-container-tui1').addClass('on');
+});
+$('#endpicker-input4').on('click', function(){
+  $('#datepicker-container-tui1').removeClass('on');
+  $('#datepicker-container-tui2').addClass('on');
+});
+
+$('.datepicker-container .btn-base').on('click', function(e){
+  e.preventDefault();
+  $(this).closest('.datepicker-container').removeClass('on');
+});</script>
+<pre class="language-html direct"><code><div class="datepicker-area">
+  <div class="input-wrap input-datepicker">
+    <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+      <input id="startpicker-input4" type="text" aria-label="Date">
+      <span class="tui-ico-date"></span>
+    </div>
+    <span class="bridge">-</span>
+    <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+      <input id="endpicker-input4" type="text" aria-label="Date">
+      <span class="tui-ico-date"></span>
+    </div>
+  </div>
+</div><!--.datepicker-area -->
+<div class="datepicker-container" id="datepicker-container1">
+  <div id="datepicker1"></div>
+  <span class="btn-base tp1 green"><a href="#">닫기</a></span>
+</div>
+<div class="datepicker-container" id="datepicker-container2">
+  <div id="datepicker2"></div>
+  <span class="btn-base tp1 green"><a href="#">닫기</a></span>
+</div></code></pre>
+<pre class="language-css"></pre>
+<pre class="language-javascript"></pre>
+        </div><!-- .code-area -->
+
+      </div><!-- .section -->
+
+      <div class="section" data-aos="fade-up" data-aos-easing="ease">
+        <h2>Range Slider</h2>
+
+        <div class="code-area">
+          <h3>Horizontal <button>코드 보기</button></h3>
+<div class="code-box"><div class="slider-horizon-area">
+  <div class="slider-horizon"></div>
+  <input type="hidden" id="slider-horizon-amount" readonly />
+</div>
+<p class="slider-horizon-result"></p></div>
+<script>var rangeH = $(".slider-horizon");
+var rangeH_amount = $("#slider-horizon-amount");
+var rangeH_result = $('.slider-horizon-result');
+rangeH.slider({
+  range: "min",
+  min: 0,
+  max: 100,
+  value: 30,
+  step: 10,
+  slide: function(event, ui){
+    rangeH_amount.val(ui.value);
+    rangeH_result.text(ui.value);
+    if (ui.value > 0) {
+      rangeH.addClass('fill');
+    } else {
+      rangeH.removeClass('fill');
+    }
+  },
+});
+if (rangeH.slider("value") > 0) {
+  rangeH.addClass('fill');
+}
+rangeH_result.text(rangeH.slider("value"));</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+        
+        <div class="code-area">
+          <h3>Vertical <button>코드 보기</button></h3>
+<div class="code-box"><div class="slider-range-area">
+  <a href="#" class="btn-increase">+</a>
+  <a href="#" class="btn-decrease">-</a>
+  <div id="slider-vertical"></div>
+  <input type="hidden" id="slider-vertical-amount" readonly />
+</div>
+<p class="slider-vertical-result"></p></div>          
+          
+<script>
+var rangeV = $('.slider-range-area');
+var rangeV_amount = $("#slider-vertical-amount");
+var rangeV_result = $('.slider-vertical-result');
+rangeV.find("#slider-vertical").slider({
+  orientation: "vertical",
+  range: "min",
+  min: 0,
+  max: 100,
+  value: 40,
+  step: 10,
+  change: function(event, ui){
+    rangeV_result.text(ui.value);
+  },
+  slide: function(event, ui){
+    rangeV_amount.val(ui.value);
+    rangeV_result.text(ui.value);
+  },
+});
+
+rangeV_amount.val(rangeV.find("#slider-vertical").slider("value"));
+rangeV_result.text($("#slider-vertical").slider("value"));
+
+rangeV.find('.btn-increase').on('click', function(e){
+  e.preventDefault();
+  var value = $("#slider-vertical").slider('value');
+  rangeV.find("#slider-vertical").slider('value', value + 10);
+});
+rangeV.find('.btn-decrease').on('click', function(e){
+  e.preventDefault();
+  var value = $("#slider-vertical").slider('value');
+  rangeV.find("#slider-vertical").slider('value', value - 10);
+});
+</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+        
+      </div><!-- .section -->
+
+      <div class="section" data-aos="fade-up" data-aos-easing="ease">
+        <h2>텍스트박스</h2>
+
+        <div class="code-area">
+          <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box"><div class="textarea-base">
+  <textarea placeholder="해지사유를 입력해 주세요."></textarea>
+  <span class="tx-count"><em>0</em>/50</span>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>라디오 버튼</h2>
+
+        <div class="code-area">
+          <h3>가로형 <button>코드 보기</button></h3>
+<div class="code-box">
+  <ul class="radio-list">
+    <li>
+      <span class="radio-base">
+        <input type="radio" id="radio-wait-all" name="radio-wait" checked />
+        <label for="radio-wait-all">전체</label>
+      </span>
+    </li>
+    <li>
+      <span class="radio-base">
+        <input type="radio" id="radio-wait-yes" name="radio-wait" />
+        <label for="radio-wait-yes">Y</label>
+      </span>
+    </li>
+    <li>
+      <span class="radio-base">
+        <input type="radio" id="radio-wait-no" name="radio-wait" />
+        <label for="radio-wait-no">N</label>
+      </span>
+    </li>
+  </ul>
+</div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>세로형 <button>코드 보기</button></h3>
+<div class="code-box"><ul class="radio-list vertical">
+  <li>
+    <span class="radio-base">
+      <input type="radio" id="radio-vertical-all" name="radio-vertical" checked />
+      <label for="radio-vertical-all">전체</label>
+    </span>
+  </li>
+  <li>
+    <span class="radio-base">
+      <input type="radio" id="radio-vertical-yes" name="radio-vertical" />
+      <label for="radio-vertical-yes">Y</label>
+    </span>
+  </li>
+  <li>
+    <span class="radio-base">
+      <input type="radio" id="radio-vertical-no" name="radio-vertical" />
+      <label for="radio-vertical-no">N</label>
+    </span>
+  </li>
+</ul></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>체크박스</h2>
+
+        <div class="code-area">
+          <h3>기본 체크박스 <button>코드 보기</button></h3>
+<div class="code-box"><span class="chk-base">
+  <input type="checkbox" id="id-save" checked />
+  <label for="id-save">아이디 저장</label>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>모두 체크박스 - 리스트형(각각 다른 부모 요소) <button>코드 보기</button></h3>
+<div class="code-box"><div class="chk-group-area">
+  <div class="top-chk-area">
+    <span class="chk-base">
+      <input type="checkbox" id="chk-all" />
+      <label for="chk-all">전체선택</label>
+    </span>
+  </div>
+  <ul>
+    <li>
+      <span class="chk-base">
+        <input type="checkbox" id="chk-1" />
+        <label for="chk-1">선택1</label>
+      </span>
+    </li>
+    <li>
+      <span class="chk-base">
+        <input type="checkbox" id="chk-2" />
+        <label for="chk-2">선택2</label>
+      </span>
+    </li>
+  </ul>
+</div></div>
+<script>var callbackChkType1 = function (checked) {
+  console.log('전체체크 유무 : ', checked)
+};
+GUI.checkAllUI('#chk-all', 'list', callbackChkType1);</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>모두 체크박스 - 약관형 (형제 요소 li) <button>코드 보기</button></h3>
+<div class="code-box"><ul class="chk-list">
+  <li class="total">
+    <span class="chk-base">
+      <input type="checkbox" id="chk-agree-all" />
+      <label for="chk-agree-all">회원가입을 위한 약관 전체 동의</label>
+    </span>
+  </li>
+  <li>
+    <span class="chk-base">
+      <input type="checkbox" id="chk-agree-1" />
+      <label for="chk-agree-1">이용약관 동의 (필수)</label>
+    </span>    
+  </li>
+  <li>
+    <span class="chk-base">
+      <input type="checkbox" id="chk-agree-2" />
+      <label for="chk-agree-2">개인정보 수집 및 이용동의 (필수)</label>
+    </span>
+  </li>
+</ul></div>
+
+<script>var callbackChkType2 = function(checked){
+  console.log('전체체크 유무 : ', checked)
+};
+GUI.checkAllUI('#chk-agree-all', 'terms', callbackChkType2);</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>모두 체크박스 - 테이블형 <button>코드 보기</button></h3>
+<div class="code-box"><table summary="테이블 목록 요약" class="tb-list mt10">
+  <colgroup>
+    <col width="50" />
+    <col width="*" />
+    <col width="150" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col">
+        <span class="chk-base chk-only">
+          <input type="checkbox" id="chk-tb-all" />
+          <label for="chk-tb-all">전체 체크</label>
+        </span>
+      </th>
+      <th scope="col"><span class="tit-area">상품명</span></th>
+      <th scope="col"><span class="tit-area">금액</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <span class="chk-base chk-only">
+          <input type="checkbox" id="chk-tb-1" />
+          <label for="chk-tb-1">체크1</label>
+        </span>
+      </td>
+      <td class="t-left">MS마트 금액권 1천원권</td>
+      <td>1,000원</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="chk-base chk-only">
+          <input type="checkbox" id="chk-tb-2" />
+          <label for="chk-tb-2">체크2</label>
+        </span>
+      </td>
+      <td class="t-left">MS마트 금액권 2천원권</td>
+      <td>2,000원</td>
+    </tr>
+  </tbody>
+</table></div>
+<script>var callbackChkType3 = function(checked){
+  console.log('테이블 전체체크 유무 : ', checked)
+};
+
+GUI.checkAllUI('#chk-tb-all', 'table', callbackChkType3);</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>버튼</h2>
+        <div class="code-area">
+          <h3>버튼 마크업 <button>코드 보기</button></h3>
+<div class="code-box"><span class="btn-base tp1"><a href="#">버튼 - a</a></span>
+<span class="btn-base tp1"><input type="button" value="버튼 - input" /></span>
+<span class="btn-base tp1"><button>버튼 - button</button></span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+        <h3>비활성화 버튼 <button>코드 보기</button></h3>
+<div class="code-box"><span class="btn-base tp1 disabled"><a href="#">버튼 - a</a></span></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>셀렉트박스</h2>
+        <div class="code-area">
+          <h3>기본 셀렉트박스 <button>코드 보기</button></h3>
+<div class="code-box"><span class="select-base">
+  <span class="value"></span>
+  <select>
+    <option value="0" selected>선택</option>
+    <option value="1">Value 1</option>
+    <option value="2">Value 2</option>
+    <option value="3">Value 3</option>
+  </select>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>커스텀 셀렉트박스 - 옵션에 선택 포함 <button>코드 보기</button></h3>
+<div class="code-box"><div class="select-box">
+  <a href="#" class="value">선택</a>
+  <ul>
+    <li><a href="#">선택</a></li>
+    <li><a href="#">Value 1</a></li>
+    <li><a href="#">Value 2</a></li>
+  </ul>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>커스텀 셀렉트박스 - 선택값 있음 <button>코드 보기</button></h3>
+<div class="code-box"><div class="select-box" data-active="1">
+  <a href="#" class="value"></a>
+  <ul>
+    <li><a href="#">Value 1</a></li>
+    <li><a href="#">Value 2</a></li>
+  </ul>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>디자인 스크롤바</h2>
+        <div class="code-area">
+          <h3>기본형</h3>
+<div class="code-box"><div class="o-scrollbar" style="height: 150px;">
+  <div class="inner">
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+    긴글이 나옵니다.<br />
+  </div>
+</div></div>          
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>카운터</h2>
+        <div class="code-area">
+          <h3>1) 최소값, 최대값 세팅 안함 <button>코드 보기</button></h3>
+<div class="code-box"><span class="counter-base">
+  <button class="btn-minus">-</button>
+  <input type="text" value="1" readonly />
+  <button class="btn-plus">+</button>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+        
+        <div class="code-area">
+          <h3>2) 최소값 2, 최대값 10 <button>코드 보기</button></h3>
+<div class="code-box"><span class="counter-base" data-min="2" data-max="10">
+  <button class="btn-minus">-</button>
+  <input type="text" value="2" readonly />
+  <button class="btn-plus">+</button>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>3) 최소값 3, 최대값 세팅 안함 <button>코드 보기</button></h3>
+<div class="code-box"><span class="counter-base" data-min="3">
+  <button class="btn-minus">-</button>
+  <input type="text" value="4" readonly />
+  <button class="btn-plus">+</button>
+</span></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>탭</h2>
+        <div class="code-area">
+          <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box"><div class="tab-base">
+  <ul>
+    <li class="on"><a href="#tab1-1">전체</a></li>
+    <li class="category"><a href="#tab1-2">카테고리</a></li>
+  </ul>
+</div>
+<ul class="panel-base">
+  <li id="tab1-1">1-1</li>
+  <li id="tab1-2">1-2</li>
+</ul></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>팝업 - <span>magnific popup</span></h2>
+
+        <div class="code-area">
+          <h3>팝업 호출 <button>코드 보기</button></h3>
+<div class="code-box"><span class="btn-base tp1 btn-popup-modal"><a href="#popup-modal">MODAL 팝업</a></span><br />
+<span class="btn-base tp1 btn-popup-anim-1"><a href="#popup-anim-1">애니메이션 팝업 1 - BODY 고정(iOS에서는 고정 안됨)</a></span><br />
+<span class="btn-base tp1 btn-popup-anim-2"><a href="#popup-anim-2">애니메이션 팝업 2 - BODY 움직임 &amp; 이중 팝업</a></span><br />
+<span class="btn-base tp1 btn-popup-anim-3"><a href="#popup-anim-3">애니메이션 팝업 3 - BODY 고정(iOS에서도 고정), <br>하단에서 붙어서 올라옴 &amp; 이중 팝업</a></span><br />
+<span class="btn-base tp1"><a href="javascript:void(0);" onclick="openToday('fadeIn');">팝업 - Today - fadeIn</a></span><br />
+<span class="btn-base tp1"><a href="javascript:void(0);" onclick="openToday('slideUp');">팝업 - Today - slideUp</a></span><br />
+
+<!-- S : 팝업 : 모달 -->
+<div class="popup-wrap mfp-hide" id="popup-modal">
+  <h3 class="tit">모달</h3>
+  <div class="con-wrap">
+    <p class="desc">모달 팝업 예제입니다.</p>
+    <div class="btn-txt-wrap">
+      <a href="#" class="btn-txt b-mfp-close">확인</a>
+    </div>
+  </div>
+</div>
+
+<div class="popup-wrap z-anim mfp-hide" id="popup-anim-1">
+  <h3 class="tit">안내</h3>
+  <div class="con-wrap">
+    <p class="desc">비밀글은 본인만 볼 수 있습니다.</p>
+    <div class="btn-txt-wrap">
+      <a href="#" class="btn-txt b-mfp-close">확인</a>
+    </div>
+  </div>
+</div>
+
+<!-- S : 팝업 : 이중 팝업 -->
+<div class="popup-wrap z-anim mfp-hide" id="popup-anim-2">
+  <h3 class="tit">안내</h3>
+  <div class="con-wrap">
+    <p class="desc">이중 팝업 예제입니다.</p>
+    <span class="btn-base tp1 mt10"><a href="#" onclick="openCSPopup('popup-anim-2-in'); return false;">이중 팝업 호출</a></span>
+    <div class="btn-txt-wrap">
+      <a href="#" class="btn-txt b-mfp-close">확인</a>
+    </div>
+  </div>
+</div>        
+<div class="cs-popup-dimm" id="popup-anim-2-in-dimm"></div>
+<div class="cs-popup-wrap" id="popup-anim-2-in">
+  <div class="cs-popup-inner">
+    <h3 class="tit">안내</h3>
+    <div class="con-wrap">
+      <p class="desc">오류 유형 및 내용 안내 텍스트</p>
+      <div class="btn-txt-wrap">
+        <a href="#" class="btn-txt" onclick="closeCSPopup('popup-anim-2-in'); return false;">확인</a>
+      </div>
+    </div>
+    <button class="mfp-close"></button>
+  </div>
+</div>
+<!-- E : 팝업 : 이중 팝업 -->
+
+<!-- S : 팝업 : 이중 하단 팝업 -->
+<div class="popup-wrap mfp-hide" id="popup-anim-3">
+  <h3 class="tit">문의하기</h3>
+  <div class="con-wrap respon-wrap">
+    <div class="o-scrollbar">
+      <div class="inner">
+        <div>글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리<br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리 <br />글이 길 경우 하단 팝업 처리</div>
+        <span class="btn-base tp1 mt10"><a href="#" onclick="openCSPopup('popup-anim-3-in'); return false;">이중 하단 팝업 호출</a></span>
+        <div class="btn-txt-wrap">
+          <a href="#" class="btn-txt">저장</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- .popup-wrap -->    
+<div class="cs-popup-dimm cs-bottom" id="popup-anim-3-in-dimm"></div>
+<div class="cs-popup-wrap cs-bottom" id="popup-anim-3-in">
+  <div class="cs-popup-inner">
+    <h3 class="tit">문의하기</h3>
+    <div class="con-wrap respon-wrap">
+      <div class="o-scrollbar">
+        <div class="inner">
+          <span class="btn-base tp1 mt10"><a href="#" onclick="closeCSPopup('popup-anim-3-in'); return false;">이중 하단 팝업 닫기</a></span>
+          <div class="btn-txt-wrap">
+            <a href="#" class="btn-txt">저장</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="mfp-close"></button>
+  </div>
+</div>
+<!-- E : 팝업 : 이중 하단 팝업 -->
+
+<div class="popup-wrap z-anim mfp-hide" id="popup-today" data-width="448">
+  <div class="popup-inner">
+    <div class="con-wrap">
+      <div class="popup-swiper swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="#"><img src="https://placehold.co/448x485" alt=""></a></div>
+          <div class="swiper-slide"><a href="#"><img src="https://placehold.co/448x485" alt=""></a></div>
+          <div class="swiper-slide"><a href="#"><img src="https://placehold.co/448x485" alt=""></a></div>
+          <div class="swiper-slide"><a href="#"><img src="https://placehold.co/448x485" alt=""></a></div>
+        </div>
+        <span class="swiper-pagination"></span>
+      </div>
+    </div><!-- .con-wrap -->
+    <div class="btn-wrap">
+      <a href="#" class="btn-today">오늘 하루 그만 보기</a>
+      <a href="#" class="btn-close b-mfp-close">닫기</a>
+    </div>
+  </div><!-- .popup-inner -->
+</div><!-- .popup-wrap --></div>
+
+<script>if ($.cookie('popupToday') == 'hidden') {
+  $('#popup-today').remove();
+}
+$("#popup-today .btn-today").on("click",function(e){
+  e.preventDefault();
+  $.cookie('popupToday', 'hidden', {expires : 1});
+  $.magnificPopup.close();
+});
+
+var popupSwiper = new Swiper('.popup-swiper', {
+  pagination: {
+    el: '.popup-swiper.swiper-container .swiper-pagination',
+    type: 'fraction',
+  },
+  autoplay: {
+    delay: 3000,
+  },
+  loop: true,
+});
+
+function openToday(type) {
+  if (type == 'fadeIn') {
+    $.magnificPopup.open(getOptions('#popup-today'));
+  } else if (type == 'slideUp') {
+    $.magnificPopup.open(getOptions2('#popup-today'));
+  }
+  popupSwiper.update();
+}</script>
+
+<style>.popup-wrap#popup-today{background-color:transparent;}
+.popup-wrap#popup-today .popup-inner{margin:0 20px;}
+.popup-wrap#popup-today .con-wrap{padding:0;border-radius:20px;overflow:hidden;}
+.popup-wrap#popup-today .btn-wrap{margin-top:20px;display:flex;justify-content:space-between;padding:0 20px;}
+.popup-wrap#popup-today .btn-wrap a{font-size:14px;color:#fff;}
+.popup-wrap#popup-today .swiper-slide img{width:100%;}
+.popup-wrap#popup-today .swiper-pagination-bullet{width:10px;height:10px;background-color:#fff;opacity:1;}
+.popup-wrap#popup-today .swiper-pagination-bullet-active{background-color:#333;}
+.popup-wrap#popup-today .swiper-pagination-fraction{position:absolute;right:20px;bottom:20px;left:initial;width:auto;background-color:rgba(0, 0, 0, 0.5);border-radius:100px;padding:2px 6px;font-size:14px;line-height:17px;color:#bbb;}
+.popup-wrap#popup-today .swiper-pagination-fraction .swiper-pagination-current{color:#fff;}
+.popup-wrap#popup-today button.mfp-close, .popup-wrap#popup-today button.mfp-arrow{display:none;}
+.fix-bottom .popup-wrap#popup-today{margin:0 auto;}
+.fix-bottom .popup-wrap#popup-today .con-wrap{border-radius:20px 20px 0 0;}
+.fix-bottom .popup-wrap#popup-today .btn-wrap{margin-top:0;position: absolute;left:0;top:-35px;width:100%;z-index:1;}</style>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+        </div>
+
+      </div><!-- //section -->
+
+      <div class="section">
+        <h2>툴팁</h2>
+        <div class="code-area">
+          <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box"><ul class="tooltip-list">
+  <li><a href="#" class="top" title="Top">Top</a></li>
+  <li><a href="#" class="left" title="Left">Left</a></li>
+  <li><a href="#" class="right" title="Right">Right</a></li>
+  <li><a href="#" class="bottom" title="Bottom">Bottom</a></li>
+  <li><a href="#" class="autotop" title="AutoTop">AutoTop</a></li>
+  <li><a href="#" class="autoleft" title="AutoLeft">AutoLeft</a></li>
+
+  <li><a href="#" class="fade" title="Fade">Fade</a></li>
+  <li><a href="#" class="delay" title="Delay">Delay</a></li>
+  <li><a href="#" class="html" title="<p>Im <b>awesome</b> <u>and</u> <i>preformatted</i></p>">Html</a></li>
+</ul>
+
+<script src="js/jquery.tooltip.js"></script></div>
+<script>var $tip = $('.tooltip-list');
+$tip.find('.top').tooltip({align: 'top'});
+$tip.find('.right').tooltip({align: 'right'});
+$tip.find('.bottom').tooltip({align: 'bottom'});
+$tip.find('.left').tooltip({align: 'left'});
+$tip.find('.autotop').tooltip({align: 'autoTop'});
+$tip.find('.autoleft').tooltip({align: 'autoLeft'});
+
+$tip.find('.fade').tooltip({fade: true});
+$tip.find('.delay').tooltip({delay: {show: 300, hide:300}});
+
+$tip.find('.html').tooltip({html: true});</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+          </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>별점</h2>
+        <div class="code-area">
+          <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box"><div class="star-rating" id="star-rating1"></div>
+<input type="hidden" id="starRating1" value="3"/>
+
+<script src="js/jquery.raty.js"></script></div>
+<script>$('#star-rating1').raty({
+  score: 3,
+  path: "images/icons",
+  starOff: 'Icon_DetailPage_Star_GR.svg',
+  starOn: 'Icon_DetailPage_Star_BL.svg',
+  width: 200,
+  click: function(score, evt) {
+    $("#starRating1").val(score);
+  }
+});</script>
+<pre class="language-html direct"><code><div class="star-rating" id="star-rating1"></div>
+<input type="hidden" id="starRating1" value="3"/>
+
+<script src="js/jquery.raty.js"></script></code></pre>
+<pre class="language-javascript"></pre>
+        </div>
+      </div><!-- //section -->
+
+      <div class="section">
+        <h2>파입 업로드</h2>
+
+        <div class="code-area">
+          <h3>단일 파일 등록 <button>코드 보기</button></h3>
+<div class="code-box"><div class="profile-form">
+  <input type="file" id="image" accept="image/*" class="imgUpload" />
+  <span class="ico-camera"></span>
+</div>
+
+<script src="js/load-image.all.min.js"></script></div>
+
+<script>$('.imgUpload').on('change', function(e) {
+  loadImage(
+    e.target.files[0],
+    function (img) {
+      $('.profile-form').css('background-image', 'url(' + img.toDataURL() + ')');
+      $('.profile-form span.ico-camera').hide();          
+    },
+    {
+      canvas: true,
+      crop: true,
+      downsamplingRatio: 0.5,
+      maxWidth: 100,
+      maxHeight: 100,
+      orientation: true
+    }
+  );
+});</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+        
+        
+        <div class="code-area">
+          <h3>다중 파일 등록 <button>코드 보기</button></h3>
+<div class="code-box"><div class="file-box-wrap">
+  <ul class="file-box"></ul>
+  <span class="file-add"><input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" /></span>
+</div></div>
+<script>function setThumbnail(event) {
+  var reader = new FileReader();
+  reader.onload = function(event) {
+    $('.file-box').append('<li style="background-image:url(' + event.target.result + ')"></li>')
+  };
+  reader.readAsDataURL(event.target.files[0]); 
+}</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>파일업로드 - input <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="file-upload-area">
+  <input type="file" />
+  <a href="#" class="btn-upload">UPLOAD</a>
+  <span class="file-path"></span>
+</div></div>
+<script>
+  $('.file-upload-area').find('input[type="file"]').on('change', function(){
+    var $path = $(this).closest('.file-upload-area').find('.file-path');
+    var fileValue = this.value.split('\\');  
+    $path.text(fileValue[fileValue.length-1]);
+    $path.show();
+  });
+</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>파일 드래그 기능 <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="file-dnd-area">
+  <span class="file-msg">끌어다 놓기로 업로드하거나 
+    <a href="#">파일 찾아보기</a>
+    <input type="file" />
+  </span>
+</div>
+<div class="file-list-area edit mt10" style="display: none">
+  <ul>
+  </ul>
+</div></div>
+<script>var $fileList = $('.file-list-area');
+$fileList.on('click', '.btn-del-file', function(e){
+  e.preventDefault();
+  $(this).closest('li').remove();
+  if ($fileList.find('li').length === 0) {
+    $fileList.hide();
+  }
+});		
+var addFileList = function(data){
+  $fileList.find('ul').append('<li>' + data + '<a href="#" class="btn-del-file">삭제</a></li>');
+  if ($fileList.css('display') === 'none') {
+    $fileList.show();
+  }
+};
+var uploadBox = document.querySelector('.file-dnd-area');
+uploadBox.addEventListener('dragover', function(e) {
+  e.preventDefault();
+});
+uploadBox.addEventListener('drop', function(e) {
+  e.preventDefault();
+  var formData = new FormData();
+  formData.append('uploadFile', e.dataTransfer.files[0]);
+  addFileList(e.dataTransfer.files[0].name);
+});
+$('.file-dnd-area').find('input[type="file"]').on('change', function(){
+  var fileValue = this.value.split('\\');  
+  addFileList(fileValue[fileValue.length-1]);
+});</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+        
+      </div><!-- //section -->
+
+      <div class="section">
+        <h2>테이블</h2>
+        <div class="code-area">
+          <h3>목록형 <button>코드 보기</button></h3>
+
+<div class="code-box"><table summary="테이블 목록 요약" class="tb-list mt10">
+  <colgroup>
+    <col width="8%" />
+    <col width="*" />
+    <col width="8%" />
+    <col width="16%" />
+    <col width="16%" />
+    <col width="8%" />
+    <col width="8%" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col"><span class="tit-area">핀번호</span></th>
+      <th scope="col"><span class="tit-area">상품명</span></th>
+      <th scope="col"><span class="tit-area">금액</span></th>
+      <th scope="col"><span class="tit-area">교환일</span></th>
+      <th scope="col"><span class="tit-area">교환취소일</span></th>
+      <th scope="col"><span class="tit-area">교환지점</span></th>
+      <th scope="col"><span class="tit-area">상태</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>999480297151</td>
+      <td>MS마트 금액권 1천원권</td>
+      <td>1,000원</td>
+      <td>2022-02-11 13:20:50</td>
+      <td></td>
+      <td>일이삼사</td>
+      <td>교환</td>
+    </tr>
+  </tbody>
+</table></div>
+<pre class="language-html"></pre>
+
+        </div>
+        
+        <div class="code-area">
+          <h3>보기형 <button>코드 보기</button></h3>
+<div class="code-box"><table summary="테이블 보기 요약" class="tb-view mt10">
+  <colgroup>
+    <col width="112" />
+    <col width="*" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">쿠폰 번호</th>
+      <td>99480297151</td>
+    </tr>
+    <tr>
+      <th scope="row">상품명</th>
+      <td>MS마트 금액권 1천원권 </td>
+    </tr>
+    <tr>
+      <th scope="row">가격</th>
+      <td>1,000</td>
+    </tr>
+    <tr>
+      <th scope="row">상태</th>
+      <td>사용이 가능한 쿠폰번호입니다.</td>
+    </tr>
+    <tr>
+      <th scope="row">쿠폰 사용기간</th>
+      <td>2022-01-02 11:22:11 ~ 2022-03-01 23:59:59</td>
+    </tr>
+  </tbody>
+</table></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- //section -->
+
+      <div class="section">
+        <h2>페이지네이션</h2>
+        <div class="code-area">
+          <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box"><div class="pagination">
+  <a href="#" class="btn-prev">이전</a>
+  <a href="#" class="on">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#" class="btn-next">다음</a>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- //section -->
+
+      <div class="section">
+        <h2>토스트 팝업</h2>
+        <div class="code-area">
+          <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box"><span class="btn-base tp1"><a href="#" onclick="GUI.toastUI('등록이 완료되었습니다.', 80); return false;">등록</a></span>
+<div class="toast-area"></div></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- //section -->
+
+      <div class="section">
+        <h2>기타 기능</h2>
+        <div class="code-area">
+          <h3>배열 데이터 순회 - 좌우버튼 <button>코드 보기</button></h3>
+<div class="code-box"><div class="temp-view">
+  <span>데이터 조회 : </span>
+</div>
+<div class="temp-wrap">
+  <button class="btn-prev">좌</button>
+  <span class="temp-res"></span>
+  <button class="btn-next">우</button>
+</div></div>
+<script>var arrTemp = [2700, 3500, 4000, 5000];
+var stateNumber = 0;
+
+arrTemp.forEach(function(val){
+  $('.temp-view').append('<span style="margin-right: 5px;">' + numberWithCommas(val) + '</span>');
+})
+$('.temp-res').text(numberWithCommas(arrTemp[stateNumber]))
+$('.temp-wrap').find('.btn-prev').on('click', function(){
+  if (stateNumber > 0) {
+    stateNumber--;
+  } else {
+    stateNumber = arrTemp.length - 1;
+  }
+  $('.temp-res').text(numberWithCommas(arrTemp[stateNumber]));
+});
+$('.temp-wrap').find('.btn-next').on('click', function(){
+  if (stateNumber < arrTemp.length - 1) {
+    stateNumber++;
+  } else {
+    stateNumber = 0;
+  }
+  $('.temp-res').text(numberWithCommas(arrTemp[stateNumber]));
+});</script>
+<pre class="language-html direct"><code><div class="temp-view">
+  <span>데이터 조회 : </span>
+</div>
+<div class="temp-wrap">
+  <button class="btn-prev">좌</button>
+  <span class="temp-res"></span>
+  <button class="btn-next">우</button>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+
+
+        <div class="code-area">
+          <h3>드래그 앤 드랍 - 심플 <button>코드 보기</button></h3>
+<div class="code-box"><ul id="simpleList" class="list-group">
+  <li class="list-group-item">
+    <span class="num">1</span>
+    <span class="data">초기 1번째 데이터</span>
+    <a href="#" class="del">X</a>
+  </li>
+  <li class="list-group-item">
+    <span class="num">2</span>
+    <span class="data">초기 2번째 데이터</span>
+    <a href="#" class="del">X</a>
+  </li>
+  <li class="list-group-item">
+    <span class="num">3</span>
+    <span class="data">초기 3번째 데이터</span>
+    <a href="#" class="del">X</a>
+  </li>
+  <li class="list-group-item">
+    <span class="num">4</span>
+    <span class="data">초기 4번째 데이터</span>
+    <a href="#" class="del">X</a>
+  </li>
+  <li class="list-group-item">
+    <span class="num">5</span>
+    <span class="data">초기 5번째 데이터</span>
+    <a href="#" class="del">X</a>
+  </li>
+  <li class="list-group-item">
+    <span class="num">6</span>
+    <span class="data">초기 6번째 데이터</span>
+    <a href="#" class="del">X</a>
+  </li>
+  <li class="list-group-item">
+    <span class="num">7</span>
+    <span class="data">초기 7번째 데이터</span>
+    <a href="#" class="del">X</a>
+  </li>
+  <li class="list-group-item">
+    <span class="num">8</span>
+    <span class="data">초기 8번째 데이터</span>
+    <a href="#" class="del">X</a>
+  </li>
+</ul>
+<script src="js/Sortable.js"></script></div>
+<style>
+#simpleList > li{border:1px solid #ddd;background-color:#fff;border-radius:3px;padding:10px;font-size:14px;margin-top:10px;cursor:pointer;}
+#simpleList > li:first-child{margin-top:0;}
+#simpleList > li .num{background-color: #000;color:#fff;padding:0px 5px;border-radius:3px;}
+</style>
+<script>Sortable.create(simpleList, {
+  animation: 150,
+  filter: ".disabled",
+  onMove: function (evt) {
+    return !evt.related.classList.contains('disabled');
+  },
+  onEnd: function() {
+    setNumber();
+  }
+});
+
+$('#simpleList li .del').on('click', function(e){
+  e.preventDefault();
+  $(this).closest('li').remove();
+  setNumber();
+});
+
+function setNumber() {
+  $('#simpleList li').each(function(i){
+    $(this).find('.num').text(i + 1);
+  });
+}</script>
+<pre class="language-html"></pre>
+<pre class="language-css"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+
+
+        <div class="code-area">
+          <h3>드래그 앤 드랍 - 데이블형 <button>코드 보기</button></h3>
+<div class="code-box"><div class="tb-div-wrap mt16">
+  <div class="tb-div" id="tableList">
+    <div class="columnGroup disabled">
+      <div class="columnCell">Phase <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></div>
+      <div class="columnCell">폼 ID <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></div>
+      <div class="columnCell">표출 화면</div>
+    </div>
+    <div class="columnGroup disabled">
+      <div class="columnCell"><span class="btn-base"><a href="#">1 현시</a></span></div>
+      <div class="columnCell">
+        <div class="input-wrap">
+          <div class="input-btn">
+            <input type="text" class="input-base" placeholder="폼 선택" disabled />
+          </div>
+        </div>
+      </div>
+      <div class="columnCell"></div>
+    </div>
+    <div class="columnGroup disabled">
+      <div class="columnCell"><span class="btn-base"><a href="#">2 현시</a></span></div>
+      <div class="columnCell">
+        <div class="input-wrap">
+          <div class="input-btn">
+            <input type="text" class="input-base" placeholder="폼 선택" disabled />
+          </div>
+        </div>
+      </div>
+      <div class="columnCell"></div>
+    </div>
+    <div class="columnGroup disabled">
+      <div class="columnCell"><span class="btn-base"><a href="#">3 현시</a></span></div>
+      <div class="columnCell">
+        <div class="input-wrap">
+          <div class="input-btn">
+            <input type="text" class="input-base" placeholder="폼 선택" disabled />
+          </div>
+        </div>
+      </div>
+      <div class="columnCell"></div>
+    </div>
+    <div class="columnGroup disabled">
+      <div class="columnCell"><span class="btn-base"><a href="#">4 현시</a></span></div>
+      <div class="columnCell">
+        <div class="input-wrap">
+          <div class="input-btn">
+            <input type="text" class="input-base" placeholder="폼 선택" disabled />
+          </div>
+        </div>
+      </div>
+      <div class="columnCell"></div>
+    </div>
+    <div class="columnGroup disabled">
+      <div class="columnCell"><span class="btn-base"><a href="#">5 현시</a></span></div>
+      <div class="columnCell">
+        <div class="input-wrap">
+          <div class="input-btn">
+            <input type="text" class="input-base" placeholder="폼 선택" disabled />
+          </div>
+        </div>
+      </div>
+      <div class="columnCell"></div>
+    </div>
+    <div class="columnGroup disabled">
+      <div class="columnCell"><span class="btn-base"><a href="#">6 현시</a></span></div>
+      <div class="columnCell">
+        <div class="input-wrap">
+          <div class="input-btn">
+            <input type="text" class="input-base" placeholder="폼 선택" disabled />
+          </div>
+        </div>
+      </div>
+      <div class="columnCell"></div>
+    </div>
+  </div><!-- .tb-div -->
+  <div class="tb-div-foot">
+    <div class="columnGroup disabled">
+      <div class="columnCell">
+        주기 : <em>00</em>초 (권장)
+      </div>
+    </div>
+    <div class="columnGroup">
+      <div class="columnCell">
+        <div class="gage-wrap">
+          <span class="gage"></span>
+        </div>    
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/Sortable.js"></script></div>
+<style>
+.tb-div-wrap{border-radius:4px;overflow:hidden;}
+.tb-div,
+.tb-div-foot{display:flex;}
+.tb-div > .columnGroup{width:173px;}
+.tb-div > .columnGroup:first-child,
+.tb-div-foot > .columnGroup:first-child{width:160px;flex-shrink:0;flex-grow:initial;}
+.tb-div > .columnGroup, .tb-div-foot > .columnGroup{flex-grow:1;position:relative;}
+.tb-div > .columnGroup > .columnCell,
+.tb-div-foot > .columnGroup > .columnCell{display:flex;align-items:center;justify-content:center;padding:8px 12px;background-color:#34374c;border-top:1px solid #212332;border-left:1px solid #212332;}
+.tb-div > .columnGroup > .columnCell:first-child{border-top:0;}
+.tb-div > .columnGroup > .columnCell{height:63px;}
+.tb-div-foot > .columnGroup > .columnCell{height:44px;}
+.tb-div > .columnGroup > .columnCell:nth-child(3){height:103px;}
+.tb-div > .columnGroup.foot > .columnCell{height:44px;}
+.tb-div > .columnGroup:nth-child(1) > .columnCell,
+.tb-div-foot > .columnGroup:nth-child(1) > .columnCell{background-color:#3e4157;justify-content:flex-start;border-left:0;color:#778298;gap:0 4px;font-weight:500;}
+.tb-div-foot > .columnGroup > .columnCell em{font-weight:inherit;}
+.tb-div-foot > .columnGroup > .columnCell .primary{color:#19b2e8;}
+.tb-div > .columnGroup::before{content:'';width:100%;height:100%;border:1px solid #1ac2ff;position: absolute;left:0;top:0;display:none;}
+.tb-div > .columnGroup.sortable-chosen::before{display:block;}
+.tb-div > .columnGroup.disabled .btn-base > *{background-color: #999;color:#ccc;}
+.tb-div-foot{display:flex;}
+</style>
+<script>$('.tb-div a:contains("현시")').parent().on('click', function(e){
+  e.preventDefault();
+  e.stopPropagation();
+  if (!$(this).hasClass('on')) {
+    $(this).addClass('on');
+    $(this).closest('.columnGroup').removeClass('disabled');
+  } else {
+    $(this).removeClass('on');
+    $(this).closest('.columnGroup').addClass('disabled');
+  }
+});    
+// $('.gage-wrap .gage').animate({ width: '100%' }, 1000 * 18);
+var result = Sortable.create(document.getElementById('tableList'), {
+  sort: true,
+  handle: '.columnGroup',
+  animation: 150,
+  filter: ".columnGroup.disabled",
+  onChoose: function (evt) {
+    // console.log('Element chosen:', evt.item);
+    // console.log('Element chosen:', evt.target);
+  },
+  onMove: function (evt) {
+    return !evt.related.classList.contains('disabled');
+  },
+});</script>
+<pre class="language-html"></pre>
+<pre class="language-css"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+      </div><!-- //section -->
+
+      <div class="section">
+        <h2>EChart - BGF - <span>echartOptions.js</span></h2>
+
+        <div class="code-area">
+          <h3>Line 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div id="lineChart" style="width: 100%; height: 200px;"></div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></div>
+<script>var lineChart = echarts.init(document.getElementById('lineChart'));
+lineChart.setOption(options['line']);
+window.addEventListener('resize', function () {
+  lineChart.resize();
+});</script>
+
+<pre class="language-html direct"><code><div id="lineChart" style="width: 100%; height: 200px;"></div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></code></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+
+        <div class="code-area">
+          <h3>Doughnut 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div id="doughnutChart" style="width: 100%; height: 372px;"></div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></div>
+<script>var doughnutChart = echarts.init(document.getElementById('doughnutChart'));
+doughnutChart.setOption(options['doughnut']);
+window.addEventListener('resize', function () {
+  doughnutChart.resize();
+});</script>
+
+<pre class="language-html direct"><code><div id="doughnutChart" style="width: 100%; height: 372px;"></div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></code></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>BarStack 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div id="barStackChart" style="width: 100%; height: 372px;"></div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></div>
+<script>var barStackChart = echarts.init(document.getElementById('barStackChart'));
+barStackChart.setOption(options['barStack']);
+window.addEventListener('resize', function () {
+  barStackChart.resize();
+});</script>
+
+<pre class="language-html direct"><code><div id="barStackChart" style="width: 100%; height: 372px;"></div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></code></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+
+      </div><!-- //section -->
+
+
+      <div class="section">
+        <h2>EChart - OPR - <span>echartOptions2.js</span></h2>
+
+        <div class="code-area">
+          <h3>Pie 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area">
+  <div id="pieChart" style="width: 100%; height: 411px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions2.js"></script></div>
+<script>var pieChart = echarts.init(document.getElementById('pieChart'));
+pieChart.setOption(options['pie']);
+window.addEventListener('resize', function () {
+pieChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Line + Bar 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area">
+  <div id="lineBarChart" style="width: 100%; height: 411px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions2.js"></script></div>
+<script>var lineBarChart = echarts.init(document.getElementById('lineBarChart'));
+lineBarChart.setOption(options['lineBar']);
+window.addEventListener('resize', function () {
+lineBarChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Line + Pie 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area">
+  <div id="lineUpChart" style="width: 100%; height: 501px;"></div>
+  <div id="pieDownChart" style="width: 100%; height: 305px; position: absolute; left: 0; top: 30px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions2.js"></script></div>
+<script>var lineUpChart = echarts.init(document.getElementById('lineUpChart'));
+var pieDownChart = echarts.init(document.getElementById('pieDownChart'));
+lineUpChart.setOption(options['lineUp']);
+pieDownChart.setOption(options['pieDown']);
+window.addEventListener('resize', function () {
+lineUpChart.resize();
+pieDownChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Bar Stack 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 404px;">
+  <div id="barStackChart2" style="width: 100%; height: 372px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions2.js"></script></div>
+<script>var barStackChart2 = echarts.init(document.getElementById('barStackChart2'));
+barStackChart2.setOption(options['barStack']);
+window.addEventListener('resize', function () {
+barStackChart2.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Line 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 404px;">
+  <div id="lineChart2" style="width: 100%; height: 372px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions2.js"></script></div>
+<script>var lineChart2 = echarts.init(document.getElementById('lineChart2'));
+lineChart2.setOption(options['line']);
+window.addEventListener('resize', function () {
+lineChart2.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Bar + pie 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 608px;">
+  <div class="inner">
+    <div id="barMultiChart2" style="width: 100%; height: 576px;"></div>
+    <div id="pieRightChart2" style="width: 345px; height: 305px; position: absolute; right: 0; top: 40px;"></div>
+  </div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions2.js"></script></div>
+<script>var barMultiChart2 = echarts.init(document.getElementById('barMultiChart2'));
+var pieRightChart2 = echarts.init(document.getElementById('pieRightChart2'));
+barMultiChart2.setOption(options['barMulti']);
+pieRightChart2.setOption(options['pieRight']);
+window.addEventListener('resize', function () {
+barMultiChart2.resize();
+pieRightChart2.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Doughnut 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 404px;">
+  <div class="inner">
+    <div id="doughnutChart2" style="width: 100%; height: 372px;"></div>
+  </div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions2.js"></script></div>
+<script>var doughnutChart2 = echarts.init(document.getElementById('doughnutChart2'));
+doughnutChart2.setOption(options['doughnut']);
+window.addEventListener('resize', function () {
+doughnutChart2.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Bar - Vertical 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 404px;">
+  <div class="inner">
+    <div id="barVerticalChart2" style="width: 100%; height: 372px;"></div>
+  </div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions2.js"></script></div>
+<script>var barVerticalChart2 = echarts.init(document.getElementById('barVerticalChart2'));
+barVerticalChart2.setOption(options['barVertical']);
+window.addEventListener('resize', function () {
+barVerticalChart2.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Bar + Line 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 608px;">
+  <div class="inner">
+    <div id="barLineChart2" style="width: 100%; height: 576px;"></div>
+  </div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions2.js"></script></div>
+<script>var barLineChart2 = echarts.init(document.getElementById('barLineChart2'));
+barLineChart2.setOption(options['barLine']);
+window.addEventListener('resize', function () {
+barLineChart2.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>EChart - Megagong - <span>echartOptions3.js</span></h2>
+
+        <div class="code-area">
+          <h3>Pie 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area bg-white">
+  <div id="mpieChart" style="width: 100%; height: 400px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions3.js"></script></div>
+<script>// 과목별 응시 비중 데이터(pie)
+  var mockPie = [
+      { name: '국어' , value: 25 },
+      { name: '영어' , value: 10 },
+      { name: '한국사' , value: 30 },
+      { name: '형법' , value: 10 },
+      { name: '형사소송법' , value: 25 },
+  ];
+  
+  var mpieChart = echarts.init(document.getElementById('mpieChart'));
+  mpieChart.setOption(pieOptions(mockPie, '과목별 응시 비중'));
+  window.addEventListener('resize', function () {
+      mpieChart.resize();
+  });</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Radar 챠트 - 데이터 5개 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area bg-white">
+  <div id="mradarChart1" style="width: 100%; height: 400px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions3.js"></script></div>
+<script>// 과목별 정답률 데이터(radar)
+var mockRadar = [
+    { name: '국어' , value: 40 },
+    { name: '영어' , value: 70 },
+    { name: '한국사' , value: 80 },
+    { name: '형법' , value: 70 },
+    { name: '형사소송법', value: 80  }
+];
+
+var mradarChart1 = echarts.init(document.getElementById('mradarChart1'));
+mradarChart1.setOption(radarOptions(mockRadar, '과목별 정답률'));
+window.addEventListener('resize', function () {
+    mradarChart1.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Radar 챠트 - 데이터 4개 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area bg-white">
+  <div id="mradarChart2" style="width: 100%; height: 400px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions3.js"></script></div>
+<script>// 과목별 정답률 데이터(radar)
+var mockRadar = [
+    { name: '국어' , value: 40 },
+    { name: '영어' , value: 70 },
+    { name: '한국사' , value: 80 },
+    { name: '형법' , value: 70 },
+];
+
+var mradarChart2 = echarts.init(document.getElementById('mradarChart2'));
+mradarChart2.setOption(radarOptions(mockRadar, '과목별 정답률'));
+window.addEventListener('resize', function () {
+    mradarChart2.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Line 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area bg-white">
+  <div id="mlineChart" style="width: 100%; height: 400px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions3.js"></script></div>
+<script>// 최근 10회 모의고사 점수 현황 데이터(line)
+var mockLine = [
+    { name: '국어', value: [40, 50, 85, 75, 60, 80, 85, 90, 95, 100] },
+    { name: '영어', value: [52, 55, 60, 50, 65, 70, 75, 80, 75, 70] },
+];
+
+var mlineChart = echarts.init(document.getElementById('mlineChart'));
+mlineChart.setOption(lineOptions(mockLine, '최근 10회 모의고사 점수 현황'));
+window.addEventListener('resize', function () {
+    mlineChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Line 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area bg-white">
+  <div id="mlineChangeChart" style="width: 100%; height: 400px;"></div>
+  <span class="btn-base tp1" id="change_lineChart"><a href="javascript:;">mlineChart 값 변경</a></span>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions3.js"></script></div>
+<script>// 최근 10회 모의고사 점수 현황 데이터(line)
+var mockLine = [
+    {
+        name: '국어',
+        value: [40, 50, 85, 75, 60, 80, 85, 90, 95, 100]
+    },
+    {
+        name: '영어',
+        value: [52, 55, 60, 50, 65, 70, 75, 80, 75, 70]
+    },
+];
+
+var mlineChangeChart = echarts.init(document.getElementById('mlineChangeChart'));
+mlineChangeChart.setOption(lineOptions(mockLine));
+window.addEventListener('resize', function () {
+    mlineChangeChart.resize();
+});
+
+var testChange = false;
+var mockTest = [
+    {
+        name: '국어',
+        value: [50, 60, 70, 85, 90, 70, 80, 90, 95, 100]
+    },
+    {
+        name: '한국사',
+        value: [100, 75, 30, 70, 55, 60, 75, 85, 90, 95]
+    },
+];
+$('#change_lineChart').on('click', function(){
+  if(!testChange) {
+      testChange = true;
+      mlineChangeChart.setOption(lineOptions(mockTest));
+  } else {
+      testChange = false;
+      mlineChangeChart.setOption(lineOptions(mockLine));
+  }
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Bar 반응형 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area bg-white">
+  <div id="mbarResponseChart" style="width: 100%; height: 400px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions3.js"></script></div>
+<script>// 국어 점수 데이터(barResponse)
+var mockBar = [
+    { name: '국어', value: [40, 50, 85, 75, 60, 80, 85, 90, 95, 100] },
+];
+
+var mbarResponseChart = echarts.init(document.getElementById('mbarResponseChart'));
+mbarResponseChart.setOption(barResponseOptions_pc(mockBar, '국어 정답률'));
+
+$(window).on("load resize",function(e){
+    var winWidth = $(window).width();
+    
+    if (winWidth >= 1024) { // 1024 이상일때 pc
+        mbarResponseChart.setOption(barResponseOptions_pc(mockBar, '국어 정답률'));
+    }
+    if(winWidth < 1024) { // 1024 미만일때 mo
+        mbarResponseChart.setOption(barResponseOptions_mo(mockBar, '국어 정답률'));
+    }
+
+    mbarResponseChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+      </div><!-- .section -->
+
+      
+
+      
+      <script>
+        GUI.mainScroll();
+      </script>
+
+      <div class="component-menu">
+        <ul class="component-list"></ul>
+        <span class="btn-base tp1"><a href="#">닫기</a></span><br />
+      </div>
+
+    </div><!-- #container -->
+    <div id="footer">
+      <h2>퍼블리싱 폴포츠</h2>
+      <address>
+        <span>서울시 동작구 사당동, 퍼블리싱 폴포츠</span><br />
+        <span>대표자 : 성연욱</span><br />
+        <span>전화번호 : 010-4147-5948</span><br />
+        <span>고객센터 : <a href="mailto:heroyooi1018@gmail.com">heroyooi1018@gmail.com</a></span>
+      </address>
+      <p class="copy">© 2021 Sungyeonwook. All rights reserved.</p>
+    </div><!-- #footer -->
+  </div><!-- #wrapper -->
+
+  <script>
+    var compMenu = $('.component-menu');
+    var compSection = $('.component .section');
+    var compPosition = [];
+
+    compSection.each(function(){
+      compMenu.find('ul').append('<li>' + $(this).find('h2').text() + '</li>');
+      compPosition.push($(this).position().top)
+    });
+    compMenu.on('click', 'li', function(){
+      $('html, body').animate({ scrollTop: compSection.eq($(this).index()).position().top }, 300);
+    });
+
+    $(window).on('load scroll', function(){
+      var scTop = $(this).scrollTop();
+      var scBottom = scTop >= $(document).height() - $(window).height();
+      for (var i = 0; i < compPosition.length; i++) {
+        if (scBottom) {
+          compMenu.find('li').eq(compPosition.length - 1).addClass('on');
+          compMenu.find('li').eq(compPosition.length - 1).siblings().removeClass('on');
+        } else {
+          if (scTop >= compPosition[i] - 10 && scTop < compPosition[i + 1]) {
+            compMenu.find('li').eq(i).addClass('on')
+            compMenu.find('li').eq(i).siblings().removeClass('on');
+          }
+        }
+      }
+    });
+
+    compMenu.find('.btn-base a').on('click', function(e){
+      e.preventDefault();
+      if ($(this).text() === '닫기') {
+        $(this).text('열기');
+        compMenu.find('.component-list').hide();
+      } else {
+        $(this).text('닫기');
+        compMenu.find('.component-list').show();
+      }
+      
+    });
+
+    setTimeout(function(){
+      // $(window).scrollTop(compSection.eq(14).position().top);
+      compMenu.find('.btn-base a').click();
+    }, 150);
+  </script>
+  <script src="js/prism.js"></script>
+</body>
+</html>

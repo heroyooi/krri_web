@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/* swiper */
+.swiper_common_wrap { position: relative; text-align: center; } 
+.swiper_common_wrap .swiper_common.swiper-initialized { position: relative;  max-width: 1320px; margin: 0 auto; } 
+
+/* main-visual swiper */
+.main_visual.swiper_common_wrap{overflow:hidden;position: relative;}
+.main_visual.swiper_common_wrap .swiper-items{display:flex;justify-content: space-between;align-items: center;margin:0 auto 16px;width:1240px;}
+.main_visual.swiper_common_wrap .swiper-items .swiper-paging,
+.main_visual.swiper_common_wrap .swiper-items .swiper-arrow{display:flex;align-items:center;}
+.main_visual.swiper_common_wrap .swiper-items .swiper-paging{gap:0 24px;}
+.main_visual.swiper_common_wrap .swiper-items .swiper-arrow{gap:0 8px;}
+.main_visual.swiper_common_wrap .swiper-items .swiper-arrow .arrow{background: #f4f6fc url('/img/common/ico-m-nextpage-b.svg') no-repeat center; width: 42px; height: 42px; border-radius: 20px;}
+.main_visual.swiper_common_wrap .swiper-items .swiper-arrow .arrow.swiper-next { transform: rotate(180deg) } 
+.main_visual.swiper_common_wrap .swiper-items .swiper-paging li,
+.main_visual.swiper_common_wrap .swiper-items .swiper-arrow .arrow{cursor:pointer;}
+.main_visual.swiper_common_wrap .swiper-items .swiper-paging li{font-size:16px;color:#656b7b;display:flex;align-items: center;gap:0 8px;}
+.main_visual.swiper_common_wrap .swiper-items .swiper-paging li .text{}
+.main_visual.swiper_common_wrap .swiper-items .swiper-paging li .range{display:none;}
+.main_visual.swiper_common_wrap .swiper-items .swiper-paging li .range .gage{display:block;width:0;height:100%;background-color: #4b75ee;border-radius:2px;}
+.main_visual.swiper_common_wrap .swiper-items .swiper-paging li.active{color:#32394f;font-weight:500;}
+.main_visual.swiper_common_wrap .swiper-items .swiper-paging li.active .range{display:inline-block;width:110px;height:4px;border-radius:2px;background-color: #d7e0fb;}
+.main_visual.swiper_common_wrap .swiper-wrapper { align-items: center; } 
+.main_visual.swiper_common_wrap .swiper-slide { position: relative; opacity: 0.5; transition: opacity 0.2s; } 
+.main_visual.swiper_common_wrap .swiper-slide.swiper-slide-active { opacity: 1; }
+
+.main_news{padding:80px 0 100px;background-color: #f4f6fc;}

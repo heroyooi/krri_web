@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiper Example</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/prism.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script><!-- 11.2.0 -->
+  <script src="js/aos.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrapper" class="ver_swiper">
+    <div id="container" class="ex_wrp">
+      <h2>Swiper Example</h2>
+
+<pre class="language-html guide">
+<code><!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<link rel="stylesheet" href="css/swiper-bundle.min.css" /><!-- 11.2.0 -->
+<script src="js/swiper-bundle.min.js"></script></code>
+</pre>
+
+
+
+<div class="code-area fullscreen">
+  <h3>centeredSlides <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="swiper_common_wrap review">
+  <div class="swiper_common">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="box">
+          <i class="tag">1년 <br>6개월 내 <br>합격</i>
+          <strong class="title">육군 9급 합격생</strong>
+          <div class="content">
+            <b class="c_title">“맘시생의 행정9급 합격”</b>
+            <span class="c_text">
+              본인의 합격을 의심하지 않고 선택한 <br>
+              선생님들만 믿으며 하라는 대로 커리큘럼을 <br>
+              따라가면 합격할 수 있다고 생각합니다. <b>여러 번 반복하고 문제를 많이 풀어본 것</b>이 <br>
+              저에게는 도움이 많이 되었습니다. 
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <i class="tag">1년 <br>
+          6개월 내 <br>
+          합격</i>
+          <strong class="title">육군 9급 합격생</strong>
+          <div class="content">
+            <b class="c_title">“나이많은 수험생의 합격전략”</b>
+            <span class="c_text">
+            다양한 선생님들의 <br>
+            모의고사를 푸는 게 중요합니다. <b>기출은 무조건 다회독 하려고 노력하였고</b> <br>
+            <b>오답노트 작성 역시 중요했습니다.</b> 
+            <br> 1주일 중 한나절에서 하루 정도 충분히 쉼으로써 <br>
+            스트레스를 해소하는 것도 중요합니다.</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <i class="tag">1년 내 <br>
+          합격</i>
+          <strong class="title">육군 9급 합격생</strong>
+          <div class="content">
+            <b class="c_title">“성실함으로! 군수9급 단기 합격”</b>
+            <span class="c_text">
+            모든 선생님들이 <br>
+            강조하는 부분이지만 저도 말씀 드리자면 <br>
+            <b>기출 위주의 학습이 가장 중요</b>한 것 같습니다. <br>
+            <b>기출문제를 통해 학습 내용을 기본서보다 </b><br>
+            <b>더 쉽게 공부할 수 있다는 점</b>입니다. <br>
+            기출문제를 단순히 푼다고 만 생각하지 말고 <br>
+            기출문제를 통해 내용을 공부한다고 <br>
+            생각하시면 좋을 것 같습니다.</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <i class="tag">1년 <br>
+          6개월 내 <br>
+          합격</i>
+          <strong class="title">육군 7급 합격생</strong>
+          <div class="content">
+            <b class="c_title">“직장인도 할 수 있습니다!"</b>
+            <span class="c_text">
+            기본개념을 정리한 후에 기출문제를 풀었습니다. <br>
+            <b>기출문제풀이를 하며 모르는 선지는</b>  <br>
+            <b>왜 모르는지 분석하고 따로 암기하면서</b> <br>
+            부족한 지식들을 채워 넣으며 <br>
+            공부한 결과 합격으로 이끌어 주었습니다. 
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <i class="tag">2년 내 <br>
+          합격</i>
+          <strong class="title">육군 9급 합격생</strong>
+          <div class="content">
+            <b class="c_title">“최적의 공부법을 찾고 육군 합격"</b>
+            <span class="c_text">
+              행정학 과목에서 <b>기출 문제 회독을 계속하다가</b> <br>
+              <b>약점 공략을 들으며 부족한 부분을 보완</b>하고 <br>
+              기출 문제가 더 이상 눈에 잘 들어오지 않을 때 <br>
+              ox교재를 사서 풀었습니다. <br>
+              문제가 맞고 틀린 것을 보기보다는 <br>
+              왜 틀렸고 제대로 고치면 어떻게 되는지에 집중하였고 <br>
+              이는 시험에서 큰 도움이 됐던 것 같습니다.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="arrow swiper-button-prev"></div>
+  <div class="arrow swiper-button-next"></div>		
+  <div class="swiper-pagination show-992"></div>
+</div></div>
+
+<script>document.addEventListener('DOMContentLoaded', () => {
+  new Swiper (".review  .swiper_common", {	
+    slidesPerView: "auto",
+    spaceBetween:0,
+    centeredSlides: true,
+    loop: true,
+    autoplay: { 
+      delay: 3000,
+      disableOnInteraction: false, 
+    },	
+    breakpoints:{
+      993: {
+        spaceBetween:0,
+        slidesPerView: 3,		
+      }
+    },
+    pagination: {
+      el: '.review .swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".review .swiper-button-next",
+      prevEl: ".review .swiper-button-prev",
+    },		
+  })
+});</script>
+
+<style>/* swiper */
+.swiper_common_wrap { position: relative; text-align: center; } 
+.swiper_common_wrap .swiper_common.swiper-initialized { position: relative; overflow: hidden; max-width: 1080px; margin: 0 auto; } 
+
+/* pagination */
+.swiper_common_wrap .swiper-pagination { position: relative; display: flex; justify-content: center; top: auto; bottom: auto; margin-bottom: 7%; z-index: 2; } 
+.swiper_common_wrap .swiper-pagination-bullet { background: #ccc; opacity: 1; width: 12px; height: 12px; transition: all .5s ease; } 
+.swiper_common_wrap .swiper-pagination-bullet-active { background: #db3eff; width: 20px; border-radius: 30px; } 
+
+/* button */
+.swiper_common_wrap [class*="swiper-button-"]:after { font-size: 0; } 
+.swiper_common_wrap [class*="swiper-button-"].swiper-button-disabled { opacity: 1; } 
+.swiper_common_wrap .arrow { position: absolute; top: 50%; transform: translate(0, calc(-50%)); left:125px; z-index: 2; background: url('https://image.megagong.net/m/2024/1015_army/slide_arrow.png') no-repeat center; width: 49px; height: 49px; background-size: contain; } 
+.swiper_common_wrap .arrow.swiper-button-next { transform: rotate(180deg) translate(0, calc(50%)); left: auto; right:125px; } 
+
+/* review swiper */
+.review.swiper_common_wrap{overflow:hidden;position: relative;}
+.review.swiper_common_wrap .swiper_common.swiper-initialized { padding: 15px 0; /*margin-left: -40px; margin-bottom:60px;*/ }
+.review.swiper_common_wrap .swiper-wrapper { align-items: center; } 
+.review.swiper_common_wrap .swiper-slide { scale: .75; transition:all 200ms linear; position: relative; } 
+.review.swiper_common_wrap .swiper-slide::before { content: ''; display: block; position: absolute; width: 110%; height: 100%; background: linear-gradient(90deg, #fff 10%, #ffffff36 90%, transparent 20%); left: -5%; top: 50%; transform: translateY(-50%); z-index: 3; } 
+.review.swiper_common_wrap .swiper-slide.swiper-slide-next::before { left: auto; right: -5%; background: linear-gradient(270deg, #fff 10%, #ffffff36 90%, transparent 20%); } 
+.review.swiper_common_wrap .swiper-slide .tag { display: none; } 
+.review.swiper_common_wrap .swiper-slide.swiper-slide-active { scale: 1; width: 440px !important; } 
+.review.swiper_common_wrap .swiper-slide.swiper-slide-active::before { display: none; } 
+.review.swiper_common_wrap .swiper-slide.swiper-slide-active .tag { display: flex; } 
+.review.swiper_common_wrap .swiper-slide .box { background: #fff; display: flex; flex-direction: column; height: 500px; align-items: center; border-radius: 30px; box-shadow: 3px 5px 15px rgb(187 182 182 / 50%); padding-top: 55px; } 
+.review.swiper_common_wrap .swiper-slide .tag { position: absolute; font-style: normal; top: -15px; left: -10px; background: #de32ff; color: #fff; border-radius: 50%; font-size: 16px; width: 100px; height: 100px; align-items: center; justify-content: center; } 
+.review.swiper_common_wrap .swiper-slide .title { font-size: 30px; padding-bottom: 35px; margin-bottom: 35px; position: relative; } 
+.review.swiper_common_wrap .swiper-slide .title::before { content: ''; display: block; position: absolute; bottom: 0; width: 325px; height: 1px; background: #fceaff; left: 50%; transform: translateX(-50%); } 
+.review.swiper_common_wrap .swiper-slide .c_title { display: block; font-size: 22px; color: #0082ff; margin-bottom: 20px; } 
+.review.swiper_common_wrap .swiper-slide .c_text { font-size: 18px; color: #666; line-height: 1.7; } 
+.review.swiper_common_wrap .swiper-slide .c_text b { position: relative; z-index: 2; display: inline-block; } 
+.review.swiper_common_wrap .swiper-slide .c_text b::before { content: ''; display: block; position: absolute; bottom: 0; width: 101%; height: 45%; background: #fceaff; left: 50%; transform: translateX(-50%); z-index: -1; } 
+
+@media screen and (max-width: 1200px){
+  .review.swiper_common_wrap .swiper_common.swiper-initialized { margin-left: 0; } 
+  .review.swiper_common_wrap .swiper-slide.swiper-slide-active { width: 40% !important; } 
+  .review.swiper_common_wrap .swiper-slide.swiper-slide-active .tag { font-size: clamp(11px,2vmin,16px); width: clamp(60px,12vmin,100px); height: clamp(60px,12vmin,100px); } 
+  .review.swiper_common_wrap .swiper-slide .box { height: 50vh; padding: 0; justify-content: center; } 
+  .review.swiper_common_wrap .swiper-slide .title { font-size: clamp(15px,3vmin,30px); padding-bottom: clamp(15px,3vmin,35px); margin-bottom: clamp(15px,3vmin,35px); } 
+  .review.swiper_common_wrap .swiper-slide .title::before { width: 145%; } 
+  .review.swiper_common_wrap .swiper-slide .c_title { font-size: clamp(14px,2.5vmin,22px); } 
+  .review.swiper_common_wrap .swiper-slide .c_text { font-size: clamp(13px,2vmin,18px); } 
+}
+
+@media screen and (max-width: 992px){
+  .review.swiper_common_wrap .swiper_common.swiper-initialized { margin: 0; } 
+  .review.swiper_common_wrap .swiper-slide { scale: 1; } 
+  .review.swiper_common_wrap .swiper-slide.swiper-slide-active { width: 100% !important; padding: 0 5%; } 
+  .review.swiper_common_wrap .swiper-slide.swiper-slide-active .tag { left: 20%; } 
+  .review.swiper_common_wrap .swiper-slide .box { height: clamp(310px,50vmin,450px); padding: 5% 0; margin: 0 auto; max-width: 768px; border-radius: clamp(10px,3vmin,30px); } 
+
+  .swiper_common_wrap .arrow { left: 0; max-width: 10%; } 
+  .swiper_common_wrap .arrow.swiper-button-next { right: 0; } 
+}
+
+@media screen and (max-width: 768px){
+  .review.swiper_common_wrap .swiper-slide.swiper-slide-active .tag { left: 5%; top: 0; } 
+}</style>
+<pre class="language-html direct"><code><div class="swiper_common_wrap review">
+  <div class="swiper_common">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="box">
+          <i class="tag">1년 <br>6개월 내 <br>합격</i>
+          <strong class="title">육군 9급 합격생</strong>
+          <div class="content">
+            <b class="c_title">“맘시생의 행정9급 합격”</b>
+            <span class="c_text">
+              본인의 합격을 의심하지 않고 선택한 <br>
+              선생님들만 믿으며 하라는 대로 커리큘럼을 <br>
+              따라가면 합격할 수 있다고 생각합니다. <b>여러 번 반복하고 문제를 많이 풀어본 것</b>이 <br>
+              저에게는 도움이 많이 되었습니다. 
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <i class="tag">1년 <br>
+          6개월 내 <br>
+          합격</i>
+          <strong class="title">육군 9급 합격생</strong>
+          <div class="content">
+            <b class="c_title">“나이많은 수험생의 합격전략”</b>
+            <span class="c_text">
+            다양한 선생님들의 <br>
+            모의고사를 푸는 게 중요합니다. <b>기출은 무조건 다회독 하려고 노력하였고</b> <br>
+            <b>오답노트 작성 역시 중요했습니다.</b> 
+            <br> 1주일 중 한나절에서 하루 정도 충분히 쉼으로써 <br>
+            스트레스를 해소하는 것도 중요합니다.</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <i class="tag">1년 내 <br>
+          합격</i>
+          <strong class="title">육군 9급 합격생</strong>
+          <div class="content">
+            <b class="c_title">“성실함으로! 군수9급 단기 합격”</b>
+            <span class="c_text">
+            모든 선생님들이 <br>
+            강조하는 부분이지만 저도 말씀 드리자면 <br>
+            <b>기출 위주의 학습이 가장 중요</b>한 것 같습니다. <br>
+            <b>기출문제를 통해 학습 내용을 기본서보다 </b><br>
+            <b>더 쉽게 공부할 수 있다는 점</b>입니다. <br>
+            기출문제를 단순히 푼다고 만 생각하지 말고 <br>
+            기출문제를 통해 내용을 공부한다고 <br>
+            생각하시면 좋을 것 같습니다.</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <i class="tag">1년 <br>
+          6개월 내 <br>
+          합격</i>
+          <strong class="title">육군 7급 합격생</strong>
+          <div class="content">
+            <b class="c_title">“직장인도 할 수 있습니다!"</b>
+            <span class="c_text">
+            기본개념을 정리한 후에 기출문제를 풀었습니다. <br>
+            <b>기출문제풀이를 하며 모르는 선지는</b>  <br>
+            <b>왜 모르는지 분석하고 따로 암기하면서</b> <br>
+            부족한 지식들을 채워 넣으며 <br>
+            공부한 결과 합격으로 이끌어 주었습니다. 
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <i class="tag">2년 내 <br>
+          합격</i>
+          <strong class="title">육군 9급 합격생</strong>
+          <div class="content">
+            <b class="c_title">“최적의 공부법을 찾고 육군 합격"</b>
+            <span class="c_text">
+              행정학 과목에서 <b>기출 문제 회독을 계속하다가</b> <br>
+              <b>약점 공략을 들으며 부족한 부분을 보완</b>하고 <br>
+              기출 문제가 더 이상 눈에 잘 들어오지 않을 때 <br>
+              ox교재를 사서 풀었습니다. <br>
+              문제가 맞고 틀린 것을 보기보다는 <br>
+              왜 틀렸고 제대로 고치면 어떻게 되는지에 집중하였고 <br>
+              이는 시험에서 큰 도움이 됐던 것 같습니다.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="arrow swiper-button-prev"></div>
+  <div class="arrow swiper-button-next"></div>		
+  <div class="swiper-pagination show-992"></div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+</div><!-- .code-area -->
+
+
+
+<div class="code-area">
+  <h3>기본형 <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="mega_swiper">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div></div>
+
+<script>new Swiper('.mega_swiper', {
+  navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+  },
+});</script>
+
+<style>.mega_swiper {
+  position: relative;
+  overflow: hidden;
+}
+.mega_swiper .swiper-slide {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}</style>
+<pre class="language-html"><code><div class="mega_swiper">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+</div><!-- .code-area -->
+
+
+
+
+
+
+<div class="code-area">
+  <h3>기본형 + 자동슬라이드 <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="mega_swiper mega_swiper_autoplay">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div></div>
+
+<script>new Swiper('.mega_swiper.mega_swiper_autoplay', {
+  navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+      el: ".swiper-pagination",
+  },
+  autoplay: {
+      delay: 3000, // 기본값 3초
+      disableOnInteraction: true, // 기본값: true
+      pauseOnMouseEnter: false, // 기본값: false
+      reverseDirection: false, // 기본값: false
+      stopOnLastSlide: false, // 기본값: false
+      waitForTransition: true // 기본값: true
+  },
+});</script>
+
+<style>.mega_swiper {
+  position: relative;
+  overflow: hidden;
+}
+.mega_swiper .swiper-slide {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}</style>
+<pre class="language-html"><code><div class="mega_swiper mega_swiper_autoplay">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+</div><!-- .code-area -->
+
+
+
+
+
+
+
+
+
+
+<div class="code-area">
+  <h3>Swiper 간격 슬라이드 (per view) <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="mega_swiper mega_swiper_per_view">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div></div>
+
+<script>new Swiper(".mega_swiper_per_view", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+  },
+});</script>
+
+<style>.mega_swiper.mega_swiper_per_view {
+  position: relative;
+  overflow: hidden;
+}</style>
+<pre class="language-html direct"><code><div class="mega_swiper mega_swiper_per_view">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+</div><!-- .code-area -->
+
+
+
+
+
+
+<div class="code-area">
+  <h3>탭 슬라이드 (tab) 1. 기본 버전 <button>코드 보기</button></h3>
+
+<div class="code-box"><ul class="swiper_tab_list">
+  <li class="swiper_tab active">첫번째 탭</li>
+  <li class="swiper_tab">두번째 탭</li>
+  <li class="swiper_tab">세번째 탭</li>
+</ul>
+<div class="mega_swiper mega_swiper_tab">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+  </div>
+</div></div>
+
+<script>// 랜덤 재생일 경우
+// var tabLength =$('.swiper_tab_list li').length;
+// var randomNum = Math.floor(Math.random()*tabLength)
+// setTimeout(function(){
+// 	$('.swiper_tab.active').removeClass("active");
+// 	$('.swiper_tab').eq(randomNum).click()
+// },50)
+
+var tabSwiper = new Swiper('.mega_swiper_tab', {
+    loop: true,
+    autoplay:{
+        delay:3000,
+        disableOnInteraction: false //탭 클릭시 자동재생 유지
+    },
+    on: { 
+        beforeTransitionStart: function (swiper, speed, internal) {
+            const activeIndex = (swiper.params.loop) ? swiper.realIndex : swiper.activeIndex; //loop true일 경우 realIndex, 아닌 경우 activeIndex
+            // const activeIndex = swiper.realIndex;
+            $('.swiper_tab.active').removeClass("active");
+            $('.swiper_tab').eq(activeIndex).addClass("active");
+        },							
+    }
+});
+
+$('.swiper_tab').on('click', function () {
+    // loop true일 경우 slideToLoop, 아닌 경우 slideTo
+    if (tabSwiper.params.loop) {
+        tabSwiper.slideToLoop($(this).index(), 0, false)
+    } else { 
+        tabSwiper.slideTo($(this).index(), 0, false)
+    }
+    $('.swiper_tab.active').removeClass("active");
+    $(this).addClass("active");
+});</script>
+
+<style>.swiper_tab_list{
+  display: flex;
+  align-items:center;
+}
+.swiper_tab_list li{
+  flex:1;
+  padding: 10px 0;
+  background: #d9d9d9;
+  cursor: pointer;
+  text-align: center;
+}
+.swiper_tab_list li.active{
+  background: #bebebe; 
+}
+.mega_swiper.mega_swiper_tab {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+.mega_swiper_tab .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-align: center;
+  background: #f1f1f1;
+}</style>
+<pre class="language-html direct"><code><ul class="swiper_tab_list">
+  <li class="swiper_tab active">첫번째 탭</li>
+  <li class="swiper_tab">두번째 탭</li>
+  <li class="swiper_tab">세번째 탭</li>
+</ul>
+<div class="mega_swiper mega_swiper_tab">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+  </div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+</div><!-- .code-area -->
+
+
+
+
+
+
+
+
+
+
+<div class="code-area">
+  <h3>탭 슬라이드 (tab) - 2. 썸네일 버전 <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="mega_swiper_thumb_list">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide tab">첫번째 탭</div>
+      <div class="swiper-slide tab">두번째 탭</div>
+      <div class="swiper-slide tab">세번째 탭</div>
+      <div class="swiper-slide tab">네번째 탭</div>
+  </div>
+</div>
+<div class="mega_swiper mega_swiper_thumb">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+  </div>
+</div></div>
+
+<script>var thumbListSwiper = new Swiper(".mega_swiper_thumb_list", {
+  // loop: true,
+  slidesPerView: 3,
+  watchSlidesProgress: true,
+});
+
+var thumSwiper = new Swiper(".mega_swiper_thumb", {
+  loop: true,
+  thumbs: {
+      swiper: thumbListSwiper,
+  },
+});</script>
+
+<style>.mega_swiper_thumb_list{
+  overflow:hidden;
+}
+.mega_swiper_thumb_list .tab{
+  padding:10px 0;
+  background-color:#d9d9d9;
+  cursor:pointer;
+  text-align: center;
+}
+.mega_swiper_thumb_list .tab.swiper-slide-thumb-active{
+  background-color:#bebebe;
+}</style>
+<pre class="language-html direct"><code><ul class="swiper_tab_list">
+  <li class="swiper_tab active">첫번째 탭</li>
+  <li class="swiper_tab">두번째 탭</li>
+  <li class="swiper_tab">세번째 탭</li>
+</ul>
+<div class="mega_swiper mega_swiper_tab">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+  </div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+</div><!-- .code-area -->
+
+
+
+
+
+
+
+<div class="code-area">
+  <h3>반응형 슬라이드 (3 > 2 > 1) <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="mega_swiper mega_swiper_responsive">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">1번째</div>
+      <div class="swiper-slide">2번째</div>
+      <div class="swiper-slide">3번째</div>
+      <div class="swiper-slide">4번째</div>
+      <div class="swiper-slide">5번째</div>
+      <div class="swiper-slide">6번째</div>
+      <div class="swiper-slide">7번째</div>
+      <div class="swiper-slide">8번째</div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div></div>
+
+<script>var responsiveSwiper = new Swiper(".mega_swiper_responsive", {
+  slidesPerView: 1,
+  slidesPerColumn: 1,
+  spaceBetween: 10,			
+  loop: true,
+  touchRatio: 1,
+  autoplay: { 
+      delay: 3000,
+      disableOnInteraction: false, 
+  },			
+  pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+  },
+  navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+  breakpoints:{
+      769: {
+          slidesPerView: 2,
+          slidesPerColumn: 2,
+          autoplay : false,
+          // touchRatio: 0, //드래그 막기
+      },
+      1201: {
+          slidesPerView: 3,
+          slidesPerColumn: 3,
+      }
+  }
+});</script>
+
+<style>.mega_swiper {
+  position: relative;
+  overflow: hidden;
+}
+.mega_swiper .swiper-slide {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}</style>
+<pre class="language-html direct"><code><div class="mega_swiper mega_swiper_responsive">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">1번째</div>
+      <div class="swiper-slide">2번째</div>
+      <div class="swiper-slide">3번째</div>
+      <div class="swiper-slide">4번째</div>
+      <div class="swiper-slide">5번째</div>
+      <div class="swiper-slide">6번째</div>
+      <div class="swiper-slide">7번째</div>
+      <div class="swiper-slide">8번째</div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+</div><!-- .code-area -->
+
+
+
+
+<div class="code-area">
+  <h3>반응형 슬라이드 (pc에서 swiper destroy, 992px에서 swiper) <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="mega_swiper mega_swiper_destroy">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">1번째</div>
+      <div class="swiper-slide">2번째</div>
+      <div class="swiper-slide">3번째</div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div></div>
+
+<script>var windowWidth = $(window).innerWidth();
+  var destroySwiper = undefined;
+  
+  function initdestroySwiper() {
+      if (windowWidth < 993 && destroySwiper == undefined) {
+          destroySwiper = new Swiper('.mega_swiper_destroy', {
+              slidesPerView: 1,
+              slidesPerColumn: 1,
+              spaceBetween: 20,			
+              loop: true,
+              touchRatio: 1,
+              autoHeight: true,
+              autoplay: { 
+                  delay: 3000,
+                  disableOnInteraction: false, 
+              },			
+          })
+      } else if (windowWidth >= 993 && destroySwiper != undefined) {
+          destroySwiper.destroy();
+          destroySwiper = undefined;
+      }
+  }
+  
+  initdestroySwiper();
+  
+  var timer = null;
+  $(window).on('resize', function() {
+      clearTimeout(timer);
+      timer = setTimeout(function() {
+          windowWidth = $(window).innerWidth();
+          initdestroySwiper();
+      }, 200)
+  });</script>
+
+<style>.mega_swiper_destroy .swiper-wrapper {gap: 10px;}
+.mega_swiper_destroy .swiper-slide {display: flex; flex: 1 1 auto; height: 125px;justify-content: center;align-items: center;}
+.mega_swiper_destroy .swiper-pagination {display: none;}
+@media screen and (max-width: 992px){
+    .mega_swiper_destroy {position: relative; overflow: hidden;}
+    .mega_swiper_destroy .swiper-wrapper {gap: 0;}
+    .mega_swiper_destroy .swiper-slide {flex: 1 0 100%;}
+    .mega_swiper_destroy .swiper-pagination {display: block; bottom: -5vw;}
+}</style>
+<pre class="language-html direct"><code><div class="mega_swiper mega_swiper_destroy">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">1번째</div>
+      <div class="swiper-slide">2번째</div>
+      <div class="swiper-slide">3번째</div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+</div><!-- .code-area -->
+
+
+
+
+
+
+
+
+
+
+<div class="code-area">
+  <h3>스크롤 <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="mega_swiper mega_swiper_scroll" id="mega_swiper_scroll">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">1번째</div>
+      <div class="swiper-slide">2번째</div>
+      <div class="swiper-slide">3번째</div>
+  </div>
+  <div class="swiper-scrollbar show-768"></div>
+</div></div>
+
+<script>new Swiper('.mega_swiper_scroll', {
+  slidesPerView: 'auto',			
+  scrollbar: {
+      el: '.mega_swiper_scroll .swiper-scrollbar',
+      draggable: true,
+  },	
+  breakpoints: {
+      769: {
+          scrollbar: {
+              draggable: false,
+          },
+      },
+  }										
+})</script>
+
+<style>:root {
+  --swiper-theme-color:#007aff
+}
+#mega_swiper_scroll .swiper-wrapper {gap: 10px;}
+#mega_swiper_scroll .swiper-slide {flex:1}		
+.swiper-scrollbar {display: none;}
+@media screen and (max-width: 768px){
+    #mega_swiper_scroll {position: relative; overflow: hidden;}
+    #mega_swiper_scroll .swiper-wrapper {gap: 0;}
+    #mega_swiper_scroll .swiper-slide {width: 300px;flex:none; margin-right: 10px;}
+    #mega_swiper_scroll .swiper-slide:last-child {margin-right: 0;}
+    #mega_swiper_scroll .swiper-scrollbar {display: block;position: relative; margin-top: 15px;left: auto;top: auto;height: 8px;width: 100%;z-index: 1;} 		
+    #mega_swiper_scroll .swiper-scrollbar .swiper-scrollbar-drag { background: var(--swiper-theme-color); } 								
+}</style>
+<pre class="language-html direct"><code><div class="mega_swiper mega_swiper_scroll" id="mega_swiper_scroll">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">1번째</div>
+      <div class="swiper-slide">2번째</div>
+      <div class="swiper-slide">3번째</div>
+  </div>
+  <div class="swiper-scrollbar show-768"></div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+</div><!-- .code-area -->
+
+
+
+
+
+
+
+<div class="code-area">
+  <h3>옵션 복제 <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="mega_swiper mega_swiper_copy" id="mega_swiper_copy1">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">슬라이드1_1</div>
+        <div class="swiper-slide">슬라이드1_2</div>
+        <div class="swiper-slide">슬라이드1_3</div>
+    </div>
+    <div class="swiper-scrollbar show-768"></div>
+</div>
+<div class="mega_swiper mega_swiper_copy" id="mega_swiper_copy2">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">슬라이드2_1</div>
+        <div class="swiper-slide">슬라이드2_2</div>
+        <div class="swiper-slide">슬라이드2_3</div>
+    </div>
+    <div class="swiper-scrollbar show-768"></div>
+</div></div>
+
+<script>var commonOpt = {
+  breakpoints: {
+      769: {
+          slidesPerView: 3,
+          scrollbar: {
+              draggable: false,
+          },
+      },
+  },
+  slidesPerView: "auto",
+  spaceBetween:15,
+};
+var teacher1 = new Swiper ("#mega_swiper_copy1",{...commonOpt, scrollbar: {el: '#mega_swiper_copy1 .swiper-scrollbar',draggable: true}});
+var teacher2 = new Swiper ("#mega_swiper_copy2",{...commonOpt, scrollbar: {el: '#mega_swiper_copy2 .swiper-scrollbar',draggable: true}});</script>
+
+<style>.mega_swiper_copy .swiper-wrapper {gap: 10px;}
+.mega_swiper_copy .swiper-slide {flex:1}		
+.swiper-scrollbar {display: none;}
+#mega_swiper_copy2{margin-top: 10px;}
+@media screen and (max-width: 768px){
+    .mega_swiper_copy {position: relative; overflow: hidden;}
+    .mega_swiper_copy .swiper-slide {width: 300px;flex:none;}
+    .mega_swiper_copy .swiper-scrollbar {display: block;position: relative; margin-top: 15px;left: auto;top: auto;height: 8px;width: 100%;z-index: 1;} 		
+    .mega_swiper_copy .swiper-scrollbar .swiper-scrollbar-drag { background: var(--swiper-theme-color); } 					
+}</style>
+<pre class="language-html direct"><code><div class="mega_swiper mega_swiper_copy" id="mega_swiper_copy1">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">슬라이드1_1</div>
+        <div class="swiper-slide">슬라이드1_2</div>
+        <div class="swiper-slide">슬라이드1_3</div>
+    </div>
+    <div class="swiper-scrollbar show-768"></div>
+</div>
+<div class="mega_swiper mega_swiper_copy" id="mega_swiper_copy2">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">슬라이드2_1</div>
+        <div class="swiper-slide">슬라이드2_2</div>
+        <div class="swiper-slide">슬라이드2_3</div>
+    </div>
+    <div class="swiper-scrollbar show-768"></div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+</div><!-- .code-area -->
+
+
+
+
+
+
+
+
+
+
+
+<div class="code-area">
+  <h3>destroySwiperMaker 함수 사용1 <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="swiper_destroy_example1">
+  <div class="swiper_common">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide" data-aos="fade-right">
+              <img src="https://design.megagong.net/image/m/2024/1203_tmddk4521/con2_sld1.png" alt="최근 3년간 소방공무원 시험 합격선">
+          </div>
+          <div class="swiper-slide" data-aos="fade-right" data-aos-delay="100">
+              <img src="https://design.megagong.net/image/m/2024/1203_tmddk4521/con2_sld2.png" alt="소방학/관계법규 88점 이상 고득점자 비율">
+          </div>
+      </div>
+      <div class="swiper-pagination show-768"></div>
+  </div>
+</div></div>
+
+<script>$(function(){
+  AOS.init({
+      once: true,
+  });
+});
+destroySwiperMaker({$name:"swiper_destroy_example1", $media: "769", $speed: 3000})</script>
+
+<style>/* swiper */
+.swiper_destroy_example1 { position: relative; } 
+.swiper_destroy_example1 .swiper_common.swiper-initialized { position: relative; overflow: hidden; margin: 0 auto; } 
+.swiper_destroy_example1 .swiper-wrapper { justify-content: space-between; gap:0 20px; } 
+.swiper_destroy_example1 .swiper-slide {flex:1; text-align:center;} 
+.swiper_destroy_example1 .swiper-slide img {filter: drop-shadow(2px 4px 6px #ddd);} 
+/* swiper - pagination */
+.swiper_destroy_example1 .swiper-pagination { position: relative; display: flex; justify-content: center; top: auto; bottom: auto; margin-top: 15px; z-index: 2; } 
+.swiper_destroy_example1 .swiper-pagination-bullet{width: 10px;height: 10px;}
+.swiper_destroy_example1 .swiper-pagination-bullet-active{background-color:#fc54a9}
+/* swiper - scrollbar */
+.swiper_destroy_example1 .swiper-scrollbar { display: block; position: relative; margin-top: 15px; left: auto; top: auto; height: 8px; width: 100%; z-index: 1; } 
+.swiper_destroy_example1 .swiper-scrollbar .swiper-scrollbar-drag { background-color:#fc54a9 } 
+/* swiper - button */
+.swiper_destroy_example1 [class*="swiper-button-"]:after { font-size: 0; } 
+.swiper_destroy_example1 [class*="swiper-button-"].swiper-button-disabled { opacity: 1; } 
+.swiper_destroy_example1 .arrow { position: absolute; top: 50%; transform: translate(0, calc(-50%)); left: 0; z-index: 2; background: url('https://image.megagong.net/m/2024/1203_tmddk4521/con6_arrow.png') no-repeat center; width: 44px; height: 85px; background-size: contain;} 
+.swiper_destroy_example1 .arrow.swiper-button-next { transform: rotate(180deg) translate(0, calc(50%)); left: auto; right: 0; }
+
+@media screen and (max-width: 1200px) { 
+    .swiper_destroy_example1 .swiper-wrapper{gap:1vmin}
+}
+
+@media screen and (max-width: 768px) { 
+    .swiper_destroy_example1 .swiper_common.swiper-initialized { position: relative; overflow: hidden; } 
+    .swiper_destroy_example1 .swiper-wrapper { justify-content: flex-start; } 
+    .swiper_destroy_example1 .swiper-slide { flex: 1 0 100%; width: auto; } 
+    .swiper_destroy_example1 .swiper-slide img { width: min(70%,348px);} 
+
+    .swiper_destroy_example1 .swiper-slide img { width: min(70%,540px);} 
+}</style>
+<pre class="language-html direct"><code></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+</div><!-- .code-area -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="code-area">
+  <h3>destroySwiperMaker 함수 사용2 <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="swiper_destroy_example2">
+  <div class="swiper_common">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" data-aos="fade-right">
+            <img src="https://design.megagong.net/image/m/2024/1203_tmddk4521/con3_sld1.png" alt="유형별·난이도별 문제를 통해 문제해결력과 자신감 UP!">
+        </div>
+        <div class="swiper-slide" data-aos="fade-right" data-aos-delay="100">
+            <img src="https://design.megagong.net/image/m/2024/1203_tmddk4521/con3_sld2.png" alt="문제를 틀리더라도 걱정 NO 약점 보완 가능한 마지막 시간!">
+        </div>
+        <div class="swiper-slide" data-aos="fade-right" data-aos-delay="200">
+            <img src="https://design.megagong.net/image/m/2024/1203_tmddk4521/con3_sld3.png" alt="문제 접근법과 풀이법을 이해하고 출제 포인트 파악하기">
+        </div>
+    </div>
+    <div class="swiper-pagination show-768"></div>
+  </div>
+</div></div>
+
+<script>$(function(){
+  AOS.init({
+      once: true,
+  });
+});
+destroySwiperMaker({$name:"swiper_destroy_example2", $media: "769", $speed: 3000})</script>
+
+<style>.swiper_destroy_example2 .swiper-slide img {filter: none;} 
+
+/* swiper */
+.swiper_destroy_example2 { position: relative; } 
+.swiper_destroy_example2 .swiper_common.swiper-initialized { position: relative; overflow: hidden; margin: 0 auto; } 
+.swiper_destroy_example2 .swiper-wrapper { justify-content: space-between; gap:0 20px; } 
+.swiper_destroy_example2 .swiper-slide {flex:1; text-align:center;} 
+.swiper_destroy_example2 .swiper-slide img {filter: drop-shadow(2px 4px 6px #ddd);} 
+/* swiper - pagination */
+.swiper_destroy_example2 .swiper-pagination { position: relative; display: flex; justify-content: center; top: auto; bottom: auto; margin-top: 15px; z-index: 2; } 
+.swiper_destroy_example2 .swiper-pagination-bullet{width: 10px;height: 10px;}
+.swiper_destroy_example2 .swiper-pagination-bullet-active{background-color:#fc54a9}
+/* swiper - scrollbar */
+.swiper_destroy_example2 .swiper-scrollbar { display: block; position: relative; margin-top: 15px; left: auto; top: auto; height: 8px; width: 100%; z-index: 1; } 
+.swiper_destroy_example2 .swiper-scrollbar .swiper-scrollbar-drag { background-color:#fc54a9 } 
+/* swiper - button */
+.swiper_destroy_example2 [class*="swiper-button-"]:after { font-size: 0; } 
+.swiper_destroy_example2 [class*="swiper-button-"].swiper-button-disabled { opacity: 1; } 
+.swiper_destroy_example2 .arrow { position: absolute; top: 50%; transform: translate(0, calc(-50%)); left: 0; z-index: 2; background: url('https://image.megagong.net/m/2024/1203_tmddk4521/con6_arrow.png') no-repeat center; width: 44px; height: 85px; background-size: contain;} 
+.swiper_destroy_example2 .arrow.swiper-button-next { transform: rotate(180deg) translate(0, calc(50%)); left: auto; right: 0; }
+
+@media screen and (max-width: 1200px) { 
+    .swiper_destroy_example2 .swiper-wrapper{gap:1vmin}
+}
+
+@media screen and (max-width: 768px) { 
+    .swiper_destroy_example2 .swiper_common.swiper-initialized { position: relative; overflow: hidden; } 
+    .swiper_destroy_example2 .swiper-wrapper { justify-content: flex-start; } 
+    .swiper_destroy_example2 .swiper-slide { flex: 1 0 100%; width: auto;} 
+    /* .swiper_destroy_example2 .swiper-slide img { width: min(70%,540px);}  */
+}</style>
+<pre class="language-html direct"><code></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+</div><!-- .code-area -->
+
+
+
+
+
+
+
+
+
+
+
+    </div><!-- #container -->
+  </div><!-- #wrapper -->
+
+  <script src="js/prism.js"></script>
+</body>
+</html>

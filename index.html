@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>퍼블리싱 - 코딩맵</title>
+  <link rel="stylesheet" type="text/css" href="./_guide/guide.css" />
+	<script type="text/javascript" src="./_guide/dtree.js"></script>
+</head>
+<body>
+  <div class="guide-wrapper">
+    <div id="content_guide_list">
+      <h1>퍼블리싱 진행표</h1>
+      <h2>진행 표시</h2>
+      <ul>
+  			<li><span style="color:#aeaeae;">■ 작업전</span></li>
+  			<li><span style="color:green;">■ 작업중</span></li>
+  			<li><span style="color:#5727ff;">■ 완료</span></li>
+  			<li><span style="color:#37b4e7;">■ 신규</span></li>
+  			<li><span style="color:#f55;">■ 수정</span></li>
+      </ul>
+      <span id="t_title"></span>
+    </div>
+    <div class="dtree">
+  		<div class="area_btn">
+  			<a href="javascript: b.openAll();"><img src="./_guide/img/btn_expand.gif" alt="Expand All" /></a>
+  			<a href="javascript: b.closeAll();"><img src="./_guide/img/btn_collapse.gif" alt="Collapse All" /></a>
+  		</div>
+  		<script type="text/javascript">
+			//<![CDATA[
+			b = new dTree('b');
+
+			b.add(0, -1, '프로젝트 이름');
+			b.add(1, 0, '1. Template' );
+			b.add(1.01, 1, '1) 템플릿','template.html', '작업전', '_blank');
+			b.add(1.02, 1, '2) gsap 템플릿','template_gsap.html', '작업중', '_blank');
+
+			b.add(2, 0, '2. Main');
+			b.add(2.01, 2, '1) 메인 - 전체', 'main.html', '작업전', '_blank');
+
+
+			b.add(9, 0, '9. 컴포넌트');  
+			b.add(9.01, 9, '1) 컴포넌트 가이드', 'component.html', '작업중', '_blank');
+			b.add(9.02, 9, '2) Slick 가이드', 'slick.html', '완료', '_blank');
+			b.add(9.03, 9, '3) Swiper 가이드', 'swiper.html', '완료', '_blank');
+			b.add(9.04, 9, '4) Flicking 가이드', 'flicking.html', '완료', '_blank');
+			b.add(9.05, 9, '5) Flicking 레이아웃', 'flicking_layout.html', '완료', '_blank');
+			b.add(9.06, 9, '6) Flex Chart 예제', 'flex_chart.html', '작업중', '_blank');
+
+			document.write(b);
+			//]]>
+  		</script>
+  	</div>
+  </div>
+</body>
+</html>
