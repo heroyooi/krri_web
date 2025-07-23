@@ -137,11 +137,26 @@
                     </div>
                   </li>
                 </ul>
-                
-                
+                <div class="btn-wrap">
+                  <span class="btn-base tp1"><a href="#">초기화</a></span>
+                  <span class="btn-base tp2"><a href="#">선택조건 검색하기</a></span>
+                </div>
               </div>
-            </div>
+            </div><!-- .filter_area -->
+          </div><!-- .search_area -->
+          <div class="info_box">
+            <span>기술기준 및 KS의 경우, 철도 기술기준·표준 개발/관리 플랫폼 서비스 내에서 작성된 문서는 고시된 원문이 아니므로 원문과 상이할 수 있습니다.</span>
           </div>
+
+          <span class="select-base">
+            <span class="value"></span>
+            <select>
+              <option value="0" selected="">선택</option>
+              <option value="1">Value 1</option>
+              <option value="2">Value 2</option>
+              <option value="3">Value 3</option>
+            </select>
+          </span>
         </div>
       </div>
       
@@ -179,6 +194,14 @@
     var query = $.urlParam('sample');
     if (query === '') { }
 
+    $('.filter_area .filter-top .arrow').on('click', function(){
+      if (!$('.filter_area').hasClass('on')) {
+        $('.filter_area').addClass('on');
+      } else {
+        $('.filter_area').removeClass('on');
+      }
+    })
+
     var today1 = new Date();
     var picker1 = tui.DatePicker.createRangePicker({
       startpicker: {
@@ -199,7 +222,7 @@
 
     picker1.on('change:end', () => {
         console.log(123);
-    })
+    });
   </script>
 </body>
 
