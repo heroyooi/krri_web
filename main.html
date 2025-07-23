@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
-  <title>제목</title>
+  <title>철도 기술기준·표준 개발/관리 플랫폼</title>
   <link rel="stylesheet" href="css/common.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
@@ -16,6 +17,7 @@
   <script src="js/aos.js"></script>
   <script src="js/ui.js"></script>
 </head>
+
 <body>
   <div class="skip-navi">
     <a href="#container">본문 바로가기</a>
@@ -38,6 +40,9 @@
       </ul>
     </div><!-- #header -->
     <div id="container">
+      <div class="content_area">
+        <div class="inner"></div>
+      </div>
       <div class="main_visual swiper_common_wrap">
         <div class="swiper-items">
           <ul class="swiper-paging">
@@ -242,7 +247,8 @@
                 </li>
                 <li>
                   <div class="tit_l">
-                    <span class="tit">새로워진 철도 기술기준·표준 플랫폼 오픈 안내 새로워진 철도 기술기준·표준 플랫폼 오픈 안내 새로워진 철도 기술기준·표준 플랫폼 오픈 안내</span>
+                    <span class="tit">새로워진 철도 기술기준·표준 플랫폼 오픈 안내 새로워진 철도 기술기준·표준 플랫폼 오픈 안내 새로워진 철도 기술기준·표준 플랫폼 오픈
+                      안내</span>
                   </div>
                   <span class="date">2025.01.02</span>
                 </li>
@@ -290,47 +296,48 @@
   </div><!-- #wrapper -->
 
   <script>
-  var query = $.urlParam('sample');
-	if (query === '') {}
+    var query = $.urlParam('sample');
+    if (query === '') { }
 
-  $(function(){
-    const mySwiper = new Swiper (".main_visual  .swiper_common", {
-      slidesPerView: "auto",
-      spaceBetween: 20,
-      centeredSlides: true,
-      loop: true,
-      // autoplay: { 
-      //     delay: 3000,
-      //     disableOnInteraction: false, 
-      // },
-      pagination: {
-        el: '.main_visual .swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".main_visual .swiper-next",
-        prevEl: ".main_visual .swiper-prev",
-      },
-      on: {
-        slideChange: function () {
-          var realIndex = this.realIndex;
-          updateCustomTabs(realIndex);
+    $(function () {
+      const mySwiper = new Swiper(".main_visual  .swiper_common", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        // autoplay: { 
+        //     delay: 3000,
+        //     disableOnInteraction: false, 
+        // },
+        pagination: {
+          el: '.main_visual .swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".main_visual .swiper-next",
+          prevEl: ".main_visual .swiper-prev",
+        },
+        on: {
+          slideChange: function () {
+            var realIndex = this.realIndex;
+            updateCustomTabs(realIndex);
+          }
         }
+      });
+
+      $(".swiper-paging li").on("click", function () {
+        var index = $(this).index();
+        mySwiper.slideToLoop(index); // loop 모드에서 사용
+      });
+      $(".swiper-paging li").each(function (index) {
+        $(this).find('.gage').css('width', (index + 1) * (100 / $(".swiper-paging li").length) + '%');
+      })
+
+      function updateCustomTabs(activeIndex) {
+        $(".swiper-paging li").removeClass("active").eq(activeIndex).addClass("active");
       }
     });
-
-    $(".swiper-paging li").on("click", function () {
-      var index = $(this).index();
-      mySwiper.slideToLoop(index); // loop 모드에서 사용
-    });
-    $(".swiper-paging li").each(function(index){
-      $(this).find('.gage').css('width', (index + 1) * (100 / $(".swiper-paging li").length) + '%');
-    })
-
-    function updateCustomTabs(activeIndex) {
-      $(".swiper-paging li").removeClass("active").eq(activeIndex).addClass("active");
-    }
-  });
   </script>
 </body>
+
 </html>

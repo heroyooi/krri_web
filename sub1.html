@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>철도 기술기준·표준 개발/관리 플랫폼</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/swiper-bundle.min.js"></script><!-- 11.2.0 -->
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+
+<body>
+  <div class="skip-navi">
+    <a href="#container">본문 바로가기</a>
+    <a href="#gnb">주메뉴 바로가기</a>
+  </div>
+  <div id="wrapper">
+    <div id="header">
+      <h1 class="logo"><a href="javascript:void(0);">철도 기술기준·표준 개발/관리 플랫폼</a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="javascript:void(0);">플랫폼 소개</a></li>
+        <li><a href="javascript:void(0);">플랫폼 소개</a></li>
+        <li><a href="javascript:void(0);">한국철도표준규격</a></li>
+        <li><a href="javascript:void(0);">철도차량·용품 기술기준</a></li>
+        <li><a href="javascript:void(0);">새소식</a></li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li class="login"><a href="javascript:void(0);">로그인</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="content_area">
+        <div class="inner">
+          <ul class="site-navi">
+            <li class="home"><a href="javascript:void(0);">홈</a></li>
+            <li class="dots"></li>
+            <li class="current"><a href="javascript:void(0);">통합검색</a></li>
+          </ul>
+          <h3 class="lg_tit">철도 기술기준·표준 통합검색</h3>
+          <div class="search_area">
+            <div class="input-wrap">
+              <input type="text" class="input-base" placeholder="철도 기술기준·표준 검색어를 입력하세요">
+              <button class="btn_search">검색</button>
+            </div>
+            <div class="filter_area">
+              <div class="filter-top">
+                <div class="label">
+                  <span>상세필터</span>
+                </div>
+                <button class="arrow"></button>
+              </div>
+              <div class="filter-detail">
+                <ul class="filter-list">
+                  <li>
+                    <span class="label">대상 구분</span>
+                    <ul class="radio-list">
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-target-all" name="radio-target" checked>
+                          <label for="radio-target-all">전체</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-target-1" name="radio-target">
+                          <label for="radio-target-1">철도 기술기준</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-target-2" name="radio-target">
+                          <label for="radio-target-2">한국철도표준규격(KRS)</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-target-3" name="radio-target">
+                          <label for="radio-target-3">철도분야산업표준(KS)</label>
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="label">규격상태</span>
+                    <ul class="radio-list">
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-status-all" name="radio-status" checked>
+                          <label for="radio-status-all">전체</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-status-1" name="radio-status">
+                          <label for="radio-status-1">확인</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-status-2" name="radio-status">
+                          <label for="radio-status-2">제정</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-status-3" name="radio-status">
+                          <label for="radio-status-3">개정</label>
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="label">최종 고시일자</span>
+                    <div class="input-wrap input-datepicker">
+                      <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+                        <input id="startpicker-input1" type="text" aria-label="Date">
+                        <span class="tui-ico-date"></span>
+                        <div id="startpicker-container1" style="margin-left: -1px;"></div>
+                      </div>
+                      <span class="bridge">~</span>
+                      <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+                        <input id="endpicker-input1" type="text" aria-label="Date">
+                        <span class="tui-ico-date"></span>
+                        <div id="endpicker-container1" style="margin-left: -1px;"></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div><!-- #container -->
+    <div id="footer">
+      <ul class="f_logo">
+        <li><a href="javascript:void(0);"><img src="img/common/logo-molit-full.svg" alt="국토교통부"></a></li>
+        <li><a href="javascript:void(0);"><img src="img/common/logo-kaia-full.svg" alt="국토교통 과학기술진흥원"></a></li>
+        <li><a href="javascript:void(0);"><img src="img/common/logo-krri-full.webp" alt="한국철도기술연구원"></a></li>
+      </ul>
+      <ul class="f_menu">
+        <li class="privacy"><a href="javascript:void(0);">개인정보처리방침</a></li>
+        <li class="dot"></li>
+        <li><a href="javascript:void(0);">정보주체권리행사절차</a></li>
+        <li class="dot"></li>
+        <li><a href="javascript:void(0);">이메일무단수집거부</a></li>
+        <li class="dot"></li>
+        <li><a href="javascript:void(0);">저작권정책</a></li>
+        <li class="dot"></li>
+        <li><a href="javascript:void(0);">찾아오시는길</a></li>
+      </ul>
+      <address class="f_address">
+        <span>(우편번호 16105) 경기도 의왕시 철도박물관로 176 <strong>한국철도기술연구원</strong></span>
+        <span>Tel. <a href="tel:031-460-5000">031-460-5000</a></span>
+        <span>Fax. 031-460-5159</span>
+      </address>
+      <p class="f_copy">Copyright (C) Korea Railroad Research Institute. All Rights Reserved.</p>
+    </div><!-- #footer -->
+
+    <button class="btn-quick"><span>Quick</span></button>
+    <button class="btn-top">TOP</button>
+  </div><!-- #wrapper -->
+
+  <script>
+    var query = $.urlParam('sample');
+    if (query === '') { }
+
+    var today1 = new Date();
+    var picker1 = tui.DatePicker.createRangePicker({
+      startpicker: {
+        date: today1,
+        input: '#startpicker-input1',
+        container: '#startpicker-container1'
+      },
+      endpicker: {
+        date: today1,
+        input: '#endpicker-input1',
+        container: '#endpicker-container1'
+      },
+      selectableRanges: [
+        [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
+      ],
+      format: 'YYYY-MM-dd',
+    });
+
+    picker1.on('change:end', () => {
+        console.log(123);
+    })
+  </script>
+</body>
+
+</html>
