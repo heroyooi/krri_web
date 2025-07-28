@@ -51,7 +51,7 @@ body{width:100%;}
 */
 
 /* swiper & slick & flicking example */
-.ex_wrp{max-width:790px;margin:0 auto;font-family:'Montserrat', 'Noto Sans KR', sans-serif;}
+.ex_wrp{margin:0 auto;font-family:'Montserrat', 'Noto Sans KR', sans-serif;}
 .ex_wrp pre{display:none;}
 .ex_wrp pre.guide{display:block;}
 .ex_wrp h2{font-size:24px;}
@@ -61,5 +61,6 @@ body{width:100%;}
 .ex_wrp h3 button{display:inline-block;background-color:#333;color:#fff;padding:5px;border-radius:3px;font-size:12px;}
 .ex_wrp .code-area{padding:20px;background-color:#eee;margin-top:30px;}
 .ex_wrp .code-area.fullscreen {width: 100vw;position: relative;left: 50%;margin-left: -50vw;}
+.ex_wrp .inner {max-width:1320px;}
 
 #wrapper.ver_swiper, #wrapper.ver_slick{overflow:hidden;}
