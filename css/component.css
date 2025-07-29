@@ -9,9 +9,23 @@
 .badge_list li.tp4{background-color:#656b7b;color:#fff;}
 .badge_list li.tp5{background-color:#059476;color:#fff;}
 
+.detail_badge{display:flex;gap:4px;}
+.detail_badge > li{display:inline-block;padding:3px 8px;border-radius:4px;}
+.detail_badge li{font-size:12px;font-weight:bold;}
+.detail_badge li.blue{background-color: #f4f6fc;color:#1d51e9;}
+.detail_badge li.green{background-color: #eff9fc;color:#058dac;}
+.detail_badge li .badge_in{display:flex;}
+.detail_badge li .badge_in > li{padding-left:17px;position: relative;}
+.detail_badge li .badge_in > li::before{content:'';display:block;width:1px;height:10px;background-color: #d7dcea;position: absolute;left:8px;top:3px;}
+.detail_badge li .badge_in > li:first-child{padding-left:0;}
+.detail_badge li .badge_in > li:first-child::before{display:none;}
+
 /* button */
 .btn_more{font-size:14px;font-weight:500;color:#656b7b;display:flex;align-items:center;gap: 0 4px;}
 .btn_more::after{content:'';display:block;width:16px;height:16px;background:url('/img/common/ico-s-more.svg') 50% 50% no-repeat;}
+.btn_favorite{display:inline-block;width:40px;height:40px;background:url('/img/icon/ico-l-favorites-g.svg') 50% 50% no-repeat;font-size:0;}
+.btn_link{display:flex;align-items:center;font-size:13px;font-weight:500;color:#656b7b;gap:0 4px;}
+.btn_link::after{content:'';display:block;width:16px;height:16px;background:url('/img/icon/ico-s-arrow.svg')}
 
 /* tab */
 .tab_area{display:flex;align-items: center;justify-content: space-between;}

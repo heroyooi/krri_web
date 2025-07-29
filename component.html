@@ -45,24 +45,10 @@
       padding: 5px;
     }
 
-    .tooltip-list li {
-      margin-top: 10px;
-    }
+    .cmp-btn-area {display:flex;gap:5px;align-items: center;}
 
-    .tooltip-list li a {
-      display: inline-block;
-      margin: 1px 0;
-      padding: 6px;
-      background-color: #222;
-      border-radius: 3px;
-      color: #fff;
-      width: 72px;
-      text-align: center;
-    }
-
-    .tooltip-list li a:hover {
-      background-color: #0ae;
-    }
+    .badge_list{margin-top:10px;}
+    .badge_list:first-child{margin-top:0;}
   </style>
 </head>
 
@@ -100,6 +86,84 @@
 <script src="js/aos.js"></script>
 <script src="js/ui.js"></script></code>
 </pre>
+
+      <div class="section">
+        <h2>버튼</h2>
+
+        <div class="code-area">
+          <h3>기본 타입 <button>코드 보기</button></h3>
+          <div class="code-box">
+<div class="btn-wrap">
+  <span class="btn-base tp1"><a href="#">초기화</a></span>
+  <span class="btn-base tp2"><a href="#">선택조건 검색하기</a></span>
+</div>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>아이콘 타입 <button>코드 보기</button></h3>
+          <div class="code-box">
+<div class="cmp-btn-area">
+  <button class="btn_search">검색</button>
+  <a href="javascript:void(0);" class="btn_favorite">즐겨찾기</a>
+</div>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>텍스트 타입 <button>코드 보기</button></h3>
+          <div class="code-box">
+<a href="javascript:void(0);" class="btn_link">원문 보러가기(URL)</a>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>셀렉트박스</h2>
+
+        <div class="code-area">
+          <h3>기본 타입 <button>코드 보기</button></h3>
+          <div class="code-box">
+<span class="select-base">
+  <span class="value"></span>
+  <select>
+    <option value="0">선택</option>
+    <option value="1" selected>10개씩 보기</option>
+    <option value="2">Value 2</option>
+    <option value="3">Value 3</option>
+  </select>
+</span>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>뱃지</h2>
+
+        <div class="code-area">
+          <h3>메인 목록 <button>코드 보기</button></h3>
+          <div class="code-box">
+<ul class="badge_list">
+  <li class="tp1">제정</li>
+  <li class="tp2">기술기준</li>
+  <li class="tp3">ISO</li>
+</ul>
+<ul class="badge_list">
+  <li class="tp1">제정</li>
+  <li class="tp4">페지</li>
+  <li class="tp3">ISO</li>
+</ul>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+      </div><!-- .section -->
 
       <div class="section">
         <h2>인풋</h2>
@@ -162,6 +226,98 @@ picker1.on('change:end', () => {
         </div>
 
       </div><!-- .section -->
+
+
+      <div class="section">
+        <h2>체크박스</h2>
+
+        <div class="code-area">
+          <h3>기본 타입 <button>코드 보기</button></h3>
+          <div class="code-box">
+<ul class="chk-list">
+  <li>
+    <span class="chk-base">
+      <input type="checkbox" id="checkbox-detail-1" checked>
+      <label for="checkbox-detail-1">CB(차체설비용품)</label>
+    </span>
+  </li>
+  <li>
+    <span class="chk-base">
+      <input type="checkbox" id="checkbox-detail-2">
+      <label for="checkbox-detail-2">RN(주행장치용품)</label>
+    </span>
+  </li>
+  <li>
+    <span class="chk-base">
+      <input type="checkbox" id="checkbox-detail-3">
+      <label for="checkbox-detail-3">BR(제동장치용품)</label>
+    </span>
+  </li>
+  <li>
+    <span class="chk-base">
+      <input type="checkbox" id="checkbox-detail-4">
+      <label for="checkbox-detail-4">PR(추진장치용품)</label>
+    </span>
+  </li>
+  <li>
+    <span class="chk-base">
+      <input type="checkbox" id="checkbox-detail-5">
+      <label for="checkbox-detail-5">RN(주행장치용품)</label>
+    </span>
+  </li>
+</ul>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+      </div><!-- .section -->
+
+
+
+      <div class="section">
+        <h2>라디오 버튼</h2>
+
+        <div class="code-area">
+          <h3>기본 타입 <button>코드 보기</button></h3>
+          <div class="code-box">
+<ul class="radio-list">
+  <li>
+    <span class="radio-base">
+      <input type="radio" id="radio-status-all" name="radio-status" checked>
+      <label for="radio-status-all">전체</label>
+    </span>
+  </li>
+  <li>
+    <span class="radio-base">
+      <input type="radio" id="radio-status-1" name="radio-status">
+      <label for="radio-status-1">확인</label>
+    </span>
+  </li>
+  <li>
+    <span class="radio-base">
+      <input type="radio" id="radio-status-2" name="radio-status">
+      <label for="radio-status-2">제정</label>
+    </span>
+  </li>
+  <li>
+    <span class="radio-base">
+      <input type="radio" id="radio-status-3" name="radio-status">
+      <label for="radio-status-3">개정</label>
+    </span>
+  </li>
+  <li>
+    <span class="radio-base">
+      <input type="radio" id="radio-status-4" name="radio-status">
+      <label for="radio-status-4">폐지</label>
+    </span>
+  </li>
+</ul>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+      </div><!-- .section -->
+
 
       <div class="component-menu">
         <ul class="component-list"></ul>
