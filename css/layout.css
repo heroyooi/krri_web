@@ -10,9 +10,12 @@ body{width:100%;}
 #header{position:relative;height:76px;z-index:1;padding:16px 40px;display:flex;justify-content: space-between;-webkit-backdrop-filter: blur(12px);backdrop-filter: blur(12px);background-color: rgba(255, 255, 255, 0.9);align-items: center;width:100%;min-width:1320px;}
 #header h1 a{font-size:0;display:block;width:259px;height:20px;background:url('/img/common/logo-krri-system.svg') 50% 50% no-repeat;}
 
-#gnb{display:flex;align-items: center;gap:0 60px;position: absolute;left:50%;top:26px;transform:translateX(-50%);white-space: nowrap;}
+#gnb{display:flex;align-items: center;gap:0 60px;position: absolute;left:50%;top:16px;transform:translateX(-50%);white-space: nowrap;}
 #gnb li{line-height:1.4;}
-#gnb li a{font-size:17px;font-weight:500;color:#656b7b;}
+#gnb li a{font-size:17px;font-weight:500;color:#656b7b;display:block;padding:10px 0;position: relative;}
+#gnb li a:hover{color:#32394f;}
+#gnb li a::after{content:'';position: absolute;left:0;bottom:0;width:100%;height:2px;background-color: #32394f;display:none;}
+#gnb li a:hover::after{display:block;}
 
 #util{display: flex;align-items: center;}
 #util li a{display:flex;align-items: center;font-size:14px;color:#656b7b;gap:0 4px;}
@@ -39,13 +42,35 @@ body{width:100%;}
 .btn-quick{bottom:86px;background-color: #fff;}
 .btn-quick span{display:inline-block;font-size:12px;font-weight:bold;line-height:1.4;color:#32394f;}
 .btn-quick::after{background: url(../img/common/ico-s-arrow.svg) 50% 50% no-repeat;content:'';display:block;width:16px;height:16px;margin:0 auto;}
-.btn-top{bottom:24px;background: #fff url(../img/common/ico-m-longarrowtop-g.svg) 50% 50% no-repeat;}
+.btn-top{bottom:24px;background: #fff url(../img/common/ico-m-longarrowtop-g.svg) 50% 50% no-repeat;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);}
+.btn-top:hover{background: #32394f url(../img/common/ico-m-longarrowtop-w.svg) 50% 50% no-repeat;}
 .btn-top.on{display:block;}
+.btn-quick-area{position:fixed;right:40px;bottom:86px;width:54px;z-index:2;background-color:#fff;border-radius:30px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);}
+.btn-quick-area a{display:block;padding:8px;display:flex;align-items: center;justify-content: center;position: relative;color:#fff;}
+.btn-quick-area a.item{height:40px;display:none;}
+.btn-quick-area a.item.search{background:url(../img/icon/ico-m-search-off.svg) 50% 50% no-repeat;}
+.btn-quick-area a.item.state-3{background:url(../img/icon/ico-menu-3-stage-off.svg) 50% 50% no-repeat;}
+.btn-quick-area a.item.relationship{background:url(../img/icon/ico-menu-relationship-off.svg) 50% 50% no-repeat;}
+
+.btn-quick-area a.item .s-tooltip{position: absolute;right:46px;top:5px;display:none;}
+.btn-quick-area a.item:hover .s-tooltip{display:block;}
+.btn-quick-area a.quick{font-size:12px;font-weight:bold;line-height:1.4;color:#32394f;height:54px;flex-direction: column;}
+.btn-quick-area a.quick::after{background: url(../img/common/ico-s-arrow.svg) 50% 50% no-repeat;content:'';display:block;width:16px;height:16px;margin:0 auto;transition:transform 0.2s;}
+.btn-quick-area a.quick:hover::after{background: url(../img/common/ico-s-arrow-b.svg) 50% 50% no-repeat;}
+
+.btn-quick-area.on{padding-top:10px;}
+.btn-quick-area.on a.item{display:block;}
+.btn-quick-area.on a.quick::after{transform:rotate(180deg);}
 
 .sub-visual{padding:80px 0;text-align:center;background-color: #f4f6fc;}
 .sub-visual .s-tit{font-size:18px;font-weight:500;color:#1d51e9;}
-.sub-visual .b-tit{font-size:52px;font-weight:bold;color:#32394f;}
+.sub-visual .tit{font-size:52px;font-weight:bold;color:#32394f;}
+
 .content-wrap{padding:80px 0 120px;margin:0 auto;width:1320px;position: relative;}
+.content-wrap .sub-tit{font-size:18px;font-weight:bold;color:#32394f;margin-bottom:8px;display:flex;gap:0 4px;align-items: center;position: relative;margin-top:40px;}
+.content-wrap .sub-tit:first-child{margin-top:0;}
+.content-wrap .sub-tit .info-area{position: relative;}
+.content-wrap .sub-tit .info-modal{position: absolute;left:0;top:0;padding:8px 7px 8px 12px;background-color: #fff;border-radius: 4px;-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);background-color: rgba(50, 57, 79, 0.9);font-size:13px;color:#fff;font-weight:400;white-space:nowrap;display:none;}
 /*
 @media screen and (min-width: 640px) {
   #wrapper{width:640px;overflow:hidden;}

@@ -23,7 +23,8 @@
 .main-intro-swiper.swiper_common_wrap .swiper-items .swiper-arrow{display:flex;align-items:center;}
 .main-intro-swiper.swiper_common_wrap .swiper-items .swiper-paging{gap:0 24px;}
 .main-intro-swiper.swiper_common_wrap .swiper-items .swiper-arrow{gap:0 8px;}
-.main-intro-swiper.swiper_common_wrap .swiper-items .swiper-arrow .arrow{background: #f4f6fc url('/img/common/ico-m-nextpage-b.svg') no-repeat center; width: 42px; height: 42px; border-radius: 20px;}
+.main-intro-swiper.swiper_common_wrap .swiper-items .swiper-arrow .arrow{background: #ffffff url('/img/common/ico-m-nextpage-b.svg') no-repeat center; width: 42px; height: 42px; border-radius: 20px;}
+.main-intro-swiper.swiper_common_wrap .swiper-items .swiper-arrow .arrow:hover{background: #f4f6fc url('/img/common/ico-m-nextpage-b.svg') no-repeat center;}
 .main-intro-swiper.swiper_common_wrap .swiper-items .swiper-arrow .arrow.swiper-next { transform: rotate(180deg) } 
 .main-intro-swiper.swiper_common_wrap .swiper-items .swiper-paging li,
 .main-intro-swiper.swiper_common_wrap .swiper-items .swiper-arrow .arrow{cursor:pointer;}
@@ -74,6 +75,16 @@
 .news_list > li .badge.new{background-color:#fff6f5;color:#d63131;}
 .news_list > li .date{font-size:16px;color:#656b7b;flex-shrink:0;margin-left:auto;}
 
+/* sub */
+.form-box{padding: 24px;border-radius: 16px;border: solid 1px #d7dcea;background-color: #fff;}
+.form-list > li{display:flex;gap: 0 8px;min-height:40px;margin-top:10px;}
+.form-list > li.attach-area{min-height:32px;justify-content: flex-end;align-items: center;}
+.form-list > li:first-child{margin-top:0;}
+.form-list > li .label{font-size:14px;font-weight:500;color:#656b7b;display:flex;gap:0 4px;padding-top:11.5px;min-width:100px;flex-shrink:0;}
+.form-list > li .label.require::after{content:'';display:block;width:8px;height:8px;background:url('/img/icon/ico-ss-required.svg') 50% 50% no-repeat;}
+.form-list > li .input-area{min-height:40px;display:flex;align-items: center;flex-grow:1;}
+
+/* 보류 */
 /* sub */
 .content_area{padding: 80px 0;position: relative;}
 .content_area::before{content:'';display:block;width:100%;height:100%;background-image: linear-gradient(to top, #fff, #f4f6fc);position: absolute;left:0;top:0;}
@@ -138,3 +149,4 @@ border: solid 1px #d7dcea;background-color: #fff;position: relative;}
 .info-list li:first-child::before{display:none;}
 .info-list li .label{color:#656b7b;}
 .info-list li .value{font-weight:bold;}
+
