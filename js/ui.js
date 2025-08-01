@@ -61,21 +61,21 @@ var GUI = window.GUI || (function(){
       }
 
       if (inputUI.length) {
-        inputUI.each(function(){
-          if ($(this).val().length) {
-            $(this).next('.tip').hide();
-          }
-        })
-        inputUI.on('keyup', function(){
-          if ($(this).val().length) {
-            $(this).next('.tip').hide();
-          } else {
-            $(this).next('.tip').show();
-          }
-        });
-        inputUI.closest('.input-wrap').find('.btn-del').on('click', function(){
-          $(this).prev('.input-base').val('').focus();
-        })
+        // inputUI.each(function(){
+        //   if ($(this).val().length) {
+        //     $(this).closest('.input-wrap').find('.btn-del').show();
+        //   }
+        // })
+        // inputUI.on('keyup', function(){
+        //   if ($(this).val().length) {
+        //     $(this).closest('.input-wrap').find('.btn-del').show();
+        //   } else {
+        //     $(this).closest('.input-wrap').find('.btn-del').hide();
+        //   }
+        // });
+        // inputUI.closest('.input-wrap').find('.btn-del').on('click', function(){
+        //   $(this).prev('.input-base').val('').focus();
+        // })
       }
       if (inputCountUI.length) {
         inputCountUI.each(function(){

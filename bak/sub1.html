@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>철도 기술기준·표준 개발/관리 플랫폼</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/swiper-bundle.min.js"></script><!-- 11.2.0 -->
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+
+<body>
+  <div class="skip-navi">
+    <a href="#container">본문 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+    <a href="#gnb">주메뉴 바로가기</a>
+  </div>
+  <div id="wrapper">
+    <div id="header">
+      <h1 class="logo"><a href="javascript:void(0);">철도 기술기준·표준 개발/관리 플랫폼</a></h1>
+      <h2 class="hide">주메뉴</h2>
+      <ul id="gnb">
+        <li><a href="javascript:void(0);">플랫폼 소개</a></li>
+        <li><a href="javascript:void(0);">플랫폼 소개</a></li>
+        <li><a href="javascript:void(0);">한국철도표준규격</a></li>
+        <li><a href="javascript:void(0);">철도차량·용품 기술기준</a></li>
+        <li><a href="javascript:void(0);">새소식</a></li>
+      </ul>
+      <h2 class="hide">유틸메뉴</h2>
+      <ul id="util">
+        <li class="login"><a href="javascript:void(0);">로그인</a></li>
+      </ul>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="content_area">
+        <div class="inner">
+          <ul class="site-navi">
+            <li class="home"><a href="javascript:void(0);">홈</a></li>
+            <li class="dots"></li>
+            <li class="current"><a href="javascript:void(0);">통합검색</a></li>
+          </ul>
+          <h3 class="lg_tit">철도 기술기준·표준 통합검색</h3>
+          <div class="search_area">
+            <div class="input-wrap">
+              <input type="text" class="input-base" placeholder="철도 기술기준·표준 검색어를 입력하세요">
+              <button class="btn_search">검색</button>
+            </div>
+            <div class="filter_area">
+              <div class="filter-top">
+                <div class="label">
+                  <span>상세필터</span>
+                </div>
+                <button class="arrow"></button>
+              </div>
+              <div class="filter-detail">
+                <ul class="filter-list">
+                  <li>
+                    <span class="label">대상 구분</span>
+                    <ul class="radio-list">
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-target-all" name="radio-target" checked>
+                          <label for="radio-target-all">전체</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-target-1" name="radio-target">
+                          <label for="radio-target-1">철도 기술기준</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-target-2" name="radio-target">
+                          <label for="radio-target-2">한국철도표준규격(KRS)</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-target-3" name="radio-target">
+                          <label for="radio-target-3">철도분야산업표준(KS)</label>
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="bg">
+                    <ul class="filter-inner">
+                      <li>
+                        <span class="label">대상 분과</span>
+                        <ul class="radio-list">
+                          <li>
+                            <span class="radio-base">
+                              <input type="radio" id="radio-department-1" name="radio-department" checked>
+                              <label for="radio-department-1">철도 차량</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio-base">
+                              <input type="radio" id="radio-department-2" name="radio-department">
+                              <label for="radio-department-2">철도 시설(궤도, 토목)</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio-base">
+                              <input type="radio" id="radio-department-3" name="radio-department">
+                              <label for="radio-department-3">철도 전력신호정보통신</label>
+                            </span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span class="label">상세분야</span>
+                        <ul class="chk-list">
+                          <li>
+                            <span class="chk-base">
+                              <input type="checkbox" id="checkbox-detail-1" checked>
+                              <label for="checkbox-detail-1">CB(차체설비용품)</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="chk-base">
+                              <input type="checkbox" id="checkbox-detail-2">
+                              <label for="checkbox-detail-2">RN(주행장치용품)</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="chk-base">
+                              <input type="checkbox" id="checkbox-detail-3">
+                              <label for="checkbox-detail-3">BR(제동장치용품)</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="chk-base">
+                              <input type="checkbox" id="checkbox-detail-4">
+                              <label for="checkbox-detail-4">PR(추진장치용품)</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="chk-base">
+                              <input type="checkbox" id="checkbox-detail-5">
+                              <label for="checkbox-detail-5">RN(주행장치용품)</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="chk-base">
+                              <input type="checkbox" id="checkbox-detail-6">
+                              <label for="checkbox-detail-6">AP(보조전원장치용품)</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="chk-base">
+                              <input type="checkbox" id="checkbox-detail-7">
+                              <label for="checkbox-detail-7">CS(차상신호장치용품)</label>
+                            </span>
+                          </li>
+
+                          <li>
+                            <span class="chk-base">
+                              <input type="checkbox" id="checkbox-detail-8">
+                              <label for="checkbox-detail-8">OS(운전자보안장치용품)</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="chk-base">
+                              <input type="checkbox" id="checkbox-detail-9">
+                              <label for="checkbox-detail-9">CC(종합제어장치용품)</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="chk-base">
+                              <input type="checkbox" id="checkbox-detail-10">
+                              <label for="checkbox-detail-10">CP(연결장치용품)</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="chk-base">
+                              <input type="checkbox" id="checkbox-detail-11">
+                              <label for="checkbox-detail-11">EQ(그 밖의 장치용품)</label>
+                            </span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="label">규격상태</span>
+                    <ul class="radio-list">
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-status-all" name="radio-status" checked>
+                          <label for="radio-status-all">전체</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-status-1" name="radio-status">
+                          <label for="radio-status-1">확인</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-status-2" name="radio-status">
+                          <label for="radio-status-2">제정</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-status-3" name="radio-status">
+                          <label for="radio-status-3">개정</label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="radio-base">
+                          <input type="radio" id="radio-status-4" name="radio-status">
+                          <label for="radio-status-4">폐지</label>
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <span class="label">최종 고시일자</span>
+                    <div class="input-wrap input-datepicker">
+                      <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+                        <input id="startpicker-input1" type="text" aria-label="Date">
+                        <span class="tui-ico-date"></span>
+                        <div id="startpicker-container1" style="margin-left: -1px;"></div>
+                      </div>
+                      <span class="bridge">~</span>
+                      <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+                        <input id="endpicker-input1" type="text" aria-label="Date">
+                        <span class="tui-ico-date"></span>
+                        <div id="endpicker-container1" style="margin-left: -1px;"></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="btn-wrap">
+                  <span class="btn-base tp1"><a href="#">초기화</a></span>
+                  <span class="btn-base tp2"><a href="#">선택조건 검색하기</a></span>
+                </div>
+              </div>
+            </div><!-- .filter_area -->
+          </div><!-- .search_area -->
+          <div class="info_box">
+            <span>기술기준 및 KS의 경우, 철도 기술기준·표준 개발/관리 플랫폼 서비스 내에서 작성된 문서는 고시된 원문이 아니므로 원문과 상이할 수 있습니다.</span>
+          </div>
+
+          <div class="total_area">
+            <p class="total">전체 <strong>19</strong>건</p>
+            <span class="select-base">
+              <span class="value"></span>
+              <select>
+                <option value="0">선택</option>
+                <option value="1" selected>10개씩 보기</option>
+                <option value="2">Value 2</option>
+                <option value="3">Value 3</option>
+              </select>
+            </span>
+          </div>
+
+          <div id="sampleTable">
+            <table class="tb-list">
+              <colgroup>
+                <col width="80" />
+                <col width="160" />
+                <col width="*" />
+                <col width="200" />
+                <col width="80" />
+                <col width="132" />
+                <col width="80" />
+                <col width="68" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">번호</th>
+                  <th scope="col">구분</th>
+                  <th scope="col">기술기준·표준명</th>
+                  <th scope="col">규격번호</th>
+                  <th scope="col">규격상태</th>
+                  <th scope="col">최종 고시일</th>
+                  <th scope="col">담당자</th>
+                  <th scope="col">문서보기</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>19</td>
+                  <td class="t-left">기술기준</td>
+                  <td class="t-left">
+                    <a href="javascript:void(0);" class="ellispis">전기기관차 모니터장치</a>
+                  </td>
+                  <td>KRS-OS-0001-24R</td>
+                  <td>개정</td>
+                  <td>2024.12.12</td>
+                  <td>홍길동</td>
+                  <td>
+                    <a href="javascript:void(0);" class="btn-ico btn-viewdocument"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td class="t-left">KRS</td>
+                  <td class="t-left">
+                    <a href="javascript:void(0);" class="ellispis">370KPH 고속철도기술기준 제정(안)370KPH 고속철도기술기준 제정(안)370KPH 고속철도기술기준 제정(안)370KPH 고속철도기술기준 제정(안)</a>
+                  </td>
+                  <td>KRS-OS-0001-24R</td>
+                  <td>개정</td>
+                  <td>2024.12.12</td>
+                  <td>홍길동</td>
+                  <td>
+                    <a href="javascript:void(0);" class="btn-ico btn-viewdocument"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td class="t-left">기술기준</td>
+                  <td class="t-left">
+                    <a href="javascript:void(0);" class="ellispis">전기기관차 모니터장치</a>
+                  </td>
+                  <td>KRS-OS-0001-24R</td>
+                  <td>개정</td>
+                  <td>2024.12.12</td>
+                  <td>홍길동</td>
+                  <td>
+                    <a href="javascript:void(0);" class="btn-ico btn-viewdocument"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td class="t-left">기술기준</td>
+                  <td class="t-left">
+                    <a href="javascript:void(0);" class="ellispis">전기기관차 모니터장치</a>
+                  </td>
+                  <td>KRS-OS-0001-24R</td>
+                  <td>개정</td>
+                  <td>2024.12.12</td>
+                  <td>홍길동</td>
+                  <td>
+                    <a href="javascript:void(0);" class="btn-ico btn-viewdocument"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td class="t-left">기술기준</td>
+                  <td class="t-left">
+                    <a href="javascript:void(0);" class="ellispis">전기기관차 모니터장치</a>
+                  </td>
+                  <td>KRS-OS-0001-24R</td>
+                  <td>개정</td>
+                  <td>2024.12.12</td>
+                  <td>홍길동</td>
+                  <td>
+                    <a href="javascript:void(0);" class="btn-ico btn-viewdocument"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td class="t-left">기술기준</td>
+                  <td class="t-left">
+                    <a href="javascript:void(0);" class="ellispis">전기기관차 모니터장치</a>
+                  </td>
+                  <td>KRS-OS-0001-24R</td>
+                  <td>개정</td>
+                  <td>2024.12.12</td>
+                  <td>홍길동</td>
+                  <td>
+                    <a href="javascript:void(0);" class="btn-ico btn-viewdocument"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td class="t-left">기술기준</td>
+                  <td class="t-left">
+                    <a href="javascript:void(0);" class="ellispis">전기기관차 모니터장치</a>
+                  </td>
+                  <td>KRS-OS-0001-24R</td>
+                  <td>개정</td>
+                  <td>2024.12.12</td>
+                  <td>홍길동</td>
+                  <td>
+                    <a href="javascript:void(0);" class="btn-ico btn-viewdocument"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td class="t-left">기술기준</td>
+                  <td class="t-left">
+                    <a href="javascript:void(0);" class="ellispis">전기기관차 모니터장치</a>
+                  </td>
+                  <td>KRS-OS-0001-24R</td>
+                  <td>개정</td>
+                  <td>2024.12.12</td>
+                  <td>홍길동</td>
+                  <td>
+                    <a href="javascript:void(0);" class="btn-ico btn-viewdocument"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td class="t-left">기술기준</td>
+                  <td class="t-left">
+                    <a href="javascript:void(0);" class="ellispis">전기기관차 모니터장치</a>
+                  </td>
+                  <td>KRS-OS-0001-24R</td>
+                  <td>개정</td>
+                  <td>2024.12.12</td>
+                  <td>홍길동</td>
+                  <td>
+                    <a href="javascript:void(0);" class="btn-ico btn-viewdocument"></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td class="t-left">기술기준</td>
+                  <td class="t-left">
+                    <a href="javascript:void(0);" class="ellispis">전기기관차 모니터장치</a>
+                  </td>
+                  <td>KRS-OS-0001-24R</td>
+                  <td>개정</td>
+                  <td>2024.12.12</td>
+                  <td>홍길동</td>
+                  <td>
+                    <a href="javascript:void(0);" class="btn-ico btn-viewdocument"></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="sampleNodata" style="display: none;">
+            <table class="tb-list">
+              <colgroup>
+                <col width="80" />
+                <col width="160" />
+                <col width="*" />
+                <col width="200" />
+                <col width="80" />
+                <col width="132" />
+                <col width="80" />
+                <col width="68" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">번호</th>
+                  <th scope="col">구분</th>
+                  <th scope="col">기술기준·표준명</th>
+                  <th scope="col">규격번호</th>
+                  <th scope="col">규격상태</th>
+                  <th scope="col">최종 고시일</th>
+                  <th scope="col">담당자</th>
+                  <th scope="col">문서보기</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="8">
+                    <p class="no-data">검색결과가 없습니다.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagination">
+            <a class="btn btn-first disabled" href="javascript:void(0);"></a>
+            <a class="btn btn-prev disabled" href="javascript:void(0);"></a>
+            <a class="num on" href="javascript:void(0);">1</a>
+            <a class="num" href="javascript:void(0);">2</a>
+            <a class="btn btn-next" href="javascript:void(0);"></a>
+            <a class="btn btn-last" href="javascript:void(0);"></a>
+          </div>
+        </div>
+      </div>
+      
+    </div><!-- #container -->
+    <div id="footer">
+      <ul class="f_logo">
+        <li><a href="javascript:void(0);"><img src="img/common/logo-molit-full.svg" alt="국토교통부"></a></li>
+        <li><a href="javascript:void(0);"><img src="img/common/logo-kaia-full.svg" alt="국토교통 과학기술진흥원"></a></li>
+        <li><a href="javascript:void(0);"><img src="img/common/logo-krri-full.webp" alt="한국철도기술연구원"></a></li>
+      </ul>
+      <ul class="f_menu">
+        <li class="privacy"><a href="javascript:void(0);">개인정보처리방침</a></li>
+        <li class="dot"></li>
+        <li><a href="javascript:void(0);">정보주체권리행사절차</a></li>
+        <li class="dot"></li>
+        <li><a href="javascript:void(0);">이메일무단수집거부</a></li>
+        <li class="dot"></li>
+        <li><a href="javascript:void(0);">저작권정책</a></li>
+        <li class="dot"></li>
+        <li><a href="javascript:void(0);">찾아오시는길</a></li>
+      </ul>
+      <address class="f_address">
+        <span>(우편번호 16105) 경기도 의왕시 철도박물관로 176 <strong>한국철도기술연구원</strong></span>
+        <span>Tel. <a href="tel:031-460-5000">031-460-5000</a></span>
+        <span>Fax. 031-460-5159</span>
+      </address>
+      <p class="f_copy">Copyright (C) Korea Railroad Research Institute. All Rights Reserved.</p>
+    </div><!-- #footer -->
+
+    <button class="btn-quick"><span>Quick</span></button>
+    <button class="btn-top">TOP</button>
+  </div><!-- #wrapper -->
+
+  <script>
+    $('.filter_area .filter-top .arrow').on('click', function(){
+      if (!$('.filter_area').hasClass('on')) {
+        $('.filter_area').addClass('on');
+      } else {
+        $('.filter_area').removeClass('on');
+      }
+    });
+
+    if ($('#radio-target-2').is(':checked')) {
+      $('.filter_area .filter-list > li.bg').addClass('on');
+    }
+
+    $('[name=radio-target]').on('change', function(){
+      if ($(this).attr('id') == 'radio-target-2') {
+        if ($(this).is(':checked')) {
+          $('.filter_area .filter-list > li.bg').addClass('on');
+        }
+      } else {
+        if ($(this).is(':checked')) {
+          $('.filter_area .filter-list > li.bg').removeClass('on');
+        }
+      }
+    });
+
+    var today1 = new Date();
+    var picker1 = tui.DatePicker.createRangePicker({
+      startpicker: {
+        date: today1,
+        input: '#startpicker-input1',
+        container: '#startpicker-container1'
+      },
+      endpicker: {
+        date: today1,
+        input: '#endpicker-input1',
+        container: '#endpicker-container1'
+      },
+      selectableRanges: [
+        [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
+      ],
+      format: 'YYYY-MM-dd',
+    });
+
+    picker1.on('change:end', () => {
+        console.log(123);
+    });
+
+    var qsample = $.urlParam('sample');
+    setTimeout(() => {
+      if (qsample === 'filterA' || qsample === 'filterB') {
+        $('.filter_area .filter-top .arrow').click();
+        if (qsample === 'filterB') {
+          $('#radio-target-2').click();
+        }
+      }
+      if (qsample === 'noData') {
+        $('#sampleTable').hide();
+        $('#sampleNodata').css('display', 'block');
+        $('.search_area .input-base').val('검색어 없음');
+        $('.total_area .total strong').text(0);
+      }
+    }, 50);
+  </script>
+</body>
+
+</html>

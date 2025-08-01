@@ -42,6 +42,10 @@ body{width:100%;}
 .btn-top{bottom:24px;background: #fff url(../img/common/ico-m-longarrowtop-g.svg) 50% 50% no-repeat;}
 .btn-top.on{display:block;}
 
+.sub-visual{padding:80px 0;text-align:center;background-color: #f4f6fc;}
+.sub-visual .s-tit{font-size:18px;font-weight:500;color:#1d51e9;}
+.sub-visual .b-tit{font-size:52px;font-weight:bold;color:#32394f;}
+.content-wrap{padding:80px 0 120px;margin:0 auto;width:1320px;position: relative;}
 /*
 @media screen and (min-width: 640px) {
   #wrapper{width:640px;overflow:hidden;}
@@ -51,7 +55,7 @@ body{width:100%;}
 */
 
 /* swiper & slick & flicking example */
-.ex_wrp{margin:0 auto;font-family:'Montserrat', 'Noto Sans KR', sans-serif;}
+.ex_wrp{margin:0 auto;}
 .ex_wrp pre{display:none;}
 .ex_wrp pre.guide{display:block;}
 .ex_wrp h2{font-size:24px;}

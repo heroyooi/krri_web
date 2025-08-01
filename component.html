@@ -58,7 +58,7 @@
       <h1 class="logo"><a href="javascript:void(0);">철도 기술기준·표준 개발/관리 플랫폼</a></h1>
       <h2 class="hide">주메뉴</h2>
       <ul id="gnb">
-        <li><a href="javascript:void(0);">플랫폼 소개</a></li>
+        <li><a href="javascript:void(0);">통합검색</a></li>
         <li><a href="javascript:void(0);">플랫폼 소개</a></li>
         <li><a href="javascript:void(0);">한국철도표준규격</a></li>
         <li><a href="javascript:void(0);">철도차량·용품 기술기준</a></li>
@@ -94,8 +94,8 @@
           <h3>기본 타입 <button>코드 보기</button></h3>
           <div class="code-box">
 <div class="btn-wrap">
-  <span class="btn-base tp1"><a href="#">초기화</a></span>
-  <span class="btn-base tp2"><a href="#">선택조건 검색하기</a></span>
+  <span class="btn-base tp1"><a href="#"><span class="ico home">메인 페이지로 돌아가기</span></a></span>
+  <span class="btn-base tp2"><a href="#"><span class="ico send">제·개정 신청</span></a></span>
 </div>
           </div>
           <pre class="language-html"></pre>
@@ -166,16 +166,132 @@
       </div><!-- .section -->
 
       <div class="section">
-        <h2>인풋</h2>
+        <h2>인풋 + 파일 업로드 + 데이트 피커</h2>
 
         <div class="code-area">
-          <h3>타입 1 <button>코드 보기</button></h3>
+          <h3>기본형 <button>코드 보기</button></h3>
           <div class="code-box">
-<div class="search_area">
-  <div class="input-wrap">
-    <input type="text" class="input-base" placeholder="철도 기술기준·표준 검색어를 입력하세요">
-    <button class="btn_search">검색</button>
-  </div>
+<input type="text" class="input-base" placeholder="대상 규격명을 입력해주세요">
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>기본형 - 비활성화 <button>코드 보기</button></h3>
+          <div class="code-box">
+<input type="text" class="input-base" placeholder="대상 규격명을 입력해주세요" value="한국철도기술연구원" disabled>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>파일 첨부 <button>코드 보기</button></h3>
+          <div class="code-box">
+<div class="input-wrap ver_file">
+  <input type="text" class="input-base" placeholder="파일을 선택해주세요" readonly>
+  <button class="btn-file"></button>
+  <input type="file" />
+  <button class="btn-del"></button>
+</div>
+          </div>
+          <script>
+$('.input-wrap.ver_file').find('input[type="file"]').on('change', function(){
+  var $fileInput = $(this).closest('.input-wrap.ver_file');
+  var fileValue = this.value.split('\\');  
+  $fileInput.find('.input-base').val(fileValue[fileValue.length-1]);
+  $fileInput.addClass('on');
+});
+$('.input-wrap.ver_file .btn-del').on('click', function(e){
+  var $fileInput = $(this).closest('.input-wrap.ver_file');
+  $fileInput.find('.input-base').val('');
+  $fileInput.removeClass('on');
+})
+          </script>
+          <pre class="language-html"></pre>
+          <pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>파일 첨부 - 기본값 있음 <button>코드 보기</button></h3>
+          <div class="code-box">
+<div class="input-wrap ver_file on">
+  <input type="text" class="input-base" placeholder="파일을 선택해주세요" value="첨부된 파일명.zip" readonly>
+  <button class="btn-file"></button>
+  <input type="file" />
+  <button class="btn-del"></button>
+</div>
+          </div>
+          <script>
+$('.input-wrap.ver_file').find('input[type="file"]').on('change', function(){
+  var $fileInput = $(this).closest('.input-wrap.ver_file');
+  var fileValue = this.value.split('\\');  
+  $fileInput.find('.input-base').val(fileValue[fileValue.length-1]);
+  $fileInput.addClass('on');
+});
+$('.input-wrap.ver_file .btn-del').on('click', function(e){
+  var $fileInput = $(this).closest('.input-wrap.ver_file');
+  $fileInput.find('.input-base').val('');
+  $fileInput.removeClass('on');
+})
+          </script>
+          <pre class="language-html"></pre>
+          <pre class="language-javascript"></pre>
+        </div>
+
+
+        <div class="code-area">
+          <h3>파일 업로드 - dnd <button>코드 보기</button></h3>
+          <div class="code-box">
+<div class="file-dnd-area">
+  <span class="file-msg">등록하실 파일을 선택하거나 올려주세요. <br />5MB이하의 파일을 5개까지 업로드할 수 있습니다
+  </span>
+  <input type="file">
+</div>
+<div class="file-list-area edit mt10" style="display: none">
+  <ul>
+  </ul>
+</div>
+          </div>
+          <script>
+var $fileList = $('.file-list-area');
+$fileList.on('click', '.btn-del-file', function(e){
+  e.preventDefault();
+  $(this).closest('li').remove();
+  if ($fileList.find('li').length === 0) {
+    $fileList.hide();
+  }
+});		
+var addFileList = function(data){
+  $fileList.find('ul').append('<li>' + data + '<a href="#" class="btn-del-file">삭제</a></li>');
+  if ($fileList.css('display') === 'none') {
+    $fileList.show();
+  }
+};
+var uploadBox = document.querySelector('.file-dnd-area');
+uploadBox.addEventListener('dragover', function(e) {
+  e.preventDefault();
+});
+uploadBox.addEventListener('drop', function(e) {
+  e.preventDefault();
+  var formData = new FormData();
+  formData.append('uploadFile', e.dataTransfer.files[0]);
+  addFileList(e.dataTransfer.files[0].name);
+});
+$('.file-dnd-area').find('input[type="file"]').on('change', function(){
+  var fileValue = this.value.split('\\');  
+  addFileList(fileValue[fileValue.length-1]);
+});
+          </script>
+          <pre class="language-html"></pre>
+          <pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>텍스트에리어 <button>코드 보기</button></h3>
+          <div class="code-box">
+<div class="textarea-base">
+  <textarea placeholder="신청사유를 작성해주세요"></textarea>
+  <span class="tx-count">현재 글자수 <em>0</em>/1,000자</span>
 </div>
           </div>
           <pre class="language-html"></pre>
