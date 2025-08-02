@@ -31,6 +31,13 @@
 			//<![CDATA[
 			b = new dTree('b');
 
+			const addList = [];
+			const originalAdd = b.add.bind(b);
+			b.add = function (...args) {
+				addList.push([...args]);
+				return originalAdd(...args);
+			};
+
 			b.add(0, -1, '철도 기술기준·표준 개발/관리 플랫폼');
 
 			b.add(1, 0, '1. 페이지');
@@ -44,15 +51,48 @@
 			b.add(1.043, 1, '4-3) DBM-001 (홈) Main>통합검색:필터B', 'sub3.html?sample=filterB', '완료', '_blank');
 			b.add(1.044, 1, '4-4) DBM-001 (홈) Main>통합검색:결과없음', 'sub3.html?sample=noData', '완료', '_blank');
 			b.add(1.05, 1, '5) DBM-001 (홈) Main>통합검색:상세-폐지', 'sub4.html', '완료', '_blank');
-			b.add(1.061, 1, '6-1) PSN-001 (홈>플랫폼 소개) 상세', 'sub5.html', '작업전', '_blank');
-			b.add(1.062, 1, '6-2) PSN-001 (홈>플랫폼 소개) 상세 - 개발·검증 및 제·개정 관리', 'sub5.html?tab=2', '작업전', '_blank');
-			b.add(1.071, 1, '7-1) PSI-002 (홈>한국철도표준규격) - 소개', 'sub6.html', '작업전', '_blank');
-			b.add(1.072, 1, '7-2) PSI-002 (홈>한국철도표준규격) - 분류', 'sub6.html?tab=2', '작업전', '_blank');
-			b.add(1.073, 1, '7-3) PSI-002 (홈>한국철도표준규격) - 구성', 'sub6.html?tab=3', '작업전', '_blank');
-			b.add(1.074, 1, '7-4) PSI-002 (홈>한국철도표준규격) - 제정, 개정 혹은 폐지 절차', 'sub6.html?tab=4', '작업전', '_blank');
+			b.add(1.061, 1, '6-1) PSN-001 (홈>플랫폼 소개) 상세', 'sub5.html', '완료', '_blank');
+			b.add(1.062, 1, '6-2) PSN-001 (홈>플랫폼 소개) 상세 - 개발·검증 및 제·개정 관리', 'sub5.html?tab=2', '완료', '_blank');
+			b.add(1.071, 1, '7-1) PSI-002 (홈>한국철도표준규격) - 소개', 'sub6.html', '완료', '_blank');
+			b.add(1.072, 1, '7-2) PSI-002 (홈>한국철도표준규격) - 분류', 'sub6.html?tab=2', '완료', '_blank');
+			b.add(1.073, 1, '7-3) PSI-002 (홈>한국철도표준규격) - 구성', 'sub6.html?tab=3', '완료', '_blank');
+			b.add(1.0741, 1, '7-4-1) PSI-002 (홈>한국철도표준규격) 절차>신청:close', 'sub6.html?tab=4', '완료', '_blank');
+			b.add(1.07421, 1, '7-4-2-1) PSI-002 (홈>한국철도표준규격) 절차>신청:open', 'sub6.html?tab=4&sample=open', '완료', '_blank');
+			b.add(1.07422, 1, '7-4-2-2) PSI-002 (홈>한국철도표준규격) 절차>검토및분석:open', 'sub6.html?tab=4&sample=open&step=2', '완료', '_blank');
+			b.add(1.07423, 1, '7-4-2-3) PSI-002 (홈>한국철도표준규격) 절차>심의:open', 'sub6.html?tab=4&sample=open&step=3', '완료', '_blank');
+			b.add(1.07424, 1, '7-4-2-4) PSI-002 (홈>한국철도표준규격) 절차>확정고시:open', 'sub6.html?tab=4&sample=open&step=3', '완료', '_blank');
+
+			b.add(1.08, 1, '8) PSN-001 (홈>새소식) 공지사항:목록', 'sub7.html', '작업전', '_blank');
+			b.add(1.09, 1, '9) PSN-001 (홈>새소식) 공지사항:상세', 'sub8.html', '작업전', '_blank');
+			b.add(1.10, 1, '10) PSN-003 (홈>새소식) 수요조사:상세>수요조사참여>작성', 'sub9.html', '작업전', '_blank');
+			b.add(1.11, 1, '11) PSN-003 (홈>새소식) 수요조사:상세>수요조사참여:상세', 'sub10.html', '작업전', '_blank');
+			b.add(1.121, 1, '12-1) PSN-004 (홈>새소식) 해외표준동향:목록', 'sub11.html', '작업전', '_blank');
+			b.add(1.122, 1, '12-2) PSN-004 (홈>새소식) 해외표준동향:목록', 'sub11.html?sample=dark', '작업전', '_blank');
 
 			b.add(9, 0, '9. 컴포넌트');  
-			b.add(9.01, 9, '1) 컴포넌트 가이드', 'component.html', '작업중', '_blank');
+			b.add(9.01, 9, '1) 컴포넌트 가이드', 'component.html', '작업전', '_blank');
+
+			const countMap = {};
+			const nameMap = {};
+			const topLevelIndexes = [];
+
+			addList.forEach(([id, pid, name], idx) => {
+				if (!countMap[pid]) countMap[pid] = 0;
+				countMap[pid]++;
+				if (!nameMap[id]) nameMap[id] = name;
+
+				if (pid === 0) topLevelIndexes.push(idx);
+			});
+
+			topLevelIndexes.forEach((idx) => {
+				const [id] = addList[idx];
+				const count = countMap[id];
+				const name = nameMap[id];
+				if (count && name) {
+				const node = b.aNodes.find((n) => n.id === id);
+				if (node) node.name = `${name} (${count})`;
+				}
+			});
 
 			document.write(b);
 			//]]>
