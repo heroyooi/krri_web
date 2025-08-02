@@ -61,6 +61,7 @@ body,input,select,textarea,button{font:14px/1.4 "Pretendard", "Malgun Gothic", "
 .mb0{margin-bottom:0 !important;}
 .mb15{margin-bottom:15px !important;}
 .mt10{margin-top:10px !important;}
+.mt16{margin-top:16px !important;}
 .mt30{margin-top:30px !important;}
 
 .hide{position:absolute;left:-9999px;font-size:0;width:0;height:0;text-indent:-9999px;overflow:hidden;}
