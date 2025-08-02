@@ -49,6 +49,9 @@
 
     .badge_list{margin-top:10px;}
     .badge_list:first-child{margin-top:0;}
+
+    .btn-top{position: relative;right:0;top:0;}
+    .btn-quick-area{position: relative;right:0;bottom:0;}
   </style>
 </head>
 
@@ -91,11 +94,53 @@
         <h2>버튼</h2>
 
         <div class="code-area">
-          <h3>기본 타입 <button>코드 보기</button></h3>
+          <h3>타입1 <button>코드 보기</button></h3>
           <div class="code-box">
 <div class="btn-wrap">
   <span class="btn-base tp1"><a href="#"><span class="ico home">메인 페이지로 돌아가기</span></a></span>
-  <span class="btn-base tp2"><a href="#"><span class="ico send">제·개정 신청</span></a></span>
+  <span class="btn-base tp1"><a href="#"><span class="ico list">목록으로</span></a></span>
+  <span class="btn-base tp1"><a href="#"><span class="ico search">텍스트</span></a></span>
+</div>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>타입2 <button>코드 보기</button></h3>
+          <div class="code-box">
+<div class="btn-wrap">
+  <span class="btn-base tp2"><a href="#"><span class="ico send">제정·개정 또는 폐지 신청</span></a></span>
+  <span class="btn-base tp2"><a href="#"><span class="ico modify">수정</span></a></span>
+  <span class="btn-base tp2"><a href="#"><span class="ico newregister">접수철회</span></a></span>
+  <span class="btn-base tp2"><a href="#"><span class="ico favorites">최종 고시원문 보기</span></a></span>
+  <span class="btn-base tp2"><a href="#"><span class="ico endview">즐겨찾기 등록</span></a></span>
+</div>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Small <button>코드 보기</button></h3>
+          <div class="code-box">
+<div class="btn-wrap">
+  <span class="btn-base tp1 sm"><a href="#">권한 변경 요청</a></span>
+  <span class="btn-base tp1 sm"><a href="#">확인</a></span>
+</div>
+
+<div class="btn-wrap">
+  <span class="btn-base tp3 sm"><a href="#">초기화</a></span>
+  <span class="btn-base tp1 sm"><a href="#">선택조건 검색하기</a></span>
+</div>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>비활성화 <button>코드 보기</button></h3>
+          <div class="code-box">
+<div class="btn-wrap">
+  <span class="btn-base tp1 disabled"><a href="#"><span class="ico search">텍스트</span></a></span>
+  <span class="btn-base tp2 disabled"><a href="#"><span class="ico newregister">신규 과제</span></a></span>
 </div>
           </div>
           <pre class="language-html"></pre>
@@ -116,6 +161,14 @@
           <h3>텍스트 타입 <button>코드 보기</button></h3>
           <div class="code-box">
 <a href="javascript:void(0);" class="btn_link">원문 보러가기(URL)</a>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>더보기 <button>코드 보기</button></h3>
+          <div class="code-box">
+<a href="javascript:void(0);" class="btn_more">더보기</a>
           </div>
           <pre class="language-html"></pre>
         </div>
@@ -254,7 +307,7 @@ $('.input-wrap.ver_file .btn-del').on('click', function(e){
           </div>
           <script>
 var $fileList = $('.file-list-area');
-$fileList.on('click', '.btn-del-file', function(e){
+$fileList.on('click', '.btn-del', function(e){
   e.preventDefault();
   $(this).closest('li').remove();
   if ($fileList.find('li').length === 0) {
@@ -262,7 +315,7 @@ $fileList.on('click', '.btn-del-file', function(e){
   }
 });		
 var addFileList = function(data){
-  $fileList.find('ul').append('<li>' + data + '<a href="#" class="btn-del-file">삭제</a></li>');
+  $fileList.find('ul').append(`<li><a href="#" class="btn-del">삭제</a>${data}</li>`);
   if ($fileList.css('display') === 'none') {
     $fileList.show();
   }
@@ -429,6 +482,82 @@ picker1.on('change:end', () => {
   </li>
 </ul>
           </div>
+          <pre class="language-html"></pre>
+        </div>
+
+      </div><!-- .section -->
+
+
+      <div class="section">
+        <h2>탭</h2>
+
+        <div class="code-area">
+          <h3>기본 <button>코드 보기</button></h3>
+          <div class="code-box">
+<ul class="tab-base tp1">
+  <li class="on"><a href="#tab1-1">공지사항</a></li>
+  <li><a href="#tab1-2">수요조사</a></li>
+  <li><a href="#tab1-3">해외 표준 동향</a></li>
+</ul>
+<ul class="panel-base">
+  <li id="tab1-1">공지사항 내용이 나옵니다.</li>
+  <li id="tab1-2">수요조사 내용이 나옵니다.</li>
+  <li id="tab1-3">해외 표준 동향 내용이 나옵니다.</li>
+</ul>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Large <button>코드 보기</button></h3>
+          <div class="code-box">
+<ul class="tab-base lg">
+  <li class="on"><a href="#tab2-1">공지사항</a></li>
+  <li><a href="#tab2-2">수요조사</a></li>
+  <li><a href="#tab2-3">해외 표준 동향</a></li>
+</ul>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Blue <button>코드 보기</button></h3>
+          <div class="code-box">
+<ul class="tab-base c_blue">
+  <li class="on"><a href="#tab2-1">공지사항</a></li>
+  <li><a href="#tab2-2">수요조사</a></li>
+  <li><a href="#tab2-3">해외 표준 동향</a></li>
+</ul>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+      </div><!-- .section -->
+
+
+      <div class="section">
+        <h2>기타 공통 요소</h2>
+
+        <div class="code-area">
+          <h3>퀵메뉴 <button>코드 보기</button></h3>
+          <div class="code-box">
+<div class="btn-quick-area">
+  <a href="#" class="item search"><span class="s-tooltip">통합검색</span></a>
+  <a href="#" class="item state-3"><span class="s-tooltip">3단 문서비교</span></a>
+  <a href="#" class="item relationship"><span class="s-tooltip">기술기준 관계도</span></a>
+  <a href="#" class="quick">Quick</a>
+</div>
+          </div>
+          <script></script>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>탑버튼 <button>코드 보기</button></h3>
+          <div class="code-box">
+<button class="btn-top">TOP</button>
+          </div>
+          <script></script>
           <pre class="language-html"></pre>
         </div>
 

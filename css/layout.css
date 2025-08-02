@@ -65,6 +65,9 @@ body{width:100%;}
 .sub-visual{padding:80px 0;text-align:center;background-color: #f4f6fc;}
 .sub-visual .s-tit{font-size:18px;font-weight:500;color:#1d51e9;}
 .sub-visual .tit{font-size:52px;font-weight:bold;color:#32394f;}
+.sub-visual.ver_search{background-color:#3d54a2;}
+.sub-visual.ver_search .s-tit{color:#a8bcf7;}
+.sub-visual.ver_search .tit{color:#ffffff;}
 
 .content-wrap{padding:80px 0 120px;margin:0 auto;width:1320px;position: relative;}
 .content-wrap .sub-tit{font-size:18px;font-weight:bold;color:#32394f;margin-bottom:8px;display:flex;gap:0 4px;align-items: center;position: relative;margin-top:40px;}

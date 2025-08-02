@@ -127,8 +127,6 @@
           </div>
         </h4>
 
-        
-
         <div class="form-box">
           <ul class="form-list">
             <li>
@@ -177,14 +175,95 @@
                 </div>
               </div>
             </li>
+            <li>
+              <span class="label require" style="width: 204px;">기타 첨부문서</span>
+              <div class="input-area">
+                <div class="file-dnd-area">
+                  <span class="file-msg">등록하실 파일을 선택하거나 올려주세요. <br />5MB이하의 파일을 5개까지 업로드할 수 있습니다
+                  </span>
+                  <input type="file">
+                </div>
+                <div class="file-list-area edit mt10" style="display: none">
+                  <ul>
+                  </ul>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
         <h4 class="sub-tit">
           <span>신청인 정보</span>
           <div class="info-area">
             <button class="btn-info"></button>
+            <div class="info-modal" style="top: -56px;">
+              <ul>
+                <li>✓ 제정, 개정, 폐지안에 대한 사유</li>
+                <li>✓ 국내외 관련 규격 및 인용규격특허 등 산업재산권에 대한 저촉여부 및 검토사항</li>
+                <li>✓ 검사 및 시험방법에 따른 공인시험 또는 검사기관에서 발행한 성적서</li>
+                <li>✓ 기타규격 안 검토에 필요한 자료 (제품개요, 현장설치 시험 또는 운영현황, 요구 성능 및 기준 산출근거, 기대효과, 산업파급효과 등)</li>
+                <li>※ 신청인의 제·개정(안) 및 자료에 대하여 철도기술연구원이 자료의 보완 및 수정을 요청할 수 있습니다.</li>
+              </ul>
+            </div>
           </div>
         </h4>
+        <div class="form-box">
+          <ul class="form-list col2">
+            <li>
+              <span class="label">소속기관</span>
+              <div class="input-area">
+                <input type="text" class="input-base" value="한국철도기술연구원" disabled>
+              </div>
+            </li>
+            <li>
+              <span class="label">소속부서</span>
+              <div class="input-area">
+                <input type="text" class="input-base" value="기술기준표준연구실" disabled>
+              </div>
+            </li>
+            <li>
+              <span class="label">연락처</span>
+              <div class="input-area">
+                <input type="text" class="input-base" value="010-0000-0000" disabled>
+              </div>
+            </li>
+            <li>
+              <span class="label">이메일</span>
+              <div class="input-area">
+                <input type="text" class="input-base" value="krri@krri.re.kr" disabled>
+              </div>
+            </li>
+            
+            <li>
+              <span class="label">신청인명</span>
+              <div class="input-area">
+                <input type="text" class="input-base" value="홍길동 책임연구원" disabled>
+              </div>
+            </li>
+            <li>
+              <span class="label">신청일자</span>
+              <div class="input-area">
+                <input type="text" class="input-base" value="2025.06.18" disabled>
+              </div>
+            </li>
+            <li>
+              <span class="label">접수번호</span>
+              <div class="input-area">
+                <input type="text" class="input-base" value="-" disabled>
+              </div>
+            </li>
+            <li>
+              <span class="label">진행 현황</span>
+              <div class="input-area">
+                <input type="text" class="input-base" value="-" disabled>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="btn-wrap">
+          <span class="btn-base tp1"><a href="#"><span class="ico home">메인 페이지로 돌아가기</span></a></span>
+          <span class="btn-base tp2"><a href="#"><span class="ico send">제·개정 신청</span></a></span>
+        </div>
       </div><!-- .content-wrap -->
     </div><!-- #container -->
     <div id="footer">
@@ -212,13 +291,34 @@
       <p class="f_copy">Copyright (C) Korea Railroad Research Institute. All Rights Reserved.</p>
     </div><!-- #footer -->
 
-    <div class="btn-quick-area on">
+    <div class="btn-quick-area">
       <a href="#" class="item search"><span class="s-tooltip">통합검색</span></a>
       <a href="#" class="item state-3"><span class="s-tooltip">3단 문서비교</span></a>
       <a href="#" class="item relationship"><span class="s-tooltip">기술기준 관계도</span></a>
       <a href="#" class="quick">Quick</a>
     </div>
     <button class="btn-top">TOP</button>
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-alert1" data-width="400">
+      <div class="con-wrap">
+        <h3 class="tit error">제·개정 신청 접수 완료</h3>
+        <p class="con t-center">접수번호 : <span class="num">000000000</span> <br /><br />제정,개정 혹은 폐지(안)에 대한 신청 접수가 <br />정상적으로 처리되었습니다.</p>
+        <div class="btn-wrap">
+          <span class="btn-base tp1 sm b-mfp-close"><a href="#">확인</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-alert2" data-width="400">
+      <div class="con-wrap">
+        <h3 class="tit error">서비스 이용 제한</h3>
+        <p class="con t-center">일반 사용자는 해당 서비스 이용에 제한이 있습니다. <br /><br />철도 관련 산업분야, 대학교, 연구기관 및 단체 등  관련 종사자인 경우 사용자 권한 변경 요청 및 관리자 승인 후 이용하실 수 있습니다</p>
+        <div class="btn-wrap">
+          <span class="btn-base tp1 sm b-mfp-close"><a href="#">권한 변경 요청</a></span>
+          <span class="btn-base tp1 sm b-mfp-close"><a href="#">확인</a></span>
+        </div>
+      </div>
+    </div>
   </div><!-- #wrapper -->
 
   <script>
@@ -232,23 +332,42 @@
       var $fileInput = $(this).closest('.input-wrap.ver_file');
       $fileInput.find('.input-base').val('');
       $fileInput.removeClass('on');
-    })
+    });
+    var $fileList = $('.file-list-area');
+    $fileList.on('click', '.btn-del', function(e){
+      e.preventDefault();
+      $(this).closest('li').remove();
+      if ($fileList.find('li').length === 0) {
+        $fileList.hide();
+      }
+    });		
+    var addFileList = function(data){
+      $fileList.find('ul').append(`<li><a href="#" class="btn-del">삭제</a>${data}</li>`);
+      if ($fileList.css('display') === 'none') {
+        $fileList.show();
+      }
+    };
+    var uploadBox = document.querySelector('.file-dnd-area');
+    uploadBox.addEventListener('dragover', function(e) {
+      e.preventDefault();
+    });
+    uploadBox.addEventListener('drop', function(e) {
+      e.preventDefault();
+      var formData = new FormData();
+      formData.append('uploadFile', e.dataTransfer.files[0]);
+      addFileList(e.dataTransfer.files[0].name);
+    });
+    $('.file-dnd-area').find('input[type="file"]').on('change', function(){
+      var fileValue = this.value.split('\\');  
+      addFileList(fileValue[fileValue.length-1]);
+    });
 
-    var qsample = $.urlParam('sample');
+    var qpopup = $.urlParam('popup');
     setTimeout(() => {
-      if (qsample === 'filterA' || qsample === 'filterB') {
-        $('.filter_area .filter-top .arrow').click();
-        if (qsample === 'filterB') {
-          $('#radio-target-2').click();
-        }
+      if (qpopup) {
+        $.magnificPopup.open(getOptions(`#popup-${qpopup}`));
       }
-      if (qsample === 'noData') {
-        $('#sampleTable').hide();
-        $('#sampleNodata').css('display', 'block');
-        $('.search_area .input-base').val('검색어 없음');
-        $('.total_area .total strong').text(0);
-      }
-    }, 50);
+    }, 250);
   </script>
 </body>
 

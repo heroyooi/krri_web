@@ -664,3 +664,39 @@ var destroySwiperMaker = function({ $name, $media, $speed = 2000, $perView = 'au
       }, 100)
   });		
 }
+
+function getOptions(id, closeOnBgClick) {
+  return {
+    items: {
+      src: id,
+      type: 'inline',
+    },
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    closeBtnInside: true,
+    preloader: false,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'mfp-zin',
+    closeOnBgClick: closeOnBgClick ?? true,
+  };
+}
+
+function getOptions2(id, closeOnBgClick) {
+  return {
+    items: {
+      src: id,
+      type: 'inline',
+    },
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    closeBtnInside: true,
+    preloader: false,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'fade-slideup fix-bottom',
+    closeOnBgClick: closeOnBgClick ?? true,
+  };
+}
