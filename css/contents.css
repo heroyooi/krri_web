@@ -85,6 +85,7 @@
 .form-list > li .label{font-size:14px;font-weight:500;color:#656b7b;display:flex;gap:0 4px;padding-top:11.5px;min-width:100px;flex-shrink:0;}
 .form-list > li .label.require::after{content:'';display:block;width:8px;height:8px;background:url('/img/icon/ico-ss-required.svg') 50% 50% no-repeat;}
 .form-list > li .input-area{min-height:40px;display:flex;align-items: center;flex-grow:1;}
+.form-list > li .input-area.column{flex-direction: column;}
 .form-list > li .value-area{display:flex;align-items: center;flex-grow:1;font-size:14px;font-weight:700;color:#32394f;}
 
 .form-list.col2{flex-direction: row;gap:0 16px;}
@@ -322,4 +323,9 @@
 .board-info li .label{font-size:12px;color:#656b7b;}
 .board-info li .value{font-size:14px;color:#32394f;font-weight:bold;}
 
+.news-view{border-top:1px solid #d7dcea;border-bottom:1px solid #d7dcea;}
+.news-view > dt{padding:24px;border-bottom:1px solid #d7dcea;}
+.news-view > dd{padding:40px 24px;}
+.news-view > dd .content{padding:0 0 40px;}
+.news-view > dd .s-label{font-size:14px;font-weight:500;color:#656b7b;margin-bottom:8px;}
 .news-view + .btn-wrap{margin-top:80px;}

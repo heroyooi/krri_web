@@ -56,7 +56,7 @@
 .input-wrap.ver_search .select-base{width:200px;flex-shrink:0;}
 .input-wrap.ver_search .btn-search{flex-shrink: 0;}
 .fileview-list{width:100%;border:1px solid #d7dcea;border-radius:4px;padding:4px 16px;}
-.fileview-list > li{display:flex;justify-content:space-between;align-items: center;width:100%;}
+.fileview-list > li{display:flex;justify-content:space-between;align-items: center;width:100%;font-weight:400;}
 
 /* input - radio */
 .radio-base{position:relative;display:inline-block;}
@@ -94,7 +94,7 @@
 .file-dnd-area .file-msg{font-size:14px;color:#8593a9;display:block;}
 .file-dnd-area .file-msg::before{content:'';display:block;width:24px;height:24px;background:url('/img/icon/ico-m-attachfile-dnd-g.svg') 50% 50% no-repeat;margin:0 auto 4px;}
 .file-dnd-area input[type="file"]{position:absolute;opacity:0;background:gold;display:block;width:100%;height:100%;left:0;top:0;}
-.file-list-area{padding:8px 12px;border:1px solid #d7dcea;border-radius:4px;position:relative;min-height:32px;max-height:100px;overflow-y:auto;background-color: #fff;}
+.file-list-area{padding:8px 12px;border:1px solid #d7dcea;border-radius:4px;position:relative;min-height:32px;max-height:100px;overflow-y:auto;background-color: #fff;width:100%;}
 .file-list-area li{font-size:12px;line-height:17px;margin-top:8px;position:relative;display:flex;gap:0 4px;}
 .file-list-area li:first-child{margin-top:0;}
 
@@ -107,6 +107,7 @@
 .btn-base > * span.ico.send::before{background:url('/img/icon/ico-s-send-w.svg') 50% 50% no-repeat;}
 .btn-base > * span.ico.list-w::before{background:url('/img/icon/ico-s-list-w.svg') 50% 50% no-repeat;}
 .btn-base > * span.ico.modify::before{background:url('/img/icon/ico-s-modify-w.svg') 50% 50% no-repeat;}
+.btn-base > * span.ico.trash::before{background:url('/img/icon/ico-s-trash-w.svg') 50% 50% no-repeat;}
 .btn-base > * span.ico.newregister::before{background:url('/img/icon/ico-s-newregister-b.svg') 50% 50% no-repeat;}
 .btn-base > * span.ico.favorites::before{background:url('/img/icon/ico-s-favorites-w.svg') 50% 50% no-repeat;}
 .btn-base > * span.ico.endview::before{background:url('/img/icon/ico-s-endview-w.svg') 50% 50% no-repeat;}

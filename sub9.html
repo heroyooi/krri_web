@@ -41,30 +41,50 @@
       </ul>
     </div><!-- #header -->
     <div id="container">
-      <div class="sub-visual" data-aos="fade">
+      <div class="sub-visual ver_img news ver_light" data-aos="fade">
         <p class="s-tit">철도 기술기준·표준 개발/관리</p>
-        <h3 class="tit">제·개정 신청/제안</h3>
+        <h3 class="tit">새소식</h3>
       </div><!-- .sub-visual -->
       <div class="content-wrap">
+        <div class="detail-top">
+          <p class="tit">수요조사 참여</p>
+        </div>
         <h4 class="sub-tit"><span>기본정보 입력</span></h4>
         <div class="form-box">
           <ul class="form-list">
             <li>
               <span class="label require">대상구분</span>
               <div class="input-area">
-                <span class="select-base">
-                  <span class="value"></span>
-                  <select>
-                    <option value="0">선택</option>
-                    <option value="1" selected>한국철도표준규격(KRS)</option>
-                    <option value="2">Value 2</option>
-                    <option value="3">Value 3</option>
-                  </select>
-                </span>
+                <ul class="radio-list">
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-ttype-1" name="radio-ttype" checked>
+                      <label for="radio-ttype-1">한국철도표준규격(KRS)</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-ttype-2" name="radio-ttype">
+                      <label for="radio-ttype-2">철도분야산업표준(KS)</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-ttype-3" name="radio-ttype">
+                      <label for="radio-ttype-3">철도차량 기술기준</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-ttype-4" name="radio-ttype">
+                      <label for="radio-ttype-4">철도용품 기술기준</label>
+                    </span>
+                  </li>
+                </ul>
               </div>
             </li>
             <li>
-              <span class="label require">사용여부</span>
+              <span class="label require">제·개정 유형</span>
               <div class="input-area">
                 <ul class="radio-list">
                   <li>
@@ -89,89 +109,29 @@
               </div>
             </li>
             <li>
-              <span class="label require">규격명</span>
+              <span class="label require">수요조사 구분</span>
+              <div class="input-area">
+                <input type="text" class="input-base" value="신규 제정 또는 개정에 대한 의견">
+              </div>
+            </li>
+            <li>
+              <span class="label require">대상 규격명</span>
               <div class="input-area">
                 <input type="text" class="input-base" placeholder="대상 규격명을 입력해주세요">
               </div>
             </li>
             <li>
-              <span class="label require">규격번호</span>
+              <span class="label require">대상 규격번호</span>
               <div class="input-area">
                 <input type="text" class="input-base" placeholder="대상 규격번호를 입력해주세요">
               </div>
             </li>
             <li>
-              <span class="label require">신청사유</span>
+              <span class="label require">사유</span>
               <div class="input-area">
                 <div class="textarea-base">
                   <textarea placeholder="신청사유를 작성해주세요"></textarea>
-                  <span class="tx-count">현재 글자수 <em>0</em>/1,000자</span>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <h4 class="sub-tit">
-          <span>지정문서 및 기타 첨부문서 등록</span>
-          <div class="info-area">
-            <button class="btn-info"></button>
-            <div class="info-modal" style="top: -56px;">
-              <ul>
-                <li>✓ 제정, 개정, 폐지안에 대한 사유</li>
-                <li>✓ 국내외 관련 규격 및 인용규격특허 등 산업재산권에 대한 저촉여부 및 검토사항</li>
-                <li>✓ 검사 및 시험방법에 따른 공인시험 또는 검사기관에서 발행한 성적서</li>
-                <li>✓ 기타규격 안 검토에 필요한 자료 (제품개요, 현장설치 시험 또는 운영현황, 요구 성능 및 기준 산출근거, 기대효과, 산업파급효과 등)</li>
-                <li>※ 신청인의 제·개정(안) 및 자료에 대하여 철도기술연구원이 자료의 보완 및 수정을 요청할 수 있습니다.</li>
-              </ul>
-            </div>
-          </div>
-        </h4>
-
-        <div class="form-box">
-          <ul class="form-list">
-            <li>
-              <span class="label require" style="width: 204px;">제·개정 또는 폐지 요청 공문</span>
-              <div class="input-wrap ver_file on">
-                <input type="text" class="input-base" placeholder="파일을 선택해주세요" value="첨부된 파일명.zip" readonly>
-                <button class="btn-file"></button>
-                <input type="file">
-                <button class="btn-del"></button>
-              </div>
-            </li>
-            <li>
-              <span class="label require" style="width: 204px;">제·개정 또는 폐지 요청 공문</span>
-              <div class="input-wrap ver_file on">
-                <input type="text" class="input-base" placeholder="파일을 선택해주세요" value="첨부된 파일명.zip" readonly>
-                <button class="btn-file"></button>
-                <input type="file">
-                <button class="btn-del"></button>
-              </div>
-            </li>
-            <li class="attach-area">
-              <div class="attach-info">
-                <span>철도안전법 시행규칙 [별지 제44호서식]</span>
-                <a href="#" class="btn-download">서식 다운로드</a>
-              </div>
-            </li>
-            <li>
-              <span class="label require" style="width: 204px;">제정·개정 또는 폐지에 대한 의견서</span>
-              <div class="input-area">
-                <div class="input-wrap ver_file">
-                  <input type="text" class="input-base" placeholder="파일을 선택해주세요" readonly>
-                  <button class="btn-file"></button>
-                  <input type="file">
-                  <button class="btn-del"></button>
-                </div>
-              </div>
-            </li>
-            <li>
-              <span class="label require" style="width: 204px;">제·개정 또는 폐지(안)</span>
-              <div class="input-area">
-                <div class="input-wrap ver_file">
-                  <input type="text" class="input-base" placeholder="파일을 선택해주세요" readonly>
-                  <button class="btn-file"></button>
-                  <input type="file">
-                  <button class="btn-del"></button>
+                  <span class="tx-count">현재 글자수 <em>0</em>/2,000자</span>
                 </div>
               </div>
             </li>
@@ -192,19 +152,7 @@
           </ul>
         </div>
         <h4 class="sub-tit">
-          <span>신청인 정보</span>
-          <div class="info-area">
-            <button class="btn-info"></button>
-            <div class="info-modal" style="top: -56px;">
-              <ul>
-                <li>✓ 제정, 개정, 폐지안에 대한 사유</li>
-                <li>✓ 국내외 관련 규격 및 인용규격특허 등 산업재산권에 대한 저촉여부 및 검토사항</li>
-                <li>✓ 검사 및 시험방법에 따른 공인시험 또는 검사기관에서 발행한 성적서</li>
-                <li>✓ 기타규격 안 검토에 필요한 자료 (제품개요, 현장설치 시험 또는 운영현황, 요구 성능 및 기준 산출근거, 기대효과, 산업파급효과 등)</li>
-                <li>※ 신청인의 제·개정(안) 및 자료에 대하여 철도기술연구원이 자료의 보완 및 수정을 요청할 수 있습니다.</li>
-              </ul>
-            </div>
-          </div>
+          <span>작성자 정보</span>
         </h4>
         <div class="form-box">
           <ul class="form-list col2">
@@ -234,9 +182,9 @@
             </li>
             
             <li>
-              <span class="label">신청인명</span>
+              <span class="label">작성자명</span>
               <div class="input-area">
-                <input type="text" class="input-base" value="홍길동 책임연구원" disabled>
+                <input type="text" class="input-base" value="홍길동" disabled>
               </div>
             </li>
             <li>
@@ -245,24 +193,12 @@
                 <input type="text" class="input-base" value="2025.06.18" disabled>
               </div>
             </li>
-            <li>
-              <span class="label">접수번호</span>
-              <div class="input-area">
-                <input type="text" class="input-base" value="-" disabled>
-              </div>
-            </li>
-            <li>
-              <span class="label">진행 현황</span>
-              <div class="input-area">
-                <input type="text" class="input-base" value="-" disabled>
-              </div>
-            </li>
           </ul>
         </div>
 
         <div class="btn-wrap">
-          <span class="btn-base tp1"><a href="#"><span class="ico home">메인 페이지로 돌아가기</span></a></span>
-          <span class="btn-base tp2"><a href="#"><span class="ico send">제·개정 신청</span></a></span>
+          <span class="btn-base tp2"><a href="#"><span class="ico list-w">목록으로</span></a></span>
+          <span class="btn-base tp2"><a href="#"><span class="ico send">수요조사서 제출하기</span></a></span>
         </div>
       </div><!-- .content-wrap -->
     </div><!-- #container -->
