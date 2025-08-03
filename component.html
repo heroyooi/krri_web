@@ -47,7 +47,7 @@
 
     .cmp-btn-area {display:flex;gap:5px;align-items: center;}
 
-    .badge_list{margin-top:10px;}
+    .badge_list, .badge-list-area{margin-top:10px;}
     .badge_list:first-child{margin-top:0;}
 
     .btn-top{position: relative;right:0;top:0;}
@@ -211,7 +211,7 @@
         <h2>뱃지</h2>
 
         <div class="code-area">
-          <h3>메인 목록 <button>코드 보기</button></h3>
+          <h3>기본 <button>코드 보기</button></h3>
           <div class="code-box">
 <ul class="badge_list">
   <li class="tp1">제정</li>
@@ -223,6 +223,48 @@
   <li class="tp4">페지</li>
   <li class="tp3">ISO</li>
 </ul>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Large <button>코드 보기</button></h3>
+          <div class="code-box">
+<ul class="badge_list lg">
+  <li class="tp1">제정</li>
+  <li class="tp2">기술기준</li>
+  <li class="tp3">ISO</li>
+</ul>
+<div class="badge-list-area">
+  <ul class="badge_list lg">
+    <li class="tp3">ISO</li>
+    <li class="tp6">
+      <span class="label">표준 규격번호</span>
+      <span class="value">ISO 6305-3:1983</span>
+    </li>
+  </ul>
+  <p class="tit">2020년 개정판이 새롭게 고시되었습니다</p>
+</div>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>뱃지 + 타이틀 <button>코드 보기</button></h3>
+          <div class="code-box">
+<div class="detail-badge-area">
+  <ul class="detail_badge">
+    <li class="blue">KRS 한국철도표준규격</li>
+    <li class="blue">철도차량</li>
+    <li class="green">
+      <ul class="badge_in">
+        <li>OS</li>
+        <li>운전자보안장치용품</li>
+      </ul>
+    </li>
+  </ul>
+  <p class="detail_title">전기기관차 모니터장치 | Monitor Equipment for Electric Locomotive</p>
+</div>
           </div>
           <pre class="language-html"></pre>
         </div>
@@ -244,6 +286,26 @@
           <h3>기본형 - 비활성화 <button>코드 보기</button></h3>
           <div class="code-box">
 <input type="text" class="input-base" placeholder="대상 규격명을 입력해주세요" value="한국철도기술연구원" disabled>
+          </div>
+          <pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>검색 <button>코드 보기</button></h3>
+          <div class="code-box">
+<div class="input-wrap ver_search">
+  <span class="select-base">
+    <span class="value"></span>
+    <select>
+      <option value="0">선택</option>
+      <option value="1" selected>전체</option>
+      <option value="2">Value 2</option>
+      <option value="3">Value 3</option>
+    </select>
+  </span>
+  <input type="text" class="input-base" placeholder="검색어를 입력해주세요">
+  <a href="#" class="btn-search"></a>
+        </div>
           </div>
           <pre class="language-html"></pre>
         </div>

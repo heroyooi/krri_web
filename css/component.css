@@ -8,6 +8,15 @@
 .badge_list li.tp3{background-color:#f9f6ff;color:#7522f2;}
 .badge_list li.tp4{background-color:#656b7b;color:#fff;}
 .badge_list li.tp5{background-color:#059476;color:#fff;}
+.badge_list li.tp6{background-color:#f4f6fc;color:#32394f;}
+.badge_list li.tp6{display:flex;gap:0 12px;}
+.badge_list li.tp6 .label{color:#8593a9;font-weight:500;}
+.badge_list li.tp6 .value{font-weight:bold;}
+.badge_list.lg{gap:8px;}
+.badge_list.lg li{padding:8px 20px;border-radius:16px;font-size:14px;}
+.badge-list-area{display:flex;gap:0 8px;align-items: center;}
+.badge-list-area .badge_list{width:auto;}
+.badge-list-area .tit{font-size:20px;font-weight:bold;color:#32394f;}
 
 .detail_badge{display:flex;gap:4px;}
 .detail_badge > li{display:inline-block;padding:3px 8px;border-radius:4px;}
