@@ -402,11 +402,11 @@
         if (isPlaying) {
           mainVisualSwiper.autoplay.stop();
           $(this).text('▶');
-          $(this).addClass('play');
+          $(this).addClass('play').removeClass('pause');
         } else {
           mainVisualSwiper.autoplay.start();
           $(this).text('❚❚');
-          $(this).addClass('pause');
+          $(this).addClass('pause').removeClass('play');
         }
         isPlaying = !isPlaying;
       });
