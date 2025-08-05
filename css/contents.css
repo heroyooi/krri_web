@@ -340,4 +340,9 @@
 .news-view > dd{padding:40px 24px;}
 .news-view > dd .content{padding:0 0 40px;}
 .news-view > dd .s-label{font-size:14px;font-weight:500;color:#656b7b;margin-bottom:8px;}
+.news-view > dd .list li{display:flex;gap: 0 12px;margin-top:8px;font-size:14px;align-items: center;}
+.news-view > dd .list li:first-child{margin-top:0;}
+.news-view > dd .list li .label{flex-shrink: 0;min-width:72px;font-weight:700;}
+.news-view > dd .list li .value{flex-grow: 1;font-weight:bold;color:#32394f;}
 .news-view + .btn-wrap{margin-top:80px;}
+.news-view > dd .list li.sm{font-size:12px;}

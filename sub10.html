@@ -51,112 +51,154 @@
         </div>
         <h4 class="sub-tit"><span>기본정보 입력</span></h4>
         <div class="form-box">
-          <ul class="form-list ver_view">
+          <ul class="form-list">
             <li>
-              <span class="label">대상구분</span>
-              <div class="value-area">
-                작성된 세부목표명
-              </div>
-            </li>
-            <li>
-              <span class="label">제·개정 유형</span>
-              <div class="value-area">
-                제정
-              </div>
-            </li>
-            <li>
-              <span class="label">수요조사 구분</span>
-              <div class="value-area">
-                신규 제정 또는 개정에 대한 의견
-              </div>
-            </li>
-            <li>
-              <span class="label">대상 규격명</span>
-              <div class="value-area">
-                전기기관차 모니터링장치
-              </div>
-            </li>
-            <li>
-              <span class="label">대상 규격번호</span>
-              <div class="value-area">
-                KRS-OS-0001-24R
-              </div>
-            </li>
-            <li>
-              <span class="label">사유</span>
-              <div class="value-area">
-                꼭 개정이 필요합니다. 검토부탁드립니다. 꼭 개정이 필요합니다. 검토부탁드립니다. <br />
-                꼭 개정이 필요합니다. 검토부탁드립니다. <br />
-                꼭 개정이 필요합니다. 검토부탁드립니다. <br />
-                꼭 개정이 필요합니다. 검토부탁드립니다. <br />
-                꼭 개정이 필요합니다. 검토부탁드립니다.
-              </div>
-            </li>
-            <li>
-              <span class="label">첨부문서</span>
-              <div class="value-area">
-                <ul class="fileview-list">
+              <span class="label require">대상구분</span>
+              <div class="input-area">
+                <ul class="radio-list">
                   <li>
-                    <span class="filename">붙임1.2025년 연구개발특구 육성 사업 지원_규제특례 R&D 공고문(2차).hwpx</span>
-                    <a href="#" class="btn-download">다운로드</a>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-ttype-1" name="radio-ttype" checked>
+                      <label for="radio-ttype-1">한국철도표준규격(KRS)</label>
+                    </span>
                   </li>
                   <li>
-                    <span class="filename">붙임2.연구개발계획서 등 관련 서식.zip</span>
-                    <a href="#" class="btn-download">다운로드</a>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-ttype-2" name="radio-ttype">
+                      <label for="radio-ttype-2">철도분야산업표준(KS)</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-ttype-3" name="radio-ttype">
+                      <label for="radio-ttype-3">철도차량 기술기준</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-ttype-4" name="radio-ttype">
+                      <label for="radio-ttype-4">철도용품 기술기준</label>
+                    </span>
                   </li>
                 </ul>
+              </div>
+            </li>
+            <li>
+              <span class="label require">제·개정 유형</span>
+              <div class="input-area">
+                <ul class="radio-list">
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-use-1" name="radio-use" checked>
+                      <label for="radio-use-1">제정</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-use-2" name="radio-use">
+                      <label for="radio-use-2">개정</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-use-3" name="radio-use">
+                      <label for="radio-use-3">폐지</label>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <span class="label require">수요조사 구분</span>
+              <div class="input-area">
+                <input type="text" class="input-base" value="신규 제정 또는 개정에 대한 의견">
+              </div>
+            </li>
+            <li>
+              <span class="label require">대상 규격명</span>
+              <div class="input-area">
+                <input type="text" class="input-base" placeholder="대상 규격명을 입력해주세요">
+              </div>
+            </li>
+            <li>
+              <span class="label require">대상 규격번호</span>
+              <div class="input-area">
+                <input type="text" class="input-base" placeholder="대상 규격번호를 입력해주세요">
+              </div>
+            </li>
+            <li>
+              <span class="label require">사유</span>
+              <div class="input-area">
+                <div class="textarea-base">
+                  <textarea placeholder="신청사유를 작성해주세요"></textarea>
+                  <span class="tx-count">현재 글자수 <em>0</em>/2,000자</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="label require" style="width: 204px;">기타 첨부문서</span>
+              <div class="input-area column">
+                <div class="file-dnd-area">
+                  <span class="file-msg">등록하실 파일을 선택하거나 올려주세요. <br />5MB이하의 파일을 5개까지 업로드할 수 있습니다
+                  </span>
+                  <input type="file">
+                </div>
+                <div class="file-list-area edit mt10" style="display: none">
+                  <ul>
+                  </ul>
+                </div>
               </div>
             </li>
           </ul>
         </div>
         <h4 class="sub-tit">
-          <span>신청인 정보</span>
-          <div class="info-area">
-            <button class="btn-info"></button>
-            <div class="info-modal" style="top: -56px;">
-              <ul>
-                <li>✓ 제정, 개정, 폐지안에 대한 사유</li>
-                <li>✓ 국내외 관련 규격 및 인용규격특허 등 산업재산권에 대한 저촉여부 및 검토사항</li>
-                <li>✓ 검사 및 시험방법에 따른 공인시험 또는 검사기관에서 발행한 성적서</li>
-                <li>✓ 기타규격 안 검토에 필요한 자료 (제품개요, 현장설치 시험 또는 운영현황, 요구 성능 및 기준 산출근거, 기대효과, 산업파급효과 등)</li>
-                <li>※ 신청인의 제·개정(안) 및 자료에 대하여 철도기술연구원이 자료의 보완 및 수정을 요청할 수 있습니다.</li>
-              </ul>
-            </div>
-          </div>
+          <span>작성자 정보</span>
         </h4>
         <div class="form-box">
-          <ul class="form-list col2 ver_view">
+          <ul class="form-list col2">
             <li>
               <span class="label">소속기관</span>
-              <div class="value-area">한국철도기술연구원</div>
+              <div class="input-area">
+                <input type="text" class="input-base" value="한국철도기술연구원" disabled>
+              </div>
             </li>
             <li>
               <span class="label">소속부서</span>
-              <div class="value-area">기술기준표준연구실</div>
+              <div class="input-area">
+                <input type="text" class="input-base" value="기술기준표준연구실" disabled>
+              </div>
             </li>
             <li>
               <span class="label">연락처</span>
-              <div class="value-area">010-0000-0000</div>
+              <div class="input-area">
+                <input type="text" class="input-base" value="010-0000-0000" disabled>
+              </div>
             </li>
             <li>
               <span class="label">이메일</span>
-              <div class="value-area">krri@krri.re.kr</div>
+              <div class="input-area">
+                <input type="text" class="input-base" value="krri@krri.re.kr" disabled>
+              </div>
             </li>
             
             <li>
-              <span class="label">신청인명</span>
-              <div class="value-area">홍길동</div>
+              <span class="label">작성자명</span>
+              <div class="input-area">
+                <input type="text" class="input-base" value="홍길동" disabled>
+              </div>
             </li>
             <li>
               <span class="label">신청일자</span>
-              <div class="value-area">2025.06.18</div>
+              <div class="input-area">
+                <input type="text" class="input-base" value="2025.06.18" disabled>
+              </div>
             </li>
           </ul>
         </div>
 
         <div class="btn-wrap">
-          <span class="btn-base tp2"><a href="#"><span class="ico trash">삭제</span></a></span>
-          <span class="btn-base tp2"><a href="#"><span class="ico modify">수정</span></a></span>
+          <span class="btn-base tp2"><a href="#"><span class="ico list-w">목록으로</span></a></span>
+          <span class="btn-base tp2"><a href="#"><span class="ico send">수요조사서 제출하기</span></a></span>
         </div>
       </div><!-- .content-wrap -->
     </div><!-- #container -->
