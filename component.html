@@ -205,6 +205,23 @@
           <pre class="language-html"></pre>
         </div>
 
+        <div class="code-area">
+          <h3>W3S 타입 <button>코드 보기</button></h3>
+          <div class="code-box">
+<div class="custom-select">
+  <select>
+    <option value="0">선택하세요</option>
+    <option value="1">값1</option>
+    <option value="2">값2</option>
+    <option value="3">값3</option>
+  </select>
+</div>
+          </div>
+          <script>customSbox();</script>
+          <pre class="language-html"></pre>
+          <pre class="language-javascript"></pre>
+        </div>
+
       </div><!-- .section -->
 
       <div class="section">
@@ -441,6 +458,18 @@ $('.file-dnd-area').find('input[type="file"]').on('change', function(){
 </div>
           </div>
           <script>
+tui.DatePicker.localeTexts['en-2letters'] = {
+  titles: {
+    DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    D: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+    MMMM: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+    MMM:  ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+  },
+  titleFormat: 'MMM yyyy',
+  todayFormat: 'D, MMMM dd, yyyy',
+  date: 'Date',
+  time: 'Time'
+};
 var today1 = new Date();
 var picker1 = tui.DatePicker.createRangePicker({
   startpicker: {
@@ -453,10 +482,12 @@ var picker1 = tui.DatePicker.createRangePicker({
     input: '#endpicker-input1',
     container: '#endpicker-container1'
   },
+  format: 'yyyy-MM-dd',
+  language: 'en-2letters',
+  weekStartDay: 'Sun',
   selectableRanges: [
     [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
   ],
-  format: 'YYYY-MM-dd',
 });
 
 picker1.on('change:end', () => {

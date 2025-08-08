@@ -254,7 +254,15 @@
 
         <div class="total_area">
           <p class="total">전체 <strong>19</strong>건</p>
-          <span class="select-base" style="width: 132px;">
+          <div class="custom-select" style="width: 132px;">
+            <select>
+              <option value="0">선택하세요</option>
+              <option value="1" selected>10개씩 보기</option>
+              <option value="2">값2</option>
+              <option value="3">값3</option>
+            </select>
+          </div>
+          <!-- <span class="select-base" style="width: 132px;">
             <span class="value"></span>
             <select>
               <option value="0">선택</option>
@@ -262,7 +270,7 @@
               <option value="2">Value 2</option>
               <option value="3">Value 3</option>
             </select>
-          </span>
+          </span> -->
         </div>
 
         <div class="tb-wrap" id="sampleTable">
@@ -539,6 +547,18 @@
       }
     });
 
+    tui.DatePicker.localeTexts['en-2letters'] = {
+      titles: {
+        DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        D: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+        MMMM: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+        MMM:  ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+      },
+      titleFormat: 'MMM yyyy',
+      todayFormat: 'D, MMMM dd, yyyy',
+      date: 'Date',
+      time: 'Time'
+    };
     var today1 = new Date();
     var picker1 = tui.DatePicker.createRangePicker({
       startpicker: {
@@ -551,10 +571,12 @@
         input: '#endpicker-input1',
         container: '#endpicker-container1'
       },
+      format: 'yyyy-MM-dd',
+      language: 'en-2letters',
+      weekStartDay: 'Sun',
       selectableRanges: [
         [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
       ],
-      format: 'YYYY-MM-dd',
     });
 
     picker1.on('change:end', () => {
@@ -576,6 +598,8 @@
         $('.total_area .total strong').text(0);
       }
     }, 50);
+
+    customSbox();
   </script>
 </body>
 

@@ -307,6 +307,18 @@
       }
     });
 
+    tui.DatePicker.localeTexts['en-2letters'] = {
+      titles: {
+        DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        D: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+        MMMM: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+        MMM:  ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+      },
+      titleFormat: 'MMM yyyy',
+      todayFormat: 'D, MMMM dd, yyyy',
+      date: 'Date',
+      time: 'Time'
+    };
     var today1 = new Date();
     var picker1 = tui.DatePicker.createRangePicker({
       startpicker: {
@@ -319,10 +331,12 @@
         input: '#endpicker-input1',
         container: '#endpicker-container1'
       },
+      format: 'yyyy-MM-dd',
+      language: 'en-2letters',
+      weekStartDay: 'Sun',
       selectableRanges: [
         [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
       ],
-      format: 'YYYY-MM-dd',
     });
 
     picker1.on('change:end', () => {

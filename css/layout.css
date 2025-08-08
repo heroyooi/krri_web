@@ -62,7 +62,7 @@ body{width:100%;}
 .btn-quick-area.on a.item{display:block;}
 .btn-quick-area.on a.quick::after{transform:rotate(180deg);}
 
-.sub-visual{padding:80px 0;text-align:center;background-color: #f4f6fc;}
+.sub-visual{padding:80px 0;text-align:center;background-color: #f4f6fc;position: relative;z-index:1;}
 .sub-visual .s-tit, .sub-visual .tit{position: relative;}
 .sub-visual .s-tit{font-size:18px;font-weight:500;color:#1d51e9;}
 .sub-visual .tit{font-size:52px;font-weight:bold;color:#32394f;margin-top:10px;}

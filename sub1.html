@@ -52,7 +52,15 @@
             <li>
               <span class="label require">대상구분</span>
               <div class="input-area">
-                <span class="select-base">
+                <div class="custom-select">
+                  <select>
+                    <option value="0">선택하세요</option>
+                    <option value="1" selected>한국철도표준규격(KRS)</option>
+                    <option value="2">값2</option>
+                    <option value="3">값3</option>
+                  </select>
+                </div>
+                <!-- <span class="select-base">
                   <span class="value"></span>
                   <select>
                     <option value="0">선택</option>
@@ -60,7 +68,7 @@
                     <option value="2">Value 2</option>
                     <option value="3">Value 3</option>
                   </select>
-                </span>
+                </span> -->
               </div>
             </li>
             <li>
@@ -368,6 +376,8 @@
         $.magnificPopup.open(getOptions(`#popup-${qpopup}`));
       }
     }, 250);
+
+    customSbox();
   </script>
 </body>
 
