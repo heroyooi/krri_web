@@ -54,6 +54,45 @@ var GUI = window.GUI || (function(){
       var csPopupUI = _.find('.cs-popup-wrap');
       var topUI = _.find('.btn-top');
 
+      var $quick = $('.btn-quick-area');
+      var $top = $('.btn-top');
+      var $footer = $('#footer');
+
+      var TOP_POS = 24;
+      var QUICK_POS = TOP_POS + 62;
+
+      // 스크롤, 리사이즈 시 갱신(기준점 밑임)
+      $(window).on('scroll resize', function(){
+        var scrollTop = $(window).scrollTop();
+        var winHeight = $(window).height();
+        var docHeight = $(document).height();
+        var footerHeight = $footer.outerHeight();
+
+        var distanceFromBottom = docHeight - (scrollTop + winHeight);
+
+        if (distanceFromBottom <= footerHeight) {
+          var extra = footerHeight - distanceFromBottom;
+
+          $quick.css({
+            position: 'fixed',
+            bottom: QUICK_POS + extra + 'px'
+          });
+          $top.css({
+            position: 'fixed',
+            bottom: TOP_POS + extra + 'px'
+          });
+        } else {
+          $quick.css({
+            position: 'fixed',
+            bottom: QUICK_POS + 'px'
+          });
+          $top.css({
+            position: 'fixed',
+            bottom: TOP_POS + 'px'
+          });
+        }
+      }).trigger('scroll');
+
       $('.btn-quick-area .quick').on('click', function(e){
         e.preventDefault();
         if (!$(this).closest('.btn-quick-area').hasClass('on')) {
