@@ -186,7 +186,7 @@
             <li>
               <div class="detail">
                 <ul class="badge_list">
-                  <li class="tp1">제정</li>
+                  <li class="tp7">제정</li>
                   <li class="tp2">기술기준</li>
                 </ul>
                 <p class="s_label">KRS AP 0003-21(R)</p>
@@ -411,14 +411,37 @@
         isPlaying = !isPlaying;
       });
       
-      const mainIntroSwiper = new Swiper(".main-intro-swiper  .swiper_common", {
+      let gageTimer = null;
+
+      function startGageAnimation(activeIndex) {
+        if (gageTimer !== null) clearInterval(gageTimer);
+        $(".swiper-paging li .gage").css('width', '0');
+
+        const slideDuration = 3000;
+        let progress = 0;
+        const step = 100 / (slideDuration / 50);
+        const $gage = $(".swiper-paging li").eq(activeIndex).find('.gage');
+
+        gageTimer = setInterval(() => {
+          progress += step;
+          if (progress >= 100) {
+            progress = 100;
+            clearInterval(gageTimer);
+            gageTimer = null;
+          }
+          $gage.css('width', progress + '%');
+        }, 50);
+      }
+
+      const slideDuration = 3000;
+      const mainIntroSwiper = new Swiper(".main-intro-swiper .swiper_common", {
         slidesPerView: "auto",
         spaceBetween: 20,
         centeredSlides: true,
         loop: true,
         autoplay: { 
-            delay: 3000,
-            disableOnInteraction: false, 
+          delay: slideDuration,
+          disableOnInteraction: false, 
         },
         pagination: {
           el: '.main-intro-swiper .swiper-pagination',
@@ -429,20 +452,21 @@
           prevEl: ".main-intro-swiper .swiper-prev",
         },
         on: {
-          slideChange: function () {
-            var realIndex = this.realIndex;
-            updateCustomTabs(realIndex);
+          init() {
+            startGageAnimation(this.realIndex);
+          },
+          slideChange() {
+            startGageAnimation(this.realIndex);
+            updateCustomTabs(this.realIndex);
           }
         }
       });
 
       $(".swiper-paging li").on("click", function () {
-        var index = $(this).index();
-        mainIntroSwiper.slideToLoop(index); // loop 모드에서 사용
+        const index = $(this).index();
+        mainIntroSwiper.slideToLoop(index);
+        startGageAnimation(index);
       });
-      $(".swiper-paging li").each(function (index) {
-        $(this).find('.gage').css('width', (index + 1) * (100 / $(".swiper-paging li").length) + '%');
-      })
 
       function updateCustomTabs(activeIndex) {
         $(".swiper-paging li").removeClass("active").eq(activeIndex).addClass("active");

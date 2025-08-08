@@ -13,6 +13,7 @@
 .badge_list li.tp6{display:flex;gap:0 12px;}
 .badge_list li.tp6 .label{color:#8593a9;font-weight:500;}
 .badge_list li.tp6 .value{font-weight:bold;}
+.badge_list li.tp7{background-color:#0E3092;color:#fff;}
 .badge_list.lg{gap:8px;}
 .badge_list.lg li{padding:8px 20px;border-radius:16px;font-size:14px;}
 .badge-list-area{display:flex;gap:0 8px;align-items: center;}
