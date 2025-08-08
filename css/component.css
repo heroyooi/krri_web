@@ -40,7 +40,9 @@
 .btn_link{display:flex;align-items:center;font-size:13px;font-weight:500;color:#656b7b;gap:0 4px;}
 .btn_link::after{content:'';display:block;width:16px;height:16px;background:url('/img/icon/ico-s-arrow.svg')}
 .btn-download{font-size:14px;font-weight:500;color:#656b7b;display:flex;gap:0 4px;align-items: center;padding: 8px;}
-.btn-download::after{content:'';display:block;width:16px;height:16px;background:url('/img/icon/ico-ss-format-g.svg') 50% 50% no-repeat;}
+.btn-download::after{content:'';display:block;width:16px;height:16px;background:url('/img/icon/ico-s-download-g.svg') 50% 50% no-repeat;}
+.btn-download:hover{color:#1d51e9;text-decoration: underline;}
+.btn-download:hover::after{background:url('/img/icon/ico-s-download-b.svg') 50% 50% no-repeat;}
 .btn-search{display:inline-block;width:40px;height:40px;background:url('/img/icon/ico-m-search-w-on.svg') 50% 50% no-repeat;border-radius: 8px;background-color: #1d51e9;}
 
 /* tab */
@@ -142,11 +144,13 @@
 .btn-wrap.ver_right{justify-content: flex-end;}
 .btn-ico{width:16px;height:16px;display:inline-block;vertical-align:middle;}
 .btn-ico.btn-viewdocument{background:url('/img/icon/ico-s-viewdocument-g.svg') 50% 50% no-repeat;}
+.btn-ico.btn-viewdocument:hover{background:url('/img/icon/ico-s-viewdocument-b.svg') 50% 50% no-repeat;}
 .btn-ico.btn-compare{background:url('/img/icon/ico-s-compare-g.svg') 50% 50% no-repeat;}
 .btn-ico.btn-viewfilter{background:url('/img/icon/ico-s-viewfiler-g.svg') 50% 50% no-repeat;}
 .btn-file{display:inline-block;width:40px;height:40px;background:#fff url('/img/icon/ico-m-attachfile-g.svg') 50% 50% no-repeat;border:1px solid #d7dcea;border-radius:4px;}
 .btn-del{display:inline-block;width:16px;height:16px;background: url('/img/icon/ico-s-cancel-g.svg') 50% 50% no-repeat;font-size:0;}
 .btn-info{display:inline-block;width:24px;height:24px;background:url('/img/icon/ico-m-infos-def.svg') 50% 50% no-repeat;}
+.btn-info.on{background:url('/img/icon/ico-m-info-act.svg') 50% 50% no-repeat;}
 
 /* text count */
 .tx-count{font-size:13px;color:#656b7b;display:block;}

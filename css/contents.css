@@ -202,10 +202,11 @@
 .intro-circle .circle-obj.obj-1 .s-tit::before{background:url('/img/sub/img-introduction-01.svg') 50% 50% no-repeat;}
 .intro-circle .circle-obj.obj-2 .s-tit::before{background:url('/img/sub/img-introduction-02.svg') 50% 50% no-repeat;}
 .intro-circle .circle-obj.obj-3 .s-tit::before{background:url('/img/sub/img-introduction-03.svg') 50% 50% no-repeat;}
-.intro-circle .s-tooltip{font-size:13px;color:#fff;padding: 8px 7px 8px 12px;border-radius: 4px;position: absolute;display:none;}
+.intro-circle .s-tooltip{font-size:13px;color:#fff;padding: 8px 7px 8px 12px;border-radius: 4px;position: absolute;display:none;border-radius: 4px;-webkit-backdrop-filter: blur(8px);  backdrop-filter: blur(8px);box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);background-color: rgba(50, 57, 79, 0.9);}
 .intro-circle .circle-obj.obj-1 .s-tooltip{left:150px;top:0;}
 .intro-circle .circle-obj.obj-2 .s-tooltip{left:148px;top:18px;}
 .intro-circle .circle-obj.obj-3 .s-tooltip{text-align:right;right:148px;top:27px;}
+.intro-circle .circle-obj:hover{background-color: #133fc0;}
 .intro-circle .circle-obj:hover .s-tooltip{display:block;}
 
 .intro-detail-area{margin-top:80px;}
@@ -242,7 +243,7 @@
 .intro-step-list > li .con-area::before{content:'';display:block;width:16px;height:36px;background:url('/img/icon/img-arrow-step.svg') 50% 50% no-repeat;position: absolute;top:50%;margin-top:-18px;left:-16px;}
 
 .intro-twinbox{display:flex;gap:24px;flex-wrap:wrap;margin:40px auto 0;max-width:984px;}
-.intro-twinbox > li{padding:24px 40px 40px;border:2px solid #47b5ee;border-radius: 16px;width:calc(50% - 12px);}
+.intro-twinbox > li{padding:24px 40px 40px;border:2px solid #4B75EE;border-radius: 16px;width:calc(50% - 12px);}
 .intro-twinbox > li .ico{display:block;}
 .intro-twinbox > li .txt-area{margin-top:32px;}
 .intro-twinbox > li .txt-area .tit{font-size:18px;font-weight:700;color:#000;}

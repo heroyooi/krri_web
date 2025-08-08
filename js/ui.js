@@ -102,11 +102,18 @@ var GUI = window.GUI || (function(){
         }
       });
       $('.sub-tit .btn-info').on('click', function(e){
-        $(this).next('.info-modal').show();
+        if (!$(this).hasClass('on')) {
+          $(this).addClass('on');
+          $(this).next('.info-modal').show();
+        } else {
+          $(this).removeClass('on');
+          $(this).next('.info-modal').hide();
+        }
       });
       $(document).on('click', function(e){
         if (!$(e.target).closest('.sub-tit .btn-info, .info-modal').length) {
           $('.info-modal').hide();
+          $('.btn-info.on').removeClass('on');
         }
       });
 
