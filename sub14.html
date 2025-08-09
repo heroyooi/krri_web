@@ -41,56 +41,12 @@
       </ul>
     </div><!-- #header -->
     <div id="container">
-      <div class="sub-visual ver_img news ver_light" data-aos="fade">
+      <div class="sub-visual ver_img ver_light technology" data-aos="fade">
         <p class="s-tit">철도 기술기준·표준 개발/관리</p>
-        <h3 class="tit">새소식</h3>
+        <h3 class="tit">철도차량·용품 기술기준</h3>
       </div><!-- .sub-visual -->
       <div class="content-wrap">
-        <p class="lg-tit">철도 용어사전</p>
-        <dl class="news-view">
-          <dt>
-            <p class="board-tit">시스템 점검안내 드립니다.</p>
-            <ul class="board-info">
-              <li>
-                <span class="label">등록일자</span>
-                <span class="value">2020.01.01</span>
-              </li>
-              <li>
-                <span class="label">담당자</span>
-                <span class="value">홍길동</span>
-              </li>
-              <li>
-                <span class="label bold">조회수</span>
-                <span class="value">101</span>
-              </li>
-            </ul>
-          </dt>
-          <dd>
-            <div class="content">공지사항 내용입니다. 공지사항 내용입니다. <br />
-              공지사항 내용입니다.<br />
-              공지사항 내용입니다.<br />
-              공지사항 내용입니다.<br />
-              공지사항 내용입니다.<br />
-              공지사항 내용입니다.<br />
-              공지사항 내용입니다.<br />
-              공지사항 내용입니다.</p>
-            </div>
-            <p class="s-label">첨부 파일</p>
-            <ul class="fileview-list">
-              <li>
-                <span class="filename">20241218_204344_국토교통부고시제2024-767호(한국철도표준규격 개정 및 폐지 고시)_24.1216.pdfB 분석 시험 동의서.pdf (100.KB)</span>
-                <a href="#" class="btn-download">다운로드</a>
-              </li>
-              <li>
-                <span class="filename">20241218_204344_국토교통부고시제2024-767호(한국철도표준규격 개정 및 폐지 고시)_24.1216.pdfB 분석 시험 동의서.pdf (100.KB)</span>
-                <a href="#" class="btn-download">다운로드</a>
-              </li>
-            </ul>
-          </dd>
-        </dl>
-        <div class="btn-wrap">
-          <span class="btn-base tp2"><a href="#"><span class="ico list-w">목록으로</span></a></span>
-        </div>
+        
       </div><!-- .content-wrap -->
     </div><!-- #container -->
     <div id="footer">
@@ -130,6 +86,36 @@
   </div><!-- #wrapper -->
 
   <script>
+    $('.intro-qna-list > li .q_area').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).closest('li').hasClass('on')) {
+        $(this).closest('li').addClass('on');
+      } else {
+        $(this).closest('li').removeClass('on');
+      }
+    });
+    $('.step-horizon > li .s-inner').on('click', function(){
+      var target = $(this).closest('li');
+      var index = target.index();
+      target.addClass('on');
+      target.siblings().removeClass('on');
+      console.log(index)
+      $('.step-detail-area > li').eq(index).addClass('on');
+      $('.step-detail-area > li').eq(index).siblings().removeClass('on');
+    });
+    var qtab = $.urlParam('tab');
+    var qsample = $.urlParam('sample');
+    var qstep = $.urlParam('step');
+
+    if (qtab || qsample || qstep) {
+      setTimeout(() => {
+        $(`[href='#tab${qtab}']`).click();
+        $('.step-horizon > li').eq(Number(qstep) - 1).find('.s-inner').click();
+        if (qsample == 'open') {
+          $('.intro-qna-list > li').addClass('on');
+        }
+      }, 250);
+    }
   </script>
 </body>
 

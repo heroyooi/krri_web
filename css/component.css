@@ -146,7 +146,9 @@
 .btn-ico.btn-viewdocument{background:url('/img/icon/ico-s-viewdocument-g.svg') 50% 50% no-repeat;}
 .btn-ico.btn-viewdocument:hover{background:url('/img/icon/ico-s-viewdocument-b.svg') 50% 50% no-repeat;}
 .btn-ico.btn-compare{background:url('/img/icon/ico-s-compare-g.svg') 50% 50% no-repeat;}
+.btn-ico.btn-compare:hover{background:url('/img/icon/ico-s-compare-b.svg') 50% 50% no-repeat;}
 .btn-ico.btn-viewfilter{background:url('/img/icon/ico-s-viewfiler-g.svg') 50% 50% no-repeat;}
+.btn-ico.btn-viewfilter:hover{background:url('/img/icon/ico-s-viewfiler-b.svg') 50% 50% no-repeat;}
 .btn-file{display:inline-block;width:40px;height:40px;background:#fff url('/img/icon/ico-m-attachfile-g.svg') 50% 50% no-repeat;border:1px solid #d7dcea;border-radius:4px;}
 .btn-del{display:inline-block;width:16px;height:16px;background: url('/img/icon/ico-s-cancel-g.svg') 50% 50% no-repeat;font-size:0;}
 .btn-info{display:inline-block;width:24px;height:24px;background:url('/img/icon/ico-m-infos-def.svg') 50% 50% no-repeat;}
