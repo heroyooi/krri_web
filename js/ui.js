@@ -36,6 +36,10 @@ var GUI = window.GUI || (function(){
       if ($('.menu-wrap').length) {
         GUI.gnbMenu();
       }
+
+      if ($('.custom-select').length) {
+        customSbox();
+      }
     },
     baseUI: function($this){
       var _ = $this;
