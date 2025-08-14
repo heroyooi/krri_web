@@ -86,7 +86,7 @@ body{width:100%;}
 .content-wrap .sub-tit{font-size:18px;font-weight:bold;color:#32394f;margin-bottom:8px;display:flex;gap:0 4px;align-items: center;position: relative;margin-top:40px;}
 .content-wrap .sub-tit:first-child{margin-top:0;}
 .content-wrap .sub-tit .info-area{position: relative;}
-.content-wrap .sub-tit .info-modal{position: absolute;left:0;top:30px;padding:8px 7px 8px 12px;background-color: #fff;border-radius: 4px;-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);background-color: rgba(50, 57, 79, 0.9);font-size:13px;color:#fff;font-weight:400;white-space:nowrap;display:none;}
+.content-wrap .sub-tit .info-modal{position: absolute;left:0;top:30px;padding:8px 7px 8px 12px;background-color: #fff;border-radius: 4px;-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);background-color: rgba(50, 57, 79, 0.9);font-size:13px;color:#fff;font-weight:400;white-space:nowrap;display:none;z-index:1;}
 .content-wrap .sub-con{font-size:14px;font-weight:500;color:#656b7b;}
 
 .content-wrap.ver_full{width:100%;padding-bottom:0;}

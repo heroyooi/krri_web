@@ -165,6 +165,14 @@
   </div><!-- #wrapper -->
 
   <script>
+    $('.btn_favorite').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    })
   </script>
 </body>
 
